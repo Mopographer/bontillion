@@ -435,6 +435,9 @@ dialog::backdrop { background: rgba(2, 6, 12, 0.78); }
    HUD on top, the pitch with the question laid over it, then the answer bar and the game's own keys.
    Nothing opens the phone's keyboard, so nothing gets pushed off screen. Sizes come from JS (--stage-h, --key-h). */
 html.shell, html.shell body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+/* The play screen is shared out in pixels, so the text is drawn at the size it was measured at: Android would otherwise
+   enlarge some of it (the question) and not the rest (the answer bar, the keys) */
+html.shell { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 html.shell body { background-image: none; }
 html.shell .app { height: 100%; padding: 0; display: flex; flex-direction: column; }
 html.shell .topbar, html.shell .foot { display: none; }
@@ -499,7 +502,7 @@ html.shell.land .key { font-size: 14px; }
 html.shell:not(.land) .app { max-width: 600px; }
 
 html.shell .console {
-  flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px;
+  flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; justify-content: flex-end; justify-content: safe flex-end; gap: 8px;
   padding: 8px 8px max(var(--pad-b, 10px), env(safe-area-inset-bottom)); touch-action: manipulation;
 }
 html.shell .q-desk, html.shell .echo { display: none !important; }
@@ -3452,11 +3455,34 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     root.style.setProperty('--stage-h', stage + 'px');
     root.style.setProperty('--key-h', keyH + 'px');
     if (qPlace === 'over') fitQuestion();
+    // Belt and braces: measure what came out. If the answer bar or the keys have been pushed out of their space (text that
+    // is bigger than it was sized for: a phone's font setting, a font that loaded late), take the height back from the
+    // pitch, then from the keys. The answer bar must never be covered.
+    const con = $('#console');
+    for (let i = 0; i < 4; i++) {
+      const over = spill(con);
+      if (over <= 0) break;
+      if (stage > 110) stage = Math.max(110, stage - over);
+      else if (game && keyH > 30) keyH = Math.max(30, keyH - Math.ceil(over / 4));
+      else break;
+      root.style.setProperty('--stage-h', stage + 'px');
+      root.style.setProperty('--key-h', keyH + 'px');
+    }
     const cv = $('#pitch');
     if (playScene) {
       playScene.resize(cv.clientWidth, cv.clientHeight);
       playScene.setIdleFeet(idleFeet());
     }
+  }
+  /* How many pixels the answer card and the keys are short of, measured: 0 when everything fits */
+  function spill(con) {
+    const kids = Array.prototype.filter.call(con.children, function (e) { return e.offsetHeight > 0; });
+    if (!kids.length) return 0;
+    const cs = getComputedStyle(con);
+    const gap = parseFloat(cs.rowGap) || 0;
+    let need = (parseFloat(cs.paddingTop) || 0) + (parseFloat(cs.paddingBottom) || 0) + gap * (kids.length - 1);
+    kids.forEach(function (e) { need += e.offsetHeight; });
+    return Math.ceil(need - con.clientHeight);
   }
   function layoutSideways(appH) {
     const root = document.documentElement;
@@ -4970,6 +4996,15 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     const snd = store.get('bontillion:sound');
     setSound(snd !== 'off');
     try { if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fitLogo(); queueLayout(); }); } catch (e) { /* ignore */ }
+    // fonts that arrive later (the play screen's weights are only fetched when it first shows) change the size of the text
+    try { if (document.fonts && document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', function () { fitLogo(); queueLayout(); }); } catch (e) { /* ignore */ }
+    // and whatever the cause, if the scoreboard strip, the question or the answer card changes size, share the screen out again
+    try {
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(function () { queueLayout(); });
+        ['#hud', '#qbox', '#prompt-card'].forEach(function (sel) { const e = $(sel); if (e) ro.observe(e); });
+      }
+    } catch (e) { /* ignore */ }
     const r = currentRound();
     ensureRound(r).catch(function () { /* tried again on tap */ });
     data = data || {};
