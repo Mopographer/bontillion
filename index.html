@@ -9,13 +9,31 @@
 <meta property="og:description" content="Seven footy prompts a day. Every answer is a kick: rare answers go further.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bontillion.io/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8F%89%3C/text%3E%3C/svg%3E">
+<meta property="og:site_name" content="Bontillion">
+<meta property="og:image" content="https://bontillion.io/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bontillion, the daily kick-to-kick: a footy sails between the goal posts under lights.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bontillion">
+<meta name="twitter:description" content="Seven footy prompts a day. Every answer is a kick: rare answers go further.">
+<meta name="twitter:image" content="https://bontillion.io/og.png">
+<meta name="theme-color" content="#050a14">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABKUlEQVR4AdyRMarCQBRF3xdsfin2Fq5AcBWuQqzEFQk2rkKwtBd0AxZioYJY2igoR7gwDImJmJgZA4c3bybkzbmpmfPU/5v3b+CMtOcFNNQ9KHPtznteoMxhWd+ucZusl8o6Z3b1CZRll/e7v5HAptO1JPKkEGcCvm2aqd5LO2c/rgTSjBqzqQFGLov9zsDd89dxJJBlfu71DWSHNah/VeNIwDfgfwPWoHOsQf3gcDRQn1TDTsD/91gD1iAjrEH9OzXsBHwTrEH7WIN6Vf47qH9V40pAJliDelWsQX2eGnYC7dXSQCZYg3psXbT/Tg07AZnMu2sD15a1zj+pYSawHdcNZDaa3AzUF1mrT+B6Of35Rq3h1cDfL7pndvUJYMVNgHXRJH2PWcDZAwAA//9JBNHUAAAABklEQVQDAD5it7X9SoTOAAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" href="https://bontillion.io/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap">
 <style>
+/* Numerals for the pixel font. Pixelify Sans's digits (SIL Open Font License) with the 5 redrawn so it can't
+   be read as an S. Made by tools/make_digits.py: don't edit by hand. */
+@font-face { font-family: "Bon Digits"; font-style: normal; font-weight: 400; font-display: swap; unicode-range: U+30-39; src: url(data:font/woff2;base64,d09GMgABAAAAAAOAAA4AAAAACFQAAAMoAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAGyAcKgZgP1NUQVQuADQRCAqFHIQPATYCJAMeCxgABCAFhWAHIBu6BhEVnKkIvjiwGz4/hIRwIsJap9WJ8IKIfUKI2e1/jofv/Xv8tc+50UUAl3KXKlXcypXY2dPHZSqw6OLKH8Iz/6dLGXEdtnU4JEah1r4Lc6oKh0NZsLV9XyjG0boeqUx8ugHIhxUOCoD8p0e9ulTv6B8fMKVixCIekftSN93yFShUKpVq4UxE8kApmLyngsUCEu+gEgfZ9hHFFaK9jF4tUOpvoJhVbwykvQJaACw40mjJXccNq/QuvWFsf5GmxEltSPfSE0fXbuKNcf42SQ7cPx3/dXlkjKn54v9fypejgoB4ku5hsCyE9gLdBfpL2w7H1IMkI0XESdI9kJDRXRborjAYhUJgagvGtLSeBgjRohOoQE90xgt8BygASQghzVdmqS7q/v3r9t27J6RBxSkLvTJX0ahSaVmT64XlUhlVVCoEhxG1hFYF1JrgY6wXxsXM0qiFWVyxys8l0c6X69wQuLKCoYwzjUow6qXlmmp6cDLLwsuJhKGkrto+4HwFfsiE9jGEy/VOW/mxGjgHu+0h2harcrHCcRq9tEHJttwQvZX7nQFavttRb3XegKWOufg3V6psfU4CRvcQsRZzYDBW2h498kfXTkSLDSLUud1Db3aemhNDt9AViSHHToc5UzIg89mbbW8tg6vcA2obr9wYBIJ9r/9qcTjjt/Y5fwkfBm2sCb7o9eNnM1qnJm0T2kog+K7z6T5EmzlHmKgF0L4izZYZcdaMda/ZUwKV/jIIE6/SXlkUHXCbvXAY6nY46ehVONvt08kCDbc1OpaEGxfDeTDU0aQENUGdFsUQvu97bWwRMkJjMNAz0Ac+FIEHy5FkuABvR0fgERqOvBgsk5iaEINaT2bxNlroGoSBuxK3wzOqCzHcozjvkqn29rqV0TGTGLdbBhtGeNfohUgindCuEoz09KS360Sh0JGIgUPVgV9HYgsYAyH4PhbItHJ3kWkLcC8cGDWzs+QYZAdjI3P8ZwDk/Bke4nPUSpBoXx3gBQPy0n68gLu16SZMXzzhFvzSXPSSjL7OvOcn7Iy8kNmHMDqiB4TOR/cgXffd5Y9+K6NqkqqVDQAAAAA=) format("woff2"); }
+@font-face { font-family: "Bon Digits"; font-style: normal; font-weight: 500; font-display: swap; unicode-range: U+30-39; src: url(data:font/woff2;base64,d09GMgABAAAAAAOcAA4AAAAACEgAAANGAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAGyAcKgZgP1NUQVQqADQRCAqFCIQPATYCJAMeCxgABCAFhWwHIBvCBgguBpyyiwVPJhKJmM8UXtkQx/mfC/7B/difuw3bHmIS1RpJTCrZQ6LiEUIkUqJlvpj+tp++K6GdWq5VI+RThaPC3ceCcEuNnXDL4id/aivs4qdLPF/d3v47K8UM88gTjOMmbTziTa2twvynr/3/752+R60NtskST+Sf+/9+bVvDFo1JY1rciQIroKVLO2kaWICbA/Os1bWuPKTctcHYtjHpwufpqgh4BUah7eTqCSIc4D8AIOBVGePDVkvtOUfBCIzZ79KjL2Jgbl8L4MCvol+9rspd4E/HfxV+qbU+ToYvYE+UARBAb64BSviJxBPIgEAB38GFgwAMARR9AWCABRn8BDIElAAcR6CtgdrWHwEQNckAAoAsQArgBngLADgAtyRilrWWWV1UUBDFZ2QUakLuknHkbVAiIZ6VxfrxoMdXUCAgWEQ7gCLhyKDyFhEqwsD0yxUxjYvbiMvDx4o2kQiXV8jz5fGgYpFfliXyHB6FTb5wGApwzziMv390vGenSaf35Gb3ssv7kNH7poyCquEpDpa1vabOuhPK7vJ6T513Z7RJ3qHlpvronqc0GNknbfvOV/gWno+PN/LuLbK/Pp68kbfT676IzL0p91PTJLOMgVC7od+6Z6lX0hZD5+iCY/CW2v/wmNwJqp0+616N8gHvhtLWkRsDICD0XeWtxXTn13hrXwAeiq05AJ5n/z/V2Zt0swVALANAeNNB80By2zNAKtEBrWsZgq06h07frXkIAkEBPwAph7x9fpoJwBWs2aTMj81Icmezdv2NO9QWq6aWbIlO9GlN0pySKkGUCcPmflfgkGZoskic4MAWzFkwD3siUNgdqYGqkJgm7FGOYsPuWLQSqsCB7XM5BM1iw8YIDofBtmHWLE7Ov+zKm1GgVc2iJIZyNMySZdO7xx3QFIdUmWG1hB2RhFe1PaA4V0WOFSvHls2Zk96tuKooS04FiTKWav/9IFNZEcwyUsyYo04pd46+aQHoOJFU30kQGO0a46jL5XsxCHk5BZQP1EOYSymiLJjzdLsenbuC3TIiHYTJqyQ8RV5SAnaXovNm2u5P2G4rsEjGLchMUKz405qFm3XrxJVX9FuRa1Usc1V+laf/qQcA) format("woff2"); }
+@font-face { font-family: "Bon Digits"; font-style: normal; font-weight: 600; font-display: swap; unicode-range: U+30-39; src: url(data:font/woff2;base64,d09GMgABAAAAAAOcAA4AAAAACEwAAANGAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAGyAcKgZgP1NUQVQqADQRCAqFCIQPATYCJAMeCxgABCAFhXAHIBvGBlGUDcoKgq8ObGPG4T8E42gbwaHohuBF8/KhPfmgqGhMXYmgfj+2d/8hLpFkyVuki4XEdIaSiYQq3jSRiFT+/87lT3MDtqf2vhwhufYg1HKSO1ZifsLu+TmBcno/nftVCM0qdOKXegNdf45izgR6+V9fq7VtOwje9jQiqVkymDFYCsWq3VIt0Pb//97p+9TaQHOIhfjP/auxre2LxrKisnhMsAJaWtzmDRZgJ5A4IE2hdufIpQV+np0t0GrcMLJ3dPEA3QrUAEy5aIQz2+B+wcaQhzHrSx46L9BB3uQKuKjOEu/m/Ms5BvjT8V+FDzNWq9f/X1BdhQcExG3eANOoEJoF+hGMcw6EtASQAqJyXgCQqNCPCvTLmQaKIrBRw0qtfkRAiJou0AYGgW7gBfgFoAAXItBQnFvJdHuO1mKrtYqHKB/SZSWzwCmcTuq6oDANIxg97AAUCQfFk0lwBAZSPBlkQS9fLgVmXDYVBC6zhTSFUIWtKKjJKgyHQaGV0TSGErg7fM6gD0p8wh4MOQt2oLQfzaRRE86knnkXitwHQuQHT6wRvcF2ViWg6bMGw8pdYKRgF7kl/eJEMcGM7OcihF+FOSaDK/4ies3q0o1GIoakDQWnNo0s3TEVbAytEJrByFRBT0x6AF5sX8La8GrgdED33efJ3gMEgs2t5pU7tPHXTekv4HtKzwB+hv6+bNZnPtsAGiUI3nQw7yC2zQ6InKsAteV8hM14s1ltVHgLQZtxFAS9qdU5KkoPcA2a1GHWuzp1elNXTn02F1TdaDk8dYfLWKg6rSaaENCeTy9OKHRnEfYlUg2aIkgWmjNjziz0QGLQDaWOCSlcA7pXEDPQDS3hY0ostKvCkhKagUZIlpUy1kybJij3zRVFU0oSkWmMwjFW3TSZNbl61J5EzFLCGBpz6IAifKpxhxEqQgV63G+OlsyYgUbEKiKMVhAyEKclouuwn4AWIe0pz9FDTbzleueb3ABcuEdRfUcjgYE3YNxTO0yCQRDiWAnjA3UTqoiVMRqyT7fq3qkL6Fo6po7QejETNuF5miVgLik6a6rY+AkvZ5RoSsoyphhKaEpCE6ZdO3LhGftW+feYiLqQt4XKKFBnTg4A) format("woff2"); }
+@font-face { font-family: "Bon Digits"; font-style: normal; font-weight: 700; font-display: swap; unicode-range: U+30-39; src: url(data:font/woff2;base64,d09GMgABAAAAAAOQAA4AAAAACDgAAAM7AAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAGyAcKgZgP1NUQVQqADQRCAqFCIQPATYCJAMeCxgABCAFhVoHIBuwBiiuBmxwrTBSKKp3NN7U0Utbtq78STxFEK2V1bPzNLsPAAFJrBJHoKJYxQNZlsDGRb5xIYUoY3NXaxogFR2VWRkgKrJ+OHw+CDhRMKJOV4luv9+GeafxQ7JMJRH/dhvmiaSSeIREyJAqRzZHkN3+WwWcWsAQSVRcVsnB5z967f9/v9L3pgOsccRGfET+uTN9JyKsKIqiQWMTbAdog5dLK8DXF2whE53hMlxflgO4jH1SgWJKUXx3Km1DToYWAALFSiUJdFj+XLnThgKlBnPa41zm4bYjbYA7D4fEW+v8O1sH+KPjH4cfunFt/0/1OBJiAuJFLgNzkkLoFBgSx5TE+War44AUYeebSKgwFIbcPGVOTKaBW5sfXvPPP7EFCNEiBmowIqZPzEv8BWSwtkJIp0srqcnN1NTwDw09MFvifgw6SlVHtzoVJ3tVjnmKEnXUakAD4zVAItrIxMV56mgQpIoT0TguZvlsKAp3qFl1a1jdDagrUTxAQ7RRTvC73RY3hHfu3IVIAus97hbkB5NO8hD0X/80+MCfYu2ar3Myj1rwXduT7cCFz5boN90FAxc/tFCC5GI1p88wcJ1lNHmmd/xs+xN3Jkahkypbn4NBkH/1HN/85q0qWoDEEoTmpNcLrGqBo/JsFhmSZy6DOy1pfDe6vodWjNcscOxLd/e+GQSC1fd7irEd//xV/YCPs+kQ4/vofzv/y5lmENcugWBGh9MbIjDfIu7szZ9HT+dxmMdO8mHa5U/iqE1JgpDfVlyTFLkLz8ELfVjwq086vdZXrvhbz1DfbnVk9N0exkrXY1PGu4ImHUwxi796l0DoRGAISgEdLR1t4BWFgEfMEeJisBPwwuCT4BFCgEMsCljTFCogICypmYt5SJpo5gjG/rNmarAEPE0IgyHKUdPLr99cthHwKYyL4FUL7DA9SnZUl83bwVBLq7E3+zQPIhhckMVEE+cfBssa0AcE2oI9DvymTlaBuh8GGpkzcB4DA/NIce7AkAeAgSxnQXZwtgPNZzccYWARKUav3AIPwsCkfvNWQ2v4nofkEGXbGjfTp+7tJIvAhBSpQWJcDQGBaHpw7tYHtJxiSWdbrZgA) format("woff2"); }
 :root {
   /* Night match, pixel-game edition: navy night, floodlit grass, amber LED scoreboard,
      Sherrin red for the kick, mint for "next". Layout: one column (max 540px), HUD + pitch on top,
@@ -39,8 +57,10 @@
   --t-chip: #f4cc4f;
   --t-punt: #4fcf83;
   --t-banana: #5aaeff;
+  --t-post: #c3a6ff;
   --t-siren: #ffd54a;
-  --f-px: "Pixelify Sans", ui-monospace, Menlo, Consolas, monospace;
+  /* "Bon Digits" holds the numerals only (digits.css): Pixelify Sans's own 5 reads as an S */
+  --f-px: "Bon Digits", "Pixelify Sans", ui-monospace, Menlo, Consolas, monospace;
   --f-label: "Silkscreen", "Pixelify Sans", ui-monospace, Menlo, monospace;
   --f-led: "DotGothic16", ui-monospace, Menlo, monospace;
   color-scheme: dark;
@@ -122,7 +142,7 @@ button { font: inherit; color: inherit; }
   background-image: radial-gradient(rgba(255, 178, 26, 0.09) 1px, transparent 1.3px); background-size: 4px 4px;
   border: 2px solid rgba(255, 178, 26, 0.28); border-radius: 4px; white-space: nowrap;
 }
-.logo-sub { margin: 8px 0 0; font-family: var(--f-label); font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--chalk); text-shadow: 0 2px 0 #000; }
+.logo-sub { margin: 8px 0 0; padding: 3px 8px 2px 10px; font-family: var(--f-label); font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--chalk); background: rgba(3, 6, 12, 0.72); border-radius: 3px; }
 .home-body { text-align: center; padding: 14px 0 0; }
 .tagline { margin: 0 16px 10px; font-family: var(--f-label); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mist); }
 .chip-led { display: inline-block; margin: 0 0 14px; padding: 4px 10px; font-family: var(--f-led); font-size: 14px; letter-spacing: 0.12em; color: var(--led); text-shadow: 0 0 6px var(--led-glow); border: 1px solid rgba(255, 178, 26, 0.3); border-radius: 4px; background: #03060c; }
@@ -184,12 +204,13 @@ button { font: inherit; color: inherit; }
 }
 .pill::after { content: ""; position: absolute; left: 50%; bottom: -5px; margin-left: -4px; border: 4px solid transparent; border-top-color: rgba(255, 244, 220, 0.6); border-bottom: 0; }
 .callout {
-  position: absolute; left: 50%; top: 14%; transform: translateX(-50%); white-space: nowrap; pointer-events: none;
+  position: absolute; left: 50%; top: 6%; transform: translateX(-50%); white-space: nowrap; pointer-events: none; text-align: center;
   font-family: var(--f-label); font-weight: 700; font-size: clamp(24px, 8vw, 40px); letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--tc, #fff); text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 0 0 18px var(--tc, #fff);
+  color: var(--tc, #fff); text-shadow: 3px 3px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 0 18px var(--tc, #fff);
   animation: pop 0.45s cubic-bezier(.2, 1.6, .4, 1) both;
 }
-.callout small { display: block; font-size: 0.42em; letter-spacing: 0.22em; text-align: center; margin-top: 2px; }
+/* the line under the call sits on its own dark strip, so it reads over the crowd, a bright sky or the scoreboards */
+.callout small { display: table; margin: 4px auto 0; padding: 3px 8px 2px 9px; font-size: 0.4em; letter-spacing: 0.12em; text-shadow: none; background: rgba(3, 6, 12, 0.84); border: 1px solid rgba(243, 239, 228, 0.22); border-radius: 3px; }
 @keyframes pop { from { transform: translateX(-50%) scale(0.4); opacity: 0; } to { transform: translateX(-50%) scale(1); opacity: 1; } }
 .skip { position: absolute; right: 8px; bottom: 8px; font-family: var(--f-label); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--chalk); background: rgba(3, 6, 12, 0.75); border: 1px solid rgba(243, 239, 228, 0.35); padding: 6px 8px; cursor: pointer; }
 
@@ -302,6 +323,7 @@ html.shell #hud-opp { letter-spacing: 0.05em; }
 .btn-row { display: flex; gap: 10px; padding: 14px 12px 0; }
 .btn-row .btn { flex: 1; }
 .copy-status { min-height: 1.4em; margin: 8px 12px 0; text-align: center; font-size: 14px; color: var(--mist); }
+.link-btn { background: none; border: 0; padding: 6px 8px; font: inherit; color: var(--mist); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .share-pre { margin: 10px 12px 0; padding: 10px 12px; border: 1px dashed var(--edge); font-family: var(--f-px); font-size: 15px; white-space: pre-wrap; user-select: all; -webkit-user-select: all; text-align: center; }
 
 /* The tally: every prompt, every answer */
@@ -557,6 +579,50 @@ html.calm *, html.calm *::before, html.calm *::after { animation: none !importan
   color: var(--chalk); font-size: 15px; line-height: 1.35; text-align: center; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5); }
 .toast[hidden] { display: none; }
 
+/* ---------- Set shot: tap the shot clock, once a game */
+#clock-box.ss-on { cursor: pointer; }
+#clock-box.ss-on .hud-s { color: var(--mint); text-decoration: underline; text-underline-offset: 2px; }
+#clock-box.frozen { border-color: var(--mint); }
+#clock-box.frozen .led { color: var(--mint); text-shadow: 0 0 6px rgba(63, 213, 138, 0.7), 0 0 18px rgba(63, 213, 138, 0.2); animation: none; letter-spacing: -0.02em; }
+#clock-box.frozen .hud-s { color: var(--mint); }
+#clock-box:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
+.timebar.frozen span { background: var(--mint); box-shadow: 0 0 8px rgba(63, 213, 138, 0.7); }
+
+/* ---------- Finals, milestones, votes */
+.finals-line { margin: -6px 18px 14px; color: #ffd54a; font-size: 14px; text-align: center; }
+.finals-line b { font-family: var(--f-led); font-weight: 400; font-size: 18px; color: var(--led); }
+.res-score .finals-line { margin: 8px 14px 0; }
+.pips.et { gap: 3px; }
+.pips.et .pip { width: 9px; height: 9px; }
+.pips.et .pip-et { border-radius: 50%; }
+html.shell .pips.et { gap: 2px; }
+html.shell .pips.et .pip { width: 7px; height: 7px; border-width: 1px; }
+.res-cup { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0 0 8px; }
+.res-cup .led { font-size: 30px; color: #ffd54a; text-shadow: 0 0 8px rgba(255, 213, 74, 0.7), 0 0 24px rgba(255, 213, 74, 0.25); text-transform: uppercase; letter-spacing: 0.06em; }
+.cup-ic { width: 33px; height: 36px; shape-rendering: crispEdges; }
+.votes { list-style: none; margin: 0; padding: 0; }
+.votes li { display: flex; align-items: center; gap: 10px; padding: 8px 2px; border-bottom: 1px solid #1d2d4c; }
+.votes li:last-child { border-bottom: 0; }
+.votes b { flex: none; width: 1.3em; text-align: center; font-family: var(--f-led); font-weight: 400; font-size: 26px; color: var(--led); text-shadow: 0 0 6px var(--led-glow); }
+.votes .pxicon { flex: none; }
+.votes-n { color: var(--chalk); }
+.votes-n small { display: block; color: var(--mist); font-size: 12px; }
+
+/* ---------- The result picture */
+.card-img { display: block; width: 100%; max-width: 360px; height: auto; margin: 2px auto 0; border: 2px solid var(--edge); image-rendering: pixelated; -webkit-touch-callout: default; }
+.card-panel .btn-row { padding: 12px 0 0; }
+.card-panel .copy-status { margin: 6px 0 0; }
+
+/* ---------- Pick your club */
+.home-club { margin: 8px 0 0; text-align: center; font-size: 14px; }
+.home-club .link-btn { color: var(--led); }
+.club-note { margin: 0 0 12px; }
+.club-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.club-opt { display: flex; align-items: center; gap: 9px; min-width: 0; padding: 7px 8px; border: 2px solid var(--edge); border-radius: 6px; background: #081120; color: var(--chalk); font: inherit; font-size: 14px; text-align: left; cursor: pointer; }
+.club-opt span { min-width: 0; line-height: 1.15; }
+.club-opt[aria-pressed="true"] { border-color: var(--led); background: #14213b; box-shadow: 0 0 10px rgba(255, 178, 26, 0.25); }
+.kit-ic { flex: none; width: 24px; height: 24px; padding: 4px; background: #3d4f70; border-radius: 3px; shape-rendering: crispEdges; }
+
 </style>
 </head>
 <body>
@@ -587,14 +653,16 @@ html.calm *, html.calm *::before, html.calm *::after { animation: none !importan
         <p class="chip-led" id="home-round">ROUND 1</p>
         <div class="mini-board" id="home-board" aria-label="Today's match"></div>
         <p class="match-line" id="home-match"></p>
+        <p class="finals-line" id="home-finals" hidden></p>
         <button type="button" class="btn btn-red btn-xl" id="play-btn">Run out ▸</button>
         <p class="status" id="home-status"></p>
         <p class="note home-next" id="home-next" hidden></p>
+        <p class="home-club" id="home-club" hidden><button type="button" class="link-btn" id="home-club-btn">Who do you barrack for? Pick your club ▸</button></p>
         <p class="record" id="home-record" hidden></p>
         <section class="panel" aria-labelledby="ladder-h">
           <h2 class="label" id="ladder-h">How far each answer goes</h2>
           <ol class="ladder" id="ladder"></ol>
-          <p class="note">You start at the centre bounce, 80 m from goal. Each goal is 6 points, then it's back to the centre.</p>
+          <p class="note">You start at the centre bounce, 80 m from goal. A goal is 6 points and a behind is 1, then it's back to the centre.</p>
         </section>
       </div>
     </section>
@@ -614,7 +682,7 @@ html.calm *, html.calm *::before, html.calm *::after { animation: none !importan
           <div class="pips" id="pips" aria-hidden="true"></div>
           <span class="hud-l" id="hud-kick">Kick 1 of 7</span>
         </div>
-        <div class="hud-box hud-right" id="clock-box">
+        <div class="hud-box hud-right" id="clock-box" role="button" tabindex="0" aria-label="Shot clock. Tap it for a set shot: the clock stops for this kick. Once a game.">
           <span class="hud-l">Shot clock</span>
           <span class="hud-v"><span class="led" id="hud-clock">30</span></span>
           <span class="hud-s" id="hud-clock-s">secs</span>
@@ -694,6 +762,7 @@ html.calm *, html.calm *::before, html.calm *::after { animation: none !importan
       <button type="button" class="tile" data-menu="archive"><span class="tile-ic">↺</span>Archive</button>
       <button type="button" class="tile" data-menu="stats"><span class="tile-ic">▤</span>Your record</button>
       <button type="button" class="tile" data-menu="help"><span class="tile-ic">?</span>How to play</button>
+      <button type="button" class="tile" data-menu="club"><span class="tile-ic">♥</span><span id="tile-club">Pick your club</span></button>
       <button type="button" class="tile" data-menu="sound"><span class="tile-ic">♪</span><span id="tile-sound">Sound: on</span></button>
       <button type="button" class="tile" data-menu="motion"><span class="tile-ic">≈</span><span id="tile-motion">Motion: full</span></button>
       <button type="button" class="tile" data-menu="keys" id="tile-keys-btn" hidden><span class="tile-ic">⌨</span><span id="tile-keys">Keys: game</span></button>
@@ -705,6 +774,8 @@ html.calm *, html.calm *::before, html.calm *::after { animation: none !importan
     <div id="reset-box">
       <p class="label">Preview only</p>
       <button type="button" class="tile tile-wide" data-menu="reset"><span id="tile-reset">Reset my results</span></button>
+      <button type="button" class="tile tile-wide" data-menu="pv-five"><span id="tile-pv-five">Make my next game my 5th (banner)</span></button>
+      <button type="button" class="tile tile-wide" data-menu="pv-finals"><span id="tile-pv-finals">Win my first three finals</span></button>
     </div>
   </div>
 </div>
@@ -714,16 +785,21 @@ html.calm *, html.calm *::before, html.calm *::after { animation: none !importan
   <div class="dialog-inner">
     <h2 id="help-h" class="menu-title">How to play</h2>
     <ol class="rules">
-      <li><b>It's the last quarter and you're behind.</b> Each day you play a different club. The higher they finished on the 2026 ladder, the bigger the gap.</li>
+      <li><b>It's the last quarter and you're behind.</b> Each day you play a different club at their home ground. The higher they finished on the 2026 ladder, the bigger the gap.</li>
       <li><b>Seven prompts, seven kicks</b>, the same for everyone. Type one answer before the 30-second shot clock runs out.</li>
+      <li><b>One set shot a game.</b> Tap the shot clock and it stops for the kick you're on. Take your time, but you only get one.</li>
       <li><b>Every answer is a kick from the centre bounce.</b> Obvious answers barely go 15. Rare ones go long. Wrong answers go out on the full.</li>
       <li><b>Reach the goal line for a goal</b> (6 points), then it's back to the centre. Four drop punts make two goals. Get in front before the siren.</li>
       <li><b>Each prompt hides one gem.</b> Find it and it's a goal after the siren, from anywhere.</li>
+      <li><b>Mind the post.</b> Some prompts have one "clever" answer that everyone reaches for. It gets there from anywhere too, but it hits the post: one behind (1 point), and back to the centre.</li>
       <li><b>Nicknames and surnames are fine</b> and small typos are forgiven. If a surname fits two people, you'll be asked which one and the clock stops.</li>
       <li><b>One go per round, no do-overs.</b> Your results and record are saved in this browser.</li>
-      <li><b>In the menu:</b> sound, a calmer camera (Motion), and on phones you can swap the game's keys for your phone's own keyboard (Keys).</li>
+      <li><b>Then come the finals.</b> After Round 23, four finals. Win all four and the flag is yours. Twelve wins in the season earns the double chance: lose the first final and you're still alive. A final can't be drawn: level after seven kicks means extra time, three more kicks from the centre, and the next score wins.</li>
+      <li><b>Your 5th game, your 10th, and every 10th after</b> gets a banner to run through.</li>
+      <li><b>In the menu:</b> pick your club and your side wears its colours. There's also sound, a calmer camera (Motion), and on phones you can swap the game's keys for your phone's own keyboard (Keys). Rain and wind are only for looks.</li>
     </ol>
     <ol class="ladder" id="help-ladder"></ol>
+    <p class="note" id="help-privacy" hidden>Bontillion counts plays and answers to see which questions work. The counts are anonymous: no cookies, no accounts, nothing that says who you are.</p>
     <div class="dialog-actions"><button type="button" class="btn btn-mint" id="help-close">Got it</button></div>
   </div>
 </dialog>
@@ -736,6 +812,16 @@ html.calm *, html.calm *::before, html.calm *::after { animation: none !importan
     <h2 id="stats-h" class="menu-title">Your record</h2>
     <div id="stats-body"></div>
     <div class="dialog-actions"><button type="button" class="btn btn-mint" id="stats-close">Done</button></div>
+  </div>
+</dialog>
+
+<!-- YOUR CLUB -->
+<dialog id="club" aria-labelledby="club-h">
+  <div class="dialog-inner">
+    <h2 id="club-h" class="menu-title">Pick your club</h2>
+    <p class="note club-note">Your side runs out in its colours and the scoreboard carries its name. If the two sides would look alike, yours wears its clash strip. Change it any time.</p>
+    <div class="club-grid" id="club-grid"></div>
+    <div class="dialog-actions"><button type="button" class="btn btn-mint" id="club-close">Done</button></div>
   </div>
 </dialog>
 
@@ -753,7 +839,7 @@ html.calm *, html.calm *::before, html.calm *::after { animation: none !importan
 
 <script>
 /* Bontillion rounds. Each round's questions load from r/<n>.json when it's played. Generated by build.py */
-window.BON_ROUNDS = [{"n":1,"date":"2026-11-06","match":{"opp":"Carlton","ab":"CAR","us":[9,10],"them":[11,9]},"v":"9b2d2b9d3e"},{"n":2,"date":"2026-11-07","match":{"opp":"Essendon","ab":"ESS","us":[10,8],"them":[11,6]},"v":"9b22d0b3fa"},{"n":3,"date":"2026-11-08","match":{"opp":"Gold Coast","ab":"GCS","us":[9,9],"them":[10,6]},"key":"3gc","v":"6c74bfba9d"},{"n":4,"date":"2026-11-09","match":{"opp":"Collingwood","ab":"COL","us":[9,8],"them":[10,8]},"v":"98667448fe"},{"n":5,"date":"2026-11-10","match":{"opp":"West Coast","ab":"WCE","us":[9,7],"them":[9,9]},"v":"cafd6eb8fa"},{"n":6,"date":"2026-11-11","match":{"opp":"Brisbane Lions","short":"Brisbane","ab":"BRI","us":[6,8],"them":[9,7]},"v":"e0e4b4aa69"},{"n":7,"date":"2026-11-12","match":{"opp":"Richmond","ab":"RIC","us":[11,9],"them":[12,8]},"v":"0a09281f41"},{"n":8,"date":"2026-11-13","match":{"opp":"Western Bulldogs","short":"Bulldogs","ab":"WBD","us":[10,12],"them":[12,10]},"v":"78ec9d7d70"},{"n":9,"date":"2026-11-14","match":{"opp":"Geelong","ab":"GEE","us":[8,10],"them":[11,4]},"v":"b9edbda2c5"},{"n":10,"date":"2026-11-15","match":{"opp":"Melbourne","ab":"MEL","us":[8,10],"them":[9,13]},"v":"51dd910bb3"},{"n":11,"date":"2026-11-16","match":{"opp":"North Melbourne","short":"North","ab":"NTH","us":[10,11],"them":[11,8]},"v":"472c5d2256"},{"n":12,"date":"2026-11-17","match":{"opp":"Hawthorn","ab":"HAW","us":[7,8],"them":[9,9]},"v":"bd152acc50"},{"n":13,"date":"2026-11-18","match":{"opp":"St Kilda","ab":"STK","us":[9,9],"them":[10,9]},"v":"fc51d89e85"},{"n":14,"date":"2026-11-19","match":{"opp":"Port Adelaide","short":"Port","ab":"PTA","us":[9,12],"them":[10,11]},"v":"4f02a69ac6"},{"n":15,"date":"2026-11-20","match":{"opp":"GWS Giants","short":"GWS","ab":"GWS","us":[8,7],"them":[9,11]},"v":"0e88146c52"},{"n":16,"date":"2026-11-21","match":{"opp":"Fremantle","ab":"FRE","us":[8,8],"them":[10,9]},"v":"6f49024b16"}];
+window.BON_ROUNDS = [{"n":1,"date":"2026-11-06","season":1,"match":{"opp":"Carlton","ab":"CAR","us":[9,10],"them":[11,9],"at":"mcg","time":"night"},"v":"ab1d50e320"},{"n":2,"date":"2026-11-07","season":1,"match":{"opp":"Essendon","ab":"ESS","us":[10,8],"them":[11,6],"at":"marvel","time":"night"},"v":"8b32b21499"},{"n":3,"date":"2026-11-08","season":1,"match":{"opp":"Gold Coast","ab":"GCS","us":[9,9],"them":[10,6],"at":"pfs","time":"day"},"key":"3gc","v":"4cb1532e08"},{"n":4,"date":"2026-11-09","season":1,"match":{"opp":"Collingwood","ab":"COL","us":[9,8],"them":[10,8],"at":"mcg","time":"day"},"v":"5cc6b3dc2a"},{"n":5,"date":"2026-11-10","season":1,"match":{"opp":"West Coast","ab":"WCE","us":[9,7],"them":[9,9],"at":"optus","time":"twilight"},"v":"102dd5c4b5"},{"n":6,"date":"2026-11-11","season":1,"match":{"opp":"Brisbane Lions","short":"Brisbane","ab":"BRI","us":[6,8],"them":[9,7],"at":"gabba","time":"night"},"v":"264e592601"},{"n":7,"date":"2026-11-12","season":1,"match":{"opp":"Richmond","ab":"RIC","us":[11,9],"them":[12,8],"at":"mcg","time":"night"},"v":"4c3249d3b3"},{"n":8,"date":"2026-11-13","season":1,"match":{"opp":"Western Bulldogs","short":"Bulldogs","ab":"WBD","us":[10,12],"them":[12,10],"at":"marvel","time":"night"},"v":"3019976faf"},{"n":9,"date":"2026-11-14","season":1,"match":{"opp":"Geelong","ab":"GEE","us":[8,10],"them":[11,4],"at":"gmhba","time":"day"},"v":"5b6e2a90f5"},{"n":10,"date":"2026-11-15","season":1,"match":{"opp":"Melbourne","ab":"MEL","us":[8,10],"them":[9,13],"at":"mcg","time":"twilight"},"v":"9d7d409494"},{"n":11,"date":"2026-11-16","season":1,"match":{"opp":"North Melbourne","short":"North","ab":"NTH","us":[10,11],"them":[11,8],"at":"marvel","time":"day"},"v":"076821c66b"},{"n":12,"date":"2026-11-17","season":1,"match":{"opp":"Hawthorn","ab":"HAW","us":[7,8],"them":[9,9],"at":"mcg","time":"day"},"v":"4cb4e154b0"},{"n":13,"date":"2026-11-18","season":1,"match":{"opp":"St Kilda","ab":"STK","us":[9,9],"them":[10,9],"at":"marvel","time":"night"},"v":"96456cde3c"},{"n":14,"date":"2026-11-19","season":1,"match":{"opp":"Port Adelaide","short":"Port","ab":"PTA","us":[9,12],"them":[10,11],"at":"adelaide","time":"night"},"v":"dc862af4dc"},{"n":15,"date":"2026-11-20","season":1,"match":{"opp":"GWS Giants","short":"GWS","ab":"GWS","us":[8,7],"them":[9,11],"at":"engie","time":"twilight"},"v":"c480372488"},{"n":16,"date":"2026-11-21","season":1,"match":{"opp":"Fremantle","ab":"FRE","us":[8,8],"them":[10,9],"at":"optus","time":"night"},"v":"bec089cd0b"},{"n":17,"date":"2026-11-22","season":1,"match":{"opp":"Adelaide","ab":"ADE","us":[10,10],"them":[12,10],"at":"adelaide","time":"twilight"},"v":"8aa0026c16"},{"n":18,"date":"2026-11-23","season":1,"match":{"opp":"Sydney","ab":"SYD","us":[11,8],"them":[13,9],"at":"scg","time":"day","wx":"wind"},"v":"b439f8ec9b"},{"n":19,"date":"2026-11-24","season":1,"match":{"opp":"Carlton","ab":"CAR","us":[9,11],"them":[10,12],"at":"mcg","time":"twilight","wx":"rain"},"v":"cc3a8e33cf"},{"n":20,"date":"2026-11-25","season":1,"match":{"opp":"Essendon","ab":"ESS","us":[8,10],"them":[9,7],"at":"marvel","time":"day"},"v":"b588b852d3"},{"n":21,"date":"2026-11-26","season":1,"match":{"opp":"Collingwood","ab":"COL","us":[10,8],"them":[11,10],"at":"mcg","time":"night"},"v":"21794a2019"},{"n":22,"date":"2026-11-27","season":1,"match":{"opp":"West Coast","ab":"WCE","us":[7,10],"them":[8,9],"at":"optus","time":"night"},"v":"ffe01c88e3"},{"n":23,"date":"2026-11-28","season":1,"match":{"opp":"Brisbane Lions","short":"Brisbane","ab":"BRI","us":[12,7],"them":[14,8],"at":"gabba","time":"twilight","wx":"rain"},"v":"f534999418"},{"n":24,"date":"2026-11-29","season":1,"match":{"opp":"Hawthorn","ab":"HAW","us":[10,9],"them":[12,9],"at":"mcg","time":"night"},"final":"F1","v":"94f1fd842c"},{"n":25,"date":"2026-11-30","season":1,"match":{"opp":"Sydney","ab":"SYD","us":[9,12],"them":[11,12],"at":"scg","time":"twilight"},"final":"SF","v":"edff45c519"},{"n":26,"date":"2026-12-01","season":1,"match":{"opp":"Fremantle","ab":"FRE","us":[11,7],"them":[13,7],"at":"optus","time":"night","wx":"wind"},"final":"PF","v":"950f66996a"},{"n":27,"date":"2026-12-02","season":1,"match":{"opp":"Brisbane Lions","short":"Brisbane","ab":"BRI","us":[11,10],"them":[13,11],"at":"mcg","time":"day"},"final":"GF","v":"a47e55c8ab"}];
 
 /* Half-time oranges: where the tip jar points. From donate.json */
 window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
@@ -767,11 +853,13 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   const TIERS = [
     { key: 'out',    name: 'Out on the full',        short: 'Out on the full', m: 0,  emoji: '❌', blurb: 'Wrong, or the shot clock ran out' },
     { key: 'n15',    name: 'Not 15, play on',        short: 'Not 15',          m: 10, emoji: '⬜', blurb: 'The answer everyone says' },
-    { key: 'grub',   name: 'Grubber',                short: 'Grubber',         m: 20, emoji: '🟫', blurb: 'The "clever" pick everyone thinks of' },
+    { key: 'grub',   name: 'Grubber',                short: 'Grubber',         m: 20, emoji: '🟫', blurb: 'Nearly everyone says it too' },
     { key: 'chip',   name: 'Chip kick',              short: 'Chip kick',       m: 30, emoji: '🟨', blurb: 'A solid answer' },
     { key: 'punt',   name: 'Drop punt',              short: 'Drop punt',       m: 40, emoji: '🟩', blurb: 'One most people miss' },
     { key: 'banana', name: 'Banana from the pocket', short: 'Banana',          m: 60, emoji: '🟦', blurb: 'A deep cut' },
-    { key: 'siren',  name: 'Goal after the siren',   short: 'Siren goal',      m: 70, emoji: '⭐', blurb: 'One in a Bontillion: a goal from anywhere' }
+    // The "clever" pick everyone goes for: it reaches the goal but hits the post. One behind, then back to the centre.
+    { key: 'post',   name: 'Hit the post',           short: 'Hit the post',    m: 0,  emoji: '🚩', blurb: 'The "clever" pick everyone goes for', tag: 'BEHIND' },
+    { key: 'siren',  name: 'Goal after the siren',   short: 'Siren goal',      m: 70, emoji: '⭐', blurb: 'One in a Bontillion: a goal from anywhere', tag: 'GOAL' }
   ];
   const TIER = {};
   TIERS.forEach(function (t, i) { t.rank = i; TIER[t.key] = t; });
@@ -780,6 +868,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   const CENTRE = 80;       // centre bounce, metres from our goal line
   const SHOT_CLOCK = 30;   // seconds per prompt
   const KICKS = 7;
+  const EXTRA = 3;         // extra-time kicks, when a final is level after seven
 
   function norm(s) {
     return String(s == null ? '' : s)
@@ -1072,53 +1161,131 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   function applyKick(pos, tierKey) {
     const t = TIER[tierKey];
     if (tierKey === 'siren') return { from: pos, to: GROUND, goal: true, metres: t.m, next: CENTRE };
+    // Off the post: it gets there from anywhere, scores a behind, and play restarts from the centre
+    if (tierKey === 'post') return { from: pos, to: GROUND, goal: false, behind: true, metres: 0, next: CENTRE };
     const to = pos + t.m;
     if (to >= GROUND) return { from: pos, to: GROUND, goal: true, metres: t.m, next: CENTRE };
     return { from: pos, to: to, goal: false, metres: t.m, next: to };
   }
 
   function summarise(kicks) {
-    let goals = 0, metres = 0;
-    kicks.forEach(function (k) { if (k.goal) goals++; metres += k.metres; });
-    return { goals: goals, metres: metres };
+    let goals = 0, behinds = 0, metres = 0;
+    kicks.forEach(function (k) { if (k.goal) goals++; else if (k.behind) behinds++; metres += k.metres; });
+    return { goals: goals, behinds: behinds, metres: metres };
   }
+  const scored = function (k) { return !!(k.goal || k.behind); };
 
   /* The match: it's the last quarter, you're behind today's opponent, and you get 7 kicks from the
-     centre bounce. round.match = {opp, ab, us:[goals, behinds], them:[goals, behinds]} */
+     centre bounce. round.match = {opp, ab, us:[goals, behinds], them:[goals, behinds], at, time}
+     at = the opposition's home ground (a key of VENUES); time = 'day', 'twilight' or 'night'. */
   const START = CENTRE;
+  const VENUES = {
+    mcg: 'the MCG', marvel: 'Marvel Stadium', gmhba: 'GMHBA Stadium', scg: 'the SCG', engie: 'Engie Stadium',
+    gabba: 'the Gabba', pfs: 'People First Stadium', adelaide: 'Adelaide Oval', optus: 'Optus Stadium'
+  };
+  const TIMES = { day: 'Day game', twilight: 'Twilight game', night: 'Night game' };
+  // The weather is for looks only: it never changes how far a kick goes
+  const WEATHER = { rain: 'in the rain', wind: 'in a howling wind' };
+  const WX_EMOJI = { rain: ' 🌧️', wind: ' 💨' };
   function matchOf(round) {
     const m = (round && round.match) || { opp: 'Opposition', ab: 'OPP', us: [8, 6], them: [9, 11] };
     const us = [m.us[0], m.us[1], m.us[0] * 6 + m.us[1]];
     const them = [m.them[0], m.them[1], m.them[0] * 6 + m.them[1]];
     const deficit = them[2] - us[2];
-    return { opp: m.opp, short: m.short || m.opp, ab: m.ab, us: us, them: them, deficit: deficit, need: deficit < 0 ? 0 : Math.floor(deficit / 6) + 1 };
+    const at = VENUES[m.at] ? m.at : null, time = at && TIMES[m.time] ? m.time : null;
+    const wx = at && WEATHER[m.wx] ? m.wx : null;
+    return {
+      opp: m.opp, short: m.short || m.opp, ab: m.ab, us: us, them: them, deficit: deficit, need: deficit < 0 ? 0 : Math.floor(deficit / 6) + 1,
+      at: at, time: time, venue: at ? VENUES[at] : '', slot: time ? TIMES[time] : '', wx: wx, weather: wx ? WEATHER[wx] : ''
+    };
   }
   // The scoreboard after some kicks. margin > 0 means you're in front.
   function scoreAfter(round, kicks) {
-    const m = matchOf(round), s = summarise(kicks || []);
-    const us = [m.us[0] + s.goals, m.us[1], m.us[2] + 6 * s.goals];
-    const margin = us[2] - m.them[2];
+    kicks = kicks || [];
+    const m = matchOf(round), s = summarise(kicks);
+    const us = [m.us[0] + s.goals, m.us[1] + s.behinds, m.us[2] + 6 * s.goals + s.behinds];
+    let them = m.them;
+    // Extra time (finals only): three kicks without a score, and the opposition scrambles a behind to win it
+    const et = kicks.slice(KICKS);
+    if (round && round.final && et.length >= EXTRA && !et.some(scored)) them = [them[0], them[1] + 1, them[2] + 1];
+    const margin = us[2] - them[2];
     return {
-      opp: m.opp, short: m.short, ab: m.ab, deficit: m.deficit, need: m.need, us: us, them: m.them, margin: margin,
-      goals: s.goals, metres: s.metres, toWin: margin > 0 ? 0 : Math.floor(-margin / 6) + 1,
+      opp: m.opp, short: m.short, ab: m.ab, at: m.at, time: m.time, venue: m.venue, slot: m.slot, wx: m.wx, weather: m.weather,
+      deficit: m.deficit, need: m.need, us: us, them: them, margin: margin, extra: et.length,
+      goals: s.goals, behinds: s.behinds, metres: s.metres, toWin: margin > 0 ? 0 : Math.floor(-margin / 6) + 1,
       outcome: margin > 0 ? 'won' : margin < 0 ? 'lost' : 'drew'
     };
+  }
+  /* Seven kicks and it's full time. A final can't be drawn: level after seven means extra time, up to three
+     more kicks from a fresh centre bounce, and the next score wins it. */
+  function isOver(round, kicks) {
+    kicks = kicks || [];
+    if (kicks.length < KICKS) return false;
+    if (!round || !round.final) return true;
+    if (scoreAfter(round, kicks.slice(0, KICKS)).margin !== 0) return true;
+    const et = kicks.slice(KICKS);
+    return et.some(scored) || et.length >= EXTRA;
+  }
+  function inExtraTime(round, kicks) { return !!(round && round.final) && (kicks || []).length >= KICKS && !isOver(round, kicks); }
+
+  /* The season: the home-and-away rounds, then four finals. Everyone plays the finals; win all four and you win
+     the flag. The double chance (12 or more wins in the season proper) forgives a loss in week one, which is then a
+     Qualifying Final rather than an Elimination Final. */
+  const FINALS = { F1: 'Elimination Final', SF: 'Semi-Final', PF: 'Preliminary Final', GF: 'Grand Final' };
+  const FINAL_KEYS = ['F1', 'SF', 'PF', 'GF'];
+  const DC_WINS = 12;
+  function roundName(round, dc) {
+    if (!round) return '';
+    if (!round.final) return 'Round ' + (round.rn || round.n);
+    return round.final === 'F1' && dc ? 'Qualifying Final' : (FINALS[round.final] || 'Final');
+  }
+  // res = { F1: 'won' | 'lost', SF: …, PF: …, GF: … } for the finals played so far
+  function finalsRun(res, dc) {
+    res = res || {};
+    let out = null, life = false;
+    FINAL_KEYS.forEach(function (k) {
+      if (res[k] !== 'lost' || out) return;
+      if (k === 'F1' && dc) life = true; else out = k;
+    });
+    const flag = !out && res.SF === 'won' && res.PF === 'won' && res.GF === 'won' && (res.F1 === 'won' || life);
+    return { out: out, alive: !out, lifeUsed: life, flag: flag, played: FINAL_KEYS.filter(function (k) { return !!res[k]; }).length };
+  }
+
+  // A banner to run through on your 5th game, your 10th, and every 10th after that
+  function milestone(n) { return n === 5 || (n >= 10 && n % 10 === 0) ? n : 0; }
+
+  // Best on ground: 3, 2 and 1 votes for the three rarest right answers (the earlier kick wins a tie)
+  const VOTE_RANK = { siren: 7, banana: 6, punt: 5, chip: 4, post: 3, grub: 2, n15: 1, out: 0 };
+  function votes(kicks) {
+    return (kicks || []).map(function (k, i) { return { kick: k, i: i }; })
+      .filter(function (x) { return x.kick.tier !== 'out' && x.kick.name; })
+      .sort(function (a, b) { return VOTE_RANK[b.kick.tier] - VOTE_RANK[a.kick.tier] || a.i - b.i; })
+      .slice(0, 3).map(function (x, j) { return { votes: 3 - j, kick: x.kick, i: x.i }; });
   }
   function resultLine(r) {
     const p = Math.abs(r.margin), pts = p + (p === 1 ? ' pt' : ' pts');
     return r.outcome === 'won' ? 'Won by ' + pts : r.outcome === 'lost' ? 'Lost by ' + pts : 'Drew';
   }
 
-  function shareText(round, kicks) {
+  // o.dc: this player has the double chance (it names week one of the finals); o.lines: extra lines (a flag, a milestone)
+  function shareText(round, kicks, o) {
+    o = o || {};
     const r = scoreAfter(round, kicks);
-    const row = kicks.map(function (k) { return TIER[k.tier].emoji; }).join('');
-    return 'Bontillion #' + round.n + ' 🏉 v ' + r.opp + '\nFrom ' + r.deficit + ' down: ' + resultLine(r) + '\n' + row + '\nbontillion.io';
+    const em = function (k) { return TIER[k.tier].emoji; };
+    let row = kicks.slice(0, KICKS).map(em).join('');
+    if (kicks.length > KICKS) row += ' ⏱ ' + kicks.slice(KICKS).map(em).join('');
+    const head = 'Bontillion #' + round.n + (round.final ? ' · ' + roundName(round, o.dc) : '') + ' 🏉 v ' + r.opp +
+      (r.venue ? ' at ' + r.venue : '') + (WX_EMOJI[r.wx] || '');
+    const result = 'From ' + r.deficit + ' down: ' + resultLine(r) + (kicks.length > KICKS ? ' in extra time' : '');
+    return [head, result, row].concat(o.lines || [], ['bontillion.io']).join('\n');
   }
 
   const api = {
-    TIERS: TIERS, TIER: TIER, GROUND: GROUND, CENTRE: CENTRE, START: START, SHOT_CLOCK: SHOT_CLOCK, KICKS: KICKS,
+    TIERS: TIERS, TIER: TIER, GROUND: GROUND, CENTRE: CENTRE, START: START, SHOT_CLOCK: SHOT_CLOCK, KICKS: KICKS, EXTRA: EXTRA, VENUES: VENUES,
+    FINALS: FINALS, FINAL_KEYS: FINAL_KEYS, DC_WINS: DC_WINS,
     norm: norm, dist: dist, judge: judge, applyKick: applyKick, summarise: summarise,
-    matchOf: matchOf, scoreAfter: scoreAfter, resultLine: resultLine, shareText: shareText
+    matchOf: matchOf, scoreAfter: scoreAfter, resultLine: resultLine, shareText: shareText,
+    isOver: isOver, inExtraTime: inExtraTime, roundName: roundName, finalsRun: finalsRun, milestone: milestone, votes: votes
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.BON = api;
@@ -1126,12 +1293,665 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
 
 </script>
 <script>
-/* Bontillion pitch: a side-on, pixel-art night match on a canvas.
+/* Bontillion grounds: each club's home ground, by day, at twilight and under lights.
+   A ground is two strips that slide behind the play at different speeds: the far strip (light towers,
+   skyline, trees) and the stand strip (roofline, decks, crowd). The art is written once in daylight
+   colours and re-lit for the time of day; lamps and screens are either on or off. */
+(function (root) {
+  'use strict';
+  const SPX = 3, FPX = 1.68;                 // strip pixels per metre of ground: stands, far
+  const SX0 = -40, SX1 = 280;                // metres the stand strip covers
+  const FX0 = -80, FX1 = 320;                // metres the far strip covers
+  const SW = (SX1 - SX0) * SPX, SH = 60, SY = 40;     // the stand strip sits at canvas y 40..100
+  const FW = Math.ceil((FX1 - FX0) * FPX), FH = 100;
+
+  const NAMES = {
+    mcg: 'MCG', marvel: 'MARVEL', gmhba: 'GMHBA', scg: 'SCG', engie: 'ENGIE', gabba: 'GABBA',
+    pfs: 'PEOPLE FIRST', adelaide: 'ADELAIDE OVAL', optus: 'OPTUS'
+  };
+
+  /* 5 x 7 scoreboard letters, also used for the fence signs */
+  const RAW = {
+    '0': '01110 10001 10011 10101 11001 10001 01110', '1': '00100 01100 00100 00100 00100 00100 01110',
+    '2': '01110 10001 00001 00010 00100 01000 11111', '3': '01110 10001 00001 00110 00001 10001 01110',
+    '4': '00010 00110 01010 10010 11111 00010 00010', '5': '11111 10000 11110 00001 00001 10001 01110',
+    '6': '00110 01000 10000 11110 10001 10001 01110', '7': '11111 00001 00010 00100 01000 01000 01000',
+    '8': '01110 10001 10001 01110 10001 10001 01110', '9': '01110 10001 10001 01111 00001 00010 01100',
+    A: '01110 10001 10001 11111 10001 10001 10001', B: '11110 10001 10001 11110 10001 10001 11110',
+    C: '01110 10001 10000 10000 10000 10001 01110', D: '11100 10010 10001 10001 10001 10010 11100',
+    E: '11111 10000 10000 11110 10000 10000 11111', F: '11111 10000 10000 11110 10000 10000 10000',
+    G: '01110 10001 10000 10111 10001 10001 01111', H: '10001 10001 10001 11111 10001 10001 10001',
+    I: '01110 00100 00100 00100 00100 00100 01110', J: '00111 00010 00010 00010 00010 10010 01100',
+    K: '10001 10010 10100 11000 10100 10010 10001', L: '10000 10000 10000 10000 10000 10000 11111',
+    M: '10001 11011 10101 10101 10001 10001 10001', N: '10001 10001 11001 10101 10011 10001 10001',
+    O: '01110 10001 10001 10001 10001 10001 01110', P: '11110 10001 10001 11110 10000 10000 10000',
+    Q: '01110 10001 10001 10001 10101 10010 01101', R: '11110 10001 10001 11110 10100 10010 10001',
+    S: '01111 10000 10000 01110 00001 00001 11110', T: '11111 00100 00100 00100 00100 00100 00100',
+    U: '10001 10001 10001 10001 10001 10001 01110', V: '10001 10001 10001 10001 10001 01010 00100',
+    W: '10001 10001 10001 10101 10101 10101 01010', X: '10001 10001 01010 00100 01010 10001 10001',
+    Y: '10001 10001 10001 01010 00100 00100 00100', Z: '11111 00001 00010 00100 01000 10000 11111',
+    '!': '00100 00100 00100 00100 00100 00000 00100', '-': '00000 00000 00000 01110 00000 00000 00000'
+  };
+  const F5 = {};
+  Object.keys(RAW).forEach(function (k) { F5[k] = RAW[k].replace(/ /g, ''); });
+  // Letters are 5 wide plus a gap; a full stop and a space are narrow
+  function width5(str, k) {
+    k = k || 1;
+    let w = 0;
+    for (let i = 0; i < str.length; i++) w += (str[i] === ' ' || str[i] === '.' ? 3 : 6) * k;
+    return w - k;
+  }
+  function text5(g, str, x, y, col, k) {
+    k = k || 1;
+    g.fillStyle = col;
+    let cx = x;
+    for (let i = 0; i < str.length; i++) {
+      const ch = str[i];
+      if (ch === ' ') { cx += 3 * k; continue; }
+      if (ch === '.') { g.fillRect(cx, y + 5 * k, 2 * k, 2 * k); cx += 3 * k; continue; }
+      const m = F5[ch];
+      if (m) for (let b = 0; b < 35; b++) if (m[b] === '1') g.fillRect(cx + (b % 5) * k, y + Math.floor(b / 5) * k, k, k);
+      cx += 6 * k;
+    }
+    return cx;
+  }
+
+  function rng(seed) { let s = seed >>> 0; return function () { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; }
+  function hex(h) { const n = parseInt(h.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+  function byte(v) { return Math.max(0, Math.min(255, Math.round(v))); }
+  function lum(h) { const c = hex(h); return 0.3 * c[0] + 0.59 * c[1] + 0.11 * c[2]; }
+
+  const TIMES = {
+    day: {
+      mul: [1, 1, 1], add: [0, 0, 0], sky: [[0, '#2a76cf'], [0.5, '#56a4ea'], [1, '#a9d7fa']], stars: 0, glow: 0,
+      grass: ['#37994a', '#42ab52', '#4fbd5c'], stripe: 0.075, line: 0.8, pool: 0, boards: ['#1d3d70', '#2a4f8a', 0.85]
+    },
+    twilight: {
+      mul: [0.76, 0.6, 0.7], add: [12, 5, 18], sky: [[0, '#191d4b'], [0.4, '#4c3577'], [0.72, '#c95c7b'], [1, '#ffb866']], stars: 0.3, glow: 0.3,
+      grass: ['#1f6038', '#277640', '#318c4a'], stripe: 0.05, line: 0.66, pool: 0.055, boards: ['#152748', '#22365c', 0.65]
+    },
+    night: {
+      mul: [0.22, 0.27, 0.4], add: [4, 7, 14], sky: [[0, '#02050c'], [0.6, '#0c1830'], [1, '#0f1d38']], stars: 1, glow: 0.42,
+      grass: ['#174f2a', '#1f7139', '#2a8b48'], stripe: 0.045, line: 0.62, pool: 0.07, boards: ['#0c1628', '#19263f', 0.55]
+    }
+  };
+
+  function canvas(w, h) { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
+
+  /* ---------- The painter's kit: one per ground and time of day */
+  function kit(time, home, seed) {
+    const T = TIMES[time];
+    const far = canvas(FW, FH), stand = canvas(SW, SH);
+    const f = far.getContext('2d'), s = stand.getContext('2d');
+    const r = rng(seed);
+    const lit = time !== 'day';
+    const hc = (home && home.length ? home : ['#ffb21a', '#c8323b']).slice(0, 2);
+    function C(h, k) {
+      const c = hex(h), m = k == null ? 1 : k;
+      return 'rgb(' + byte(c[0] * m * T.mul[0] + T.add[0]) + ',' + byte(c[1] * m * T.mul[1] + T.add[1]) + ',' + byte(c[2] * m * T.mul[2] + T.add[2]) + ')';
+    }
+    // a lamp or a screen: its own colour when it's on, a dull daylight colour when it's off
+    function L(on, off) { return lit ? on : C(off || '#9aa3b0'); }
+    function rect(g, x, y, w, h, c) { g.fillStyle = c; g.fillRect(Math.round(x), Math.round(y), Math.max(1, Math.round(w)), Math.max(1, Math.round(h))); }
+    function line(g, x0, y0, x1, y1, c) {
+      const n = Math.max(Math.abs(x1 - x0), Math.abs(y1 - y0)) | 0;
+      g.fillStyle = c;
+      for (let i = 0; i <= n; i++) { const t = n ? i / n : 0; g.fillRect(Math.round(x0 + (x1 - x0) * t), Math.round(y0 + (y1 - y0) * t), 1, 1); }
+    }
+    function disc(g, x, y, rx, ry, c) {
+      g.fillStyle = c;
+      for (let dy = -ry; dy <= ry; dy++) { const hw = Math.round(rx * Math.sqrt(Math.max(0, 1 - (dy * dy) / (ry * ry + 0.01)))); if (hw > 0) g.fillRect(Math.round(x - hw), Math.round(y + dy), hw * 2, 1); }
+    }
+    function glow(g, x, y, rad, a, col) {
+      if (a <= 0) return;
+      const gr = g.createRadialGradient(x, y, 1, x, y, rad), c = col || '255,246,214';
+      gr.addColorStop(0, 'rgba(' + c + ',' + a + ')'); gr.addColorStop(1, 'rgba(' + c + ',0)');
+      g.fillStyle = gr; g.fillRect(x - rad, y - rad, rad * 2, rad * 2);
+    }
+    const sx = function (m) { return Math.round((m - SX0) * SPX); };
+    const fx = function (m) { return Math.round((m - FX0) * FPX); };
+
+    // the crowd, by the light it sits in
+    const homeVis = hc.filter(function (c) { return lit ? lum(c) > 50 : true; });
+    const bright = homeVis.concat(homeVis, lit ? ['#ffb21a', '#ece8dd', '#c8323b', '#4a8fd6', '#46c37b'] : ['#f1ede2', '#d8554e', '#e9c46a', '#4a8fd6', '#52b788']);
+    const pal = time === 'night' ? { bg: '#0b1323', dim: ['#1d2a44', '#22304d', '#283857', '#31415f'], pb: 0.15 }
+      : time === 'twilight' ? { bg: '#181c36', dim: ['#34385c', '#3e4368', '#4a4c73', '#57557b'], pb: 0.19 }
+        : { bg: '#27314a', dim: ['#7b88a2', '#929db3', '#62718c', '#b0a08a', '#526079', '#c2b6a2', '#8c6e62', '#a8836c', '#6c8777', '#4a5672'], pb: 0.3 };
+    /* o.seat: the colour of an empty seat (or a list, or a function of the row); o.fill: how full;
+       o.shade: darkness under a roof; o.top(x): the first row to draw at that column */
+    function crowd(x0, x1, y0, y1, o) {
+      o = o || {};
+      x0 = Math.round(x0); x1 = Math.round(x1);
+      const fill = o.fill == null ? 0.86 : o.fill;
+      if (!o.bare) rect(s, x0, y0, x1 - x0, y1 - y0, pal.bg);
+      for (let y = y0; y < y1; y += 3) {
+        const seat = typeof o.seat === 'function' ? o.seat(y) : (o.seat || '#4f5d73');
+        const seats = Array.isArray(seat) ? seat : [seat];
+        for (let x = x0; x < x1; x += 2) {
+          const u = r(), v = r(), w = r(), j = r() < 0.5 ? 0 : 1;
+          if (o.top && y < o.top(x)) continue;
+          if (u < fill) s.fillStyle = v < pal.pb ? bright[(w * bright.length) | 0] : pal.dim[(w * pal.dim.length) | 0];
+          else if (o.bare) continue;
+          else s.fillStyle = C(seats[(w * seats.length) | 0], 0.82);
+          s.fillRect(x, y + j, 2, 2);
+        }
+      }
+      if (o.shade) rect(s, x0, y0, x1 - x0, y1 - y0, 'rgba(4,8,18,' + (o.shade * (lit ? 0.7 : 1)).toFixed(2) + ')');
+    }
+    // an LED ribbon along a fascia
+    function ribbon(x0, x1, y) {
+      const cols = [hc[0], hc[1], '#f4f1e8', '#ffb21a'];
+      let x = Math.round(x0);
+      s.globalAlpha = lit ? 0.9 : 0.7;
+      while (x < x1) {
+        const w = 6 + ((r() * 10) | 0);
+        s.fillStyle = cols[(r() * 4) | 0];
+        s.fillRect(x, y, Math.min(w, x1 - x), 1);
+        x += w + 2 + ((r() * 6) | 0);
+      }
+      s.globalAlpha = 1;
+    }
+    const pools = [];
+    function tower(m, o) {
+      o = o || {};
+      const x = fx(m), top = o.top == null ? 7 : o.top, hw = o.hw || 16, hh = o.hh || 11, base = o.base || 66;
+      if (lit) glow(f, x, top + hh / 2, o.rad || 46, T.glow);
+      const mast = C('#9aa5b3'), dark = C('#5a6473');
+      if (o.lattice) {
+        for (let y = top + hh; y < base; y++) {
+          const w = 3 + Math.round((y - top - hh) / (base - top - hh) * 3);
+          f.fillStyle = mast; f.fillRect(x - (w >> 1), y, 1, 1); f.fillRect(x - (w >> 1) + w - 1, y, 1, 1);
+          if ((y - top - hh) % 5 === 2) { f.fillStyle = dark; f.fillRect(x - (w >> 1), y, w, 1); }
+        }
+      } else {
+        rect(f, x - 1, top + hh, 2, base - top - hh, mast);
+        rect(f, x, top + hh, 1, base - top - hh, dark);
+      }
+      rect(f, x - hw / 2, top, hw, hh, C('#3d4756'));
+      rect(f, x - hw / 2, top, hw, 1, C('#667284'));
+      f.fillStyle = L('#fffbea', '#b4bcc8');
+      const cols = Math.floor((hw - 1) / 4), rows = Math.floor((hh - 1) / 3);
+      const ox = Math.round(x - hw / 2 + (hw - (cols * 4 - 2)) / 2);
+      for (let rr = 0; rr < rows; rr++) for (let c = 0; c < cols; c++) f.fillRect(ox + c * 4, top + 2 + rr * 3, 2, 2);
+      pools.push(m);
+    }
+    function cloud(m, y, w) {
+      if (time === 'night') return;
+      const x = fx(m), top = time === 'day' ? '#ffffff' : '#f6bfa2', und = time === 'day' ? '#cfe2f6' : '#a8689a';
+      rect(f, x + w * 0.28, y - 2, w * 0.36, 2, top);
+      rect(f, x + 4, y, w - 9, 2, top); rect(f, x, y + 2, w, 3, top); rect(f, x + 3, y + 5, w - 7, 1, und);
+    }
+    function clouds(list) { list.forEach(function (c) { cloud(c[0], c[1], c[2]); }); }
+    // a low sun for the twilight games, and a moon for the night ones
+    function sun(m, y) {
+      if (time !== 'twilight') return;
+      const x = fx(m);
+      glow(f, x, y, 70, 0.55, '255,196,120');
+      disc(f, x, y, 6, 6, '#ffe9b4'); disc(f, x, y, 4, 4, '#fff6dc');
+    }
+    function moon(m, y) {
+      if (time !== 'night') return;
+      const x = fx(m);
+      glow(f, x, y, 16, 0.18, '214,226,255');
+      disc(f, x, y, 4, 4, '#e6ebf5');
+      f.globalCompositeOperation = 'destination-out'; disc(f, x + 2, y - 1, 4, 4, '#000'); f.globalCompositeOperation = 'source-over';
+    }
+    // a run of city buildings: [metres across, height in px] from left to right
+    function skyline(m0, list, base, col) {
+      let x = fx(m0);
+      list.forEach(function (b, i) {
+        const w = Math.round(b[0] * FPX), h = b[1];
+        if (h > 0) {
+          rect(f, x, base - h, w, h, C(col || '#8496b0', i % 2 ? 0.92 : 1));
+          rect(f, x + w - 1, base - h, 1, h, C(col || '#8496b0', 0.78));
+          for (let wy = base - h + 2; wy < base - 1; wy += 3) for (let wx = x + 1; wx < x + w - 1; wx += 2) {
+            const u = r();
+            if (lit && u < 0.34) { f.fillStyle = u < 0.05 ? '#bfe0ff' : '#ffd98a'; f.fillRect(wx, wy, 1, 1); }
+            else if (!lit && u < 0.3) { f.fillStyle = C('#5f7696'); f.fillRect(wx, wy, 1, 1); }
+          }
+        }
+        x += w + 1;
+      });
+    }
+    function ridge(y, amp, col, seed2) {
+      const q = rng(seed2 || 5);
+      const a = q() * 6, b = q() * 6;
+      f.fillStyle = col;
+      for (let x = 0; x < FW; x++) {
+        const h = Math.round(amp * (0.55 * Math.sin(x / 47 + a) + 0.45 * Math.sin(x / 19 + b)) + amp);
+        f.fillRect(x, y - h, 1, FH - y + h);
+      }
+    }
+    function trees(m0, m1, y, col) {
+      for (let x = fx(m0); x < fx(m1); x += 5 + ((r() * 5) | 0)) {
+        const rad = 3 + ((r() * 4) | 0);
+        disc(f, x, y - rad + 2, rad + 1, rad, C(col || '#2d6638', 0.85 + r() * 0.3));
+      }
+      rect(f, fx(m0), y, fx(m1) - fx(m0), FH - y, C(col || '#2d6638', 0.8));
+    }
+    function palm(x, base, h) {
+      const trunk = C('#6b5a45'), leaf = C('#2f7a3f'), leaf2 = C('#3f9450');
+      let tx = x;
+      for (let i = 0; i < h; i++) { tx = x + Math.round(Math.sin(i / h * 1.3) * 3); f.fillStyle = trunk; f.fillRect(tx, base - i, 1, 1); }
+      const ty = base - h;
+      [[-6, 2], [-5, -2], [-2, -5], [2, -5], [5, -2], [6, 2]].forEach(function (d, i) {
+        line(f, tx, ty, tx + d[0], ty + d[1], i % 2 ? leaf : leaf2);
+        f.fillStyle = leaf; f.fillRect(tx + d[0], ty + d[1] + 1, 1, 2);
+      });
+    }
+    // the usual deck arrangement: top deck, a fascia with its LED ribbon, a row of boxes, bottom deck
+    function decks(x0, x1, top, o) {
+      o = o || {};
+      const split = o.split || 28;
+      crowd(x0, x1, top, split, { seat: o.seat, shade: o.shade == null ? 0.28 : o.shade, top: o.topFn });
+      rect(s, x0, split, x1 - x0, 3, C('#d3d7dc')); ribbon(x0, x1, split + 1);
+      rect(s, x0, split + 3, x1 - x0, 4, C('#1e2632'));
+      for (let x = Math.round(x0) + 2; x < x1 - 5; x += 7) rect(s, x, split + 4, 5, 2, L('#ffdf9a', '#86a9c9'));
+      rect(s, x0, split + 7, x1 - x0, 2, C('#c1c6cc'));
+      crowd(x0, x1, split + 9, SH, { seat: o.seat });
+      rect(s, x0, split + 19, x1 - x0, 1, C('#3b4554'));
+      for (let x = Math.round(x0) + 30; x < x1 - 8; x += 72) rect(s, x, split + 14, 7, 5, C('#161b24'));
+    }
+    // a roof whose top edge follows y(x): pale skin, a shaded soffit, then shadow; clears the sky above it
+    function roofLine(x0, x1, yf, o) {
+      o = o || {};
+      for (let x = Math.round(x0); x < x1; x++) {
+        const y = Math.round(yf(x));
+        s.clearRect(x, 0, 1, y);
+        s.fillStyle = o.skin || C('#f2f4f6'); s.fillRect(x, y, 1, o.thick || 2);
+        s.fillStyle = C('#aebccb'); s.fillRect(x, y + (o.thick || 2), 1, 1);
+        s.fillStyle = C('#242b37'); s.fillRect(x, y + (o.thick || 2) + 1, 1, o.dark == null ? 3 : o.dark);
+      }
+    }
+    return {
+      T: T, time: time, lit: lit, day: time === 'day', night: time === 'night', home: hc, r: r, f: f, s: s, far: far, stand: stand,
+      C: C, L: L, rect: rect, line: line, disc: disc, glow: glow, sx: sx, fx: fx, crowd: crowd, ribbon: ribbon, tower: tower, pools: pools,
+      clouds: clouds, sun: sun, moon: moon, skyline: skyline, ridge: ridge, trees: trees, palm: palm, decks: decks, roofLine: roofLine
+    };
+  }
+
+  /* ---------- The grounds */
+  const PAINT = {
+    // No ground named: the plain night ground the game began with
+    generic: function (K) {
+      for (let i = -3; i < 7; i++) K.tower(i * 70 - 30, { top: 7, hw: 16, hh: 11, base: 66 });
+      K.moon(150, 16);
+      K.rect(K.s, 0, 14, SW, 6, K.C('#232c40'));
+      K.crowd(0, SW, 20, SH, {});
+    },
+
+    /* The MCG: one vast bowl under a slim roof, with the six light towers standing over it */
+    mcg: function (K) {
+      const s = K.s, C = K.C;
+      K.clouds([[-50, 22, 30], [40, 30, 22], [128, 20, 34], [236, 26, 26]]);
+      K.sun(64, 44); K.moon(214, 14);
+      [-76, -14, 48, 110, 172, 234, 296].forEach(function (m) { K.tower(m, { top: 3, hw: 24, hh: 12, base: 60, lattice: true, rad: 50 }); });
+      const ry = 5;
+      K.rect(s, 0, ry + 3, SW, SH - ry - 3, C('#566170'));
+      K.decks(0, SW, ry + 6, { seat: '#4d6480', split: 27 });
+      K.rect(s, 0, ry + 3, SW, 3, C('#242b37'));
+      for (let x = 22; x < SW; x += 60) {                      // masts and stays hold the roof up
+        K.line(s, x, ry - 5, x - 13, ry, C('#b9c4cf')); K.line(s, x, ry - 5, x + 13, ry, C('#b9c4cf'));
+        K.rect(s, x, ry - 5, 1, 5, C('#e3e8ed'));
+      }
+      K.rect(s, 0, ry, SW, 2, C('#eef1f4')); K.rect(s, 0, ry + 2, SW, 1, C('#a9bccb'));
+    },
+
+    /* Marvel Stadium: under lights the roof is shut, so there is steel where the sky would be */
+    marvel: function (K) {
+      const s = K.s, f = K.f, C = K.C, shut = K.lit;
+      if (shut) {
+        K.roofed = true;
+        K.rect(f, 0, 0, FW, FH, '#0c1119');
+        for (let x = -40; x < FW; x += 64) {
+          K.line(f, x, 0, x + 32, 44, '#263043'); K.line(f, x + 32, 44, x + 64, 0, '#263043');
+          K.rect(f, x + 31, 0, 2, 46, '#202a3a');
+        }
+        [10, 27].forEach(function (y) { K.rect(f, 0, y, FW, 1, '#313d55'); });
+        K.rect(f, 0, 44, FW, 2, '#3a465e');
+        for (let x = 6; x < FW; x += 64) {                     // banks of lights hung from the roof
+          K.glow(f, x + 10, 39, 34, 0.34);
+          K.rect(f, x, 36, 20, 6, '#161c27');
+          f.fillStyle = '#fffbea';
+          for (let c = 0; c < 4; c++) for (let rr = 0; rr < 2; rr++) f.fillRect(x + 3 + c * 4, 37 + rr * 3, 2, 2);
+        }
+      } else {
+        K.clouds([[-30, 16, 34], [70, 24, 26], [160, 14, 30], [250, 22, 36]]);
+      }
+      const ry = 12;
+      K.rect(s, 0, ry + 2, SW, SH - ry - 2, C('#525d6c'));
+      K.decks(0, SW, ry + 6, { seat: '#51607c', split: 29, shade: shut ? 0.5 : 0.3 });
+      K.rect(s, 0, ry + 2, SW, 4, C('#222935'));
+      // the fixed roof is a deep white truss
+      K.rect(s, 0, ry - 8, SW, 1, C('#eef1f4'));
+      for (let x = 0; x < SW; x += 12) { K.line(s, x, ry - 8, x + 6, ry, C('#c7d0da')); K.line(s, x + 6, ry, x + 12, ry - 8, C('#c7d0da')); }
+      K.rect(s, 0, ry, SW, 2, C('#e2e7ec'));
+      for (let x = 30; x < SW; x += 90) {                      // lights along the roof's leading edge
+        K.rect(s, x, ry + 2, 22, 3, C('#2c3441'));
+        s.fillStyle = K.L('#fffbea', '#b4bcc8');
+        for (let c = 0; c < 5; c++) s.fillRect(x + 2 + c * 4, ry + 3, 2, 1);
+      }
+    },
+
+    /* GMHBA Stadium, Kardinia Park: white arched roofs, one to a stand, and the tallest towers in the game */
+    gmhba: function (K) {
+      const s = K.s, C = K.C;
+      K.clouds([[-60, 30, 26], [26, 18, 36], [118, 34, 24], [196, 20, 30], [280, 30, 28]]);
+      K.sun(180, 50); K.moon(40, 18);
+      K.trees(FX0, FX1, 62);
+      [-64, 6, 76, 146, 216, 286].forEach(function (m) { K.tower(m, { top: 1, hw: 26, hh: 9, base: 68, rad: 52 }); });
+      const seg = 64, per = 70;
+      const u = function (x) { const m = SX0 + x / SPX; return ((m - 28) % per + per) % per; };
+      const roof = function (x) { return 21 - 11 * Math.sin(Math.PI * Math.min(1, u(x) / seg)); };
+      K.rect(s, 0, 10, SW, SH - 10, C('#566170'));
+      K.crowd(0, SW, 13, 38, { seat: '#1f3a6e', shade: 0.22, top: function (x) { return roof(x) + 5; } });
+      K.rect(s, 0, 38, SW, 2, C('#e3e7ec')); K.ribbon(0, SW, 39);
+      K.crowd(0, SW, 41, SH, { seat: '#1f3a6e' });
+      K.roofLine(0, SW, roof, {});
+      for (let x = 0; x < SW; x++) {
+        const v = u(x);
+        if (v >= seg) {                                        // between the stands: sky, then the concourse
+          s.clearRect(x, 0, 1, 42);
+          s.fillStyle = C('#465061'); s.fillRect(x, 42, 1, SH - 42);
+          s.fillStyle = C('#7c8695'); s.fillRect(x, 42, 1, 1);
+        } else if (v < 1 / SPX + 0.7 || v > seg - 1 / SPX - 0.7) {   // a white pylon at each end of a stand
+          s.fillStyle = C('#f4f6f8'); s.fillRect(x, 12, 1, 30);
+        }
+      }
+    },
+
+    /* The SCG: the green-roofed Members and Ladies pavilions among the modern stands, and the city behind */
+    scg: function (K) {
+      const s = K.s, f = K.f, C = K.C;
+      K.clouds([[-40, 20, 30], [60, 12, 26], [170, 24, 34], [262, 14, 26]]);
+      K.sun(-10, 46); K.moon(120, 14);
+      K.skyline(34, [[7, 16], [5, 24], [8, 20], [4, 30], [9, 14], [6, 26], [8, 18], [0, 0], [6, 12], [7, 22], [5, 15]], 62);
+      const tx = K.fx(112);                                    // Sydney Tower
+      K.rect(f, tx, 30, 2, 34, C('#8f9db3')); K.rect(f, tx - 4, 26, 10, 4, C('#c9b46a')); K.rect(f, tx - 3, 24, 8, 2, C('#a8955a'));
+      K.rect(f, tx, 14, 1, 10, C('#8f9db3')); if (K.lit) { f.fillStyle = '#ff5b4d'; f.fillRect(tx, 13, 1, 1); f.fillStyle = '#ffd98a'; f.fillRect(tx - 3, 27, 8, 1); }
+      [-62, 16, 94, 204, 282].forEach(function (m) { K.tower(m, { top: 5, hw: 20, hh: 9, base: 66 }); });
+      function modern(x0, x1) {
+        K.rect(s, x0, 12, x1 - x0, SH - 12, C('#566170'));
+        K.decks(x0, x1, 15, { seat: '#3f6f5a', split: 28 });
+        K.rect(s, x0, 12, x1 - x0, 3, C('#242b37'));
+        K.rect(s, x0, 9, x1 - x0, 2, C('#f2f4f6')); K.rect(s, x0, 11, x1 - x0, 1, C('#aebccb'));
+        for (let x = x0 + 14; x < x1; x += 40) K.rect(s, x, 4, 1, 5, C('#dfe5ea'));
+      }
+      const cream = C('#efe5c8'), cream2 = C('#c9ba95'), green = C('#5c9f89'), green2 = C('#3f7c68'), dark = C('#2a3140');
+      function pavilion(x, w, clock) {
+        K.rect(s, x, 24, w, SH - 24, dark);
+        for (let i = 0; i < 9; i++) {                          // the hipped roof, in green iron
+          const inset = Math.round((8 - i) * 1.6);
+          K.rect(s, x + inset, 15 + i, w - 2 * inset, 1, i === 0 ? green2 : green);
+          for (let xx = x + inset + 2; xx < x + w - inset - 1; xx += 4) if (i > 0) K.rect(s, xx, 15 + i, 1, 1, green2);
+        }
+        K.rect(s, x - 1, 24, w + 2, 1, cream);
+        K.crowd(x + 1, x + w - 1, 27, 36, { fill: 0.72, seat: '#39465c' });
+        for (let xx = x; xx < x + w; xx += 2) K.rect(s, xx, 25, 1, 1, cream);       // iron lace under the eave
+        for (let xx = x; xx <= x + w - 1; xx += 9) K.rect(s, xx, 25, 1, 12, cream); // verandah posts
+        K.rect(s, x + w - 1, 25, 1, 12, cream);
+        K.rect(s, x, 36, w, 2, cream); K.rect(s, x, 38, w, 1, cream2);
+        K.crowd(x, x + w, 40, SH, { seat: '#39465c' });
+        for (let xx = x; xx <= x + w - 1; xx += 18) K.rect(s, xx, 39, 1, 7, cream);
+        K.rect(s, x + w - 1, 39, 1, 7, cream);
+        if (clock) {                                           // the Members' clock tower
+          const cx = x + (w >> 1);
+          K.rect(s, cx - 4, 5, 8, 10, cream); K.rect(s, cx - 5, 10, 10, 1, cream2);
+          K.rect(s, cx - 5, 4, 10, 1, green2); K.rect(s, cx - 4, 3, 8, 1, green); K.rect(s, cx - 3, 2, 6, 1, green); K.rect(s, cx - 1, 1, 2, 1, green); K.rect(s, cx, 0, 1, 1, cream);
+          K.rect(s, cx - 2, 6, 4, 3, K.L('#fff6d8', '#fbf7ea')); K.rect(s, cx, 7, 1, 1, dark); K.rect(s, cx - 1, 7, 1, 1, dark);
+        } else {                                               // the Ladies' has a cupola at each end
+          [x + 10, x + w - 11].forEach(function (cx) {
+            K.rect(s, cx - 2, 11, 5, 5, cream); K.rect(s, cx - 3, 10, 7, 1, green2); K.rect(s, cx - 2, 9, 5, 1, green); K.rect(s, cx - 1, 8, 3, 1, green); K.rect(s, cx, 6, 1, 2, cream);
+          });
+        }
+      }
+      const p0 = K.sx(119), p1 = K.sx(185);
+      modern(0, p0); modern(p1, SW);
+      K.rect(s, p0, 39, p1 - p0, SH - 39, dark);               // the concourse between them
+      K.crowd(p0, p1, 40, SH, { seat: '#39465c', fill: 0.6 });
+      K.rect(s, p0, 38, p1 - p0, 1, cream2);
+      pavilion(K.sx(121), 93, true);
+      pavilion(K.sx(155), 87, false);
+    },
+
+    /* Engie Stadium at the Sydney Showground: a floating roof, with the giant screen standing on top of it */
+    engie: function (K) {
+      const s = K.s, f = K.f, C = K.C;
+      K.clouds([[-50, 14, 28], [36, 26, 34], [140, 12, 26], [220, 24, 30]]);
+      K.sun(210, 50); K.moon(-20, 16);
+      // the Olympic stadium's arch, away over the trees
+      const ax0 = K.fx(150), ax1 = K.fx(236);
+      for (let x = ax0; x < ax1; x++) {
+        const t = (x - ax0) / (ax1 - ax0), y = Math.round(58 - 14 * Math.sin(Math.PI * t));
+        f.fillStyle = C('#dfe6ee'); f.fillRect(x, y, 1, 1);
+        f.fillStyle = C('#93a2b8'); f.fillRect(x, y + 3, 1, 70 - y);
+        if (x % 7 === 0) { f.fillStyle = C('#c6d0dc'); f.fillRect(x, y, 1, 4); }
+      }
+      K.trees(FX0, FX1, 64);
+      [-52, 38, 128, 218, 308].forEach(function (m) { K.tower(m, { top: 5, hw: 18, hh: 10, base: 68 }); });
+      K.rect(s, 0, 22, SW, SH - 22, C('#5a6370'));
+      K.rect(s, 0, 22, SW, 2, C('#8a94a1'));
+      K.crowd(0, SW, 24, 40, { seat: ['#5c6470', '#5c6470', '#e8772e'] });
+      K.rect(s, 0, 40, SW, 2, C('#d3d7dc')); K.ribbon(0, SW, 41);
+      K.crowd(0, SW, 43, SH, { seat: ['#5c6470', '#5c6470', '#e8772e'] });
+      // the roof floats on slim columns, with daylight between it and the seats
+      for (let x = 10; x < SW; x += 34) K.rect(s, x, 16, 2, 7, C('#e6eaee'));
+      K.rect(s, 0, 13, SW, 2, C('#f2f4f6')); K.rect(s, 0, 15, SW, 1, C('#aebccb'));
+      // the screen
+      const bx = K.sx(63), bw = 96;
+      K.rect(s, bx + 10, 10, 3, 4, C('#7b8593')); K.rect(s, bx + bw - 13, 10, 3, 4, C('#7b8593'));
+      K.rect(s, bx, 0, bw, 12, C('#20262f'));
+      K.rect(s, bx + 2, 1, bw - 4, 10, '#0b0e13');
+      if (K.lit) K.glow(s, bx + bw / 2, 6, 50, 0.2, '244,122,32');
+      K.rect(s, bx + 4, 2, 10, 8, '#f47a20'); K.rect(s, bx + 6, 4, 6, 4, '#0b0e13'); K.rect(s, bx + 9, 6, 5, 2, '#f47a20');
+      text5(s, 'GIANTS', bx + 22, 2, '#f47a20');
+      K.rect(s, bx + 62, 2, 30, 1, '#5a6470'); K.rect(s, bx + 62, 5, 22, 1, '#e8e4d8'); K.rect(s, bx + 62, 8, 26, 1, '#5a6470');
+    },
+
+    /* The Gabba: a closed bowl with no towers. The lights sit in racks along the roof, and the seats are every colour */
+    gabba: function (K) {
+      const s = K.s, C = K.C;
+      K.clouds([[-40, 12, 30], [70, 22, 26], [180, 10, 34], [260, 20, 24]]);
+      K.moon(96, 12);
+      K.skyline(-70, [[10, 20], [0, 0], [8, 30], [12, 14], [0, 0], [0, 0], [9, 36], [7, 22], [0, 0], [0, 0], [11, 26], [0, 0], [8, 40], [10, 18], [0, 0], [0, 0], [9, 28], [0, 0], [12, 16], [7, 34], [0, 0], [0, 0], [10, 24], [8, 12], [0, 0], [9, 32]], 66, '#93a3ba');
+      const seat = ['#7c2242', '#e0a526', '#2e6fb3', '#2a9d8f', '#d9d4c5'];
+      const ry = 11;
+      K.rect(s, 0, ry + 2, SW, SH - ry - 2, C('#59626f'));
+      K.decks(0, SW, ry + 6, { seat: seat, split: 29 });
+      K.rect(s, 0, ry + 3, SW, 3, C('#242b37'));
+      K.rect(s, 0, ry, SW, 2, C('#ebe7dc')); K.rect(s, 0, ry + 2, SW, 1, C('#b4ad9c'));
+      for (let x = 14; x < SW; x += 84) {                      // the light racks
+        if (K.lit) K.glow(s, x + 18, ry - 6, 34, K.T.glow);
+        K.rect(s, x + 5, ry - 3, 2, 3, C('#7b8593')); K.rect(s, x + 29, ry - 3, 2, 3, C('#7b8593'));
+        K.rect(s, x, ry - 11, 36, 9, C('#333c4a')); K.rect(s, x, ry - 11, 36, 1, C('#5d6878'));
+        s.fillStyle = K.L('#fffbea', '#b4bcc8');
+        for (let c = 0; c < 8; c++) for (let rr = 0; rr < 2; rr++) s.fillRect(x + 3 + c * 4, ry - 9 + rr * 3, 2, 2);
+      }
+      K.evenPools = true;
+    },
+
+    /* People First Stadium, Carrara: a white wave of a roof, palms, and the hinterland behind */
+    pfs: function (K) {
+      const s = K.s, f = K.f, C = K.C;
+      K.clouds([[-60, 10, 34], [30, 20, 26], [120, 8, 30], [200, 18, 38], [290, 12, 26]]);
+      K.sun(40, 50); K.moon(170, 14);
+      K.ridge(60, 7, C('#6c8fb8'), 3); K.ridge(64, 4, C('#4d7f96'), 9);
+      [-66, 24, 114, 204, 294].forEach(function (m) { K.tower(m, { top: 4, hw: 14, hh: 8, base: 68 }); });
+      [-58, -22, 4, 50, 78, 96, 140, 166, 188, 236, 262, 310].forEach(function (m, i) { K.palm(K.fx(m), 70, 20 + (i * 7) % 9); });
+      const wave = function (x) { return 17 - 5 * Math.abs(Math.sin(Math.PI * x / 78)); };
+      const sun3 = function (y) { return y < 36 ? '#d43d2a' : y < 48 ? '#ea7a1f' : '#f2b21c'; };
+      K.rect(s, 0, 24, SW, SH - 24, C('#5a6370'));
+      K.rect(s, 0, 24, SW, 2, C('#8a94a1'));
+      K.crowd(0, SW, 26, 41, { seat: sun3 });
+      K.rect(s, 0, 41, SW, 2, C('#d3d7dc')); K.ribbon(0, SW, 42);
+      K.crowd(0, SW, 44, SH, { seat: sun3 });
+      for (let x = 0; x < SW; x += 78) K.rect(s, x, 17, 2, 8, C('#e6eaee'));      // a column where each wave lands
+      for (let x = 0; x < SW; x++) {
+        const y = Math.round(wave(x));
+        s.fillStyle = C('#f6f7f8'); s.fillRect(x, y, 1, 2);
+        s.fillStyle = C('#b7c4d2'); s.fillRect(x, y + 2, 1, 1);
+      }
+    },
+
+    /* Adelaide Oval: the white shells of the eastern stand, then the Hill, the old scoreboard, the figs and the cathedral */
+    adelaide: function (K) {
+      const s = K.s, f = K.f, C = K.C;
+      K.clouds([[-50, 16, 30], [40, 26, 24], [118, 12, 34], [262, 20, 30]]);
+      K.sun(160, 52); K.moon(60, 14);
+      K.ridge(63, 3, C('#7d93b0'), 11);
+      // St Peter's Cathedral
+      const cx = K.fx(203), stone = C('#bca781'), stone2 = C('#8f7c5c');
+      [cx - 8, cx + 4].forEach(function (x) {
+        K.rect(f, x, 36, 5, 34, stone); K.rect(f, x + 4, 36, 1, 34, stone2);
+        for (let i = 0; i < 14; i++) K.rect(f, x + (i < 5 ? 2 : i < 10 ? 1 : 0), 22 + i, i < 5 ? 1 : i < 10 ? 3 : 5, 1, i % 2 ? stone : stone2);
+        K.rect(f, x + 2, 19, 1, 3, stone2);
+      });
+      K.rect(f, cx - 3, 48, 7, 22, stone); K.rect(f, cx - 2, 46, 5, 2, stone); K.rect(f, cx - 1, 44, 3, 2, stone); K.rect(f, cx, 50, 1, 4, stone2);
+      // the Moreton Bay figs behind the Hill
+      [150, 166, 184, 222, 240].forEach(function (m, i) {
+        const x = K.fx(m);
+        K.disc(f, x, 60, 15, 9, C('#275a33')); K.disc(f, x - 4, 57, 8, 5, C('#34703f')); K.rect(f, x - 1, 66, 2, 8, C('#4a3a2c'));
+      });
+      K.rect(f, K.fx(136), 68, K.fx(252) - K.fx(136), FH - 68, C('#275a33'));
+      [-58, 44, 130, 262].forEach(function (m) { K.tower(m, { top: 3, hw: 16, hh: 8, base: 70 }); });
+      // the eastern stand
+      const end = K.sx(128);
+      const shell = function (x) { return 17 - 10 * Math.sin(Math.PI * (((x + 60) % 188) / 188)); };
+      K.rect(s, 0, 8, end, SH - 8, C('#566170'));
+      K.decks(0, end, 12, { seat: '#566b84', split: 30, topFn: function (x) { return shell(x) + 5; } });
+      K.roofLine(0, end, shell, {});
+      for (let x = 128 - 60; x < end; x += 188) { K.rect(s, x, 16, 2, 9, C('#f2f4f6')); }
+      // its northern end wall, in red brick
+      K.rect(s, end, 24, 9, SH - 24, C('#a4553e')); K.rect(s, end, 24, 9, 1, C('#e9dcc0'));
+      for (let y = 30; y < SH; y += 9) { K.rect(s, end + 2, y, 5, 6, C('#5a2c22')); K.rect(s, end + 3, y - 1, 3, 1, C('#5a2c22')); }
+      // the Hill
+      const h0 = end + 9, h1 = K.sx(229);
+      const hill = function (x) { return 45 - 5 * Math.sin(Math.PI * (x - h0) / (h1 - h0)); };
+      for (let x = h0; x < h1; x++) {
+        const y = Math.round(hill(x));
+        s.fillStyle = C('#3f984b'); s.fillRect(x, y, 1, SH - y);
+        s.fillStyle = C('#52b05c'); s.fillRect(x, y, 1, 1);
+      }
+      K.crowd(h0, h1, 44, SH, { bare: true, fill: 0.5, top: function (x) { return hill(x) + 2; } });
+      // the scoreboard
+      const bx = K.sx(167), bw = 74, wood = C('#22382a'), trim = C('#e9dcc0');
+      K.rect(s, bx + 6, 40, 3, 8, wood); K.rect(s, bx + bw - 9, 40, 3, 8, wood); K.rect(s, bx + (bw >> 1) - 1, 40, 3, 8, wood);
+      K.rect(s, bx, 11, bw, 30, wood);
+      K.rect(s, bx + 2, 14, bw - 4, 24, K.lit ? '#0c1410' : C('#16241b'));
+      K.rect(s, bx - 2, 9, bw + 4, 2, C('#8f3a2e')); K.rect(s, bx, 11, bw, 1, trim); K.rect(s, bx, 40, bw, 1, trim);
+      const ink = K.L('#f4f1e8', '#f4f1e8');
+      const q = K.r;
+      for (let y = 16; y < 37; y += 4) {                        // rows of white lettering
+        let x = bx + 4;
+        while (x < bx + bw - 6) { const w = 2 + ((q() * 7) | 0); if (q() < 0.8) K.rect(s, x, y, Math.min(w, bx + bw - 4 - x), 2, ink); x += w + 2; }
+      }
+      K.rect(s, bx + 24, 14, 1, 24, wood); K.rect(s, bx + 50, 14, 1, 24, wood);
+      const gx = bx + (bw >> 1);
+      K.rect(s, gx - 8, 3, 16, 6, wood); K.rect(s, gx - 9, 2, 18, 1, C('#8f3a2e')); K.rect(s, gx - 6, 1, 12, 1, C('#8f3a2e')); K.rect(s, gx - 3, 0, 6, 1, C('#8f3a2e'));
+      K.rect(s, gx - 2, 4, 4, 4, K.L('#fff6d8', '#fbf7ea')); K.rect(s, gx, 5, 1, 2, wood);
+      // the stand beyond
+      K.rect(s, h1, 12, SW - h1, SH - 12, C('#566170'));
+      K.decks(h1, SW, 16, { seat: '#566b84', split: 30 });
+      K.rect(s, h1, 10, SW - h1, 2, C('#f2f4f6')); K.rect(s, h1, 12, SW - h1, 4, C('#242b37'));
+    },
+
+    /* Optus Stadium: five steep decks under the halo roof, which glows in the home side's colours after dark */
+    optus: function (K) {
+      const s = K.s, C = K.C;
+      K.clouds([[-50, 30, 34], [50, 18, 28], [150, 34, 24], [226, 22, 36]]);
+      K.sun(96, 50); K.moon(200, 16);
+      const ry = 3, rh = 9, hc = K.home, c0 = hex(hc[0]), rgb0 = c0[0] + ',' + c0[1] + ',' + c0[2];
+      K.rect(s, 0, ry + rh, SW, SH - ry - rh, C('#59626f'));
+      K.crowd(0, SW, ry + rh + 3, SH, { seat: '#6a727c' });
+      K.rect(s, 0, ry + rh + 3, SW, 6, 'rgba(4,8,18,' + (K.lit ? 0.2 : 0.3) + ')');
+      [24, 32, 40, 49].forEach(function (y, i) { K.rect(s, 0, y, SW, 1, C('#c9ced4')); if (i === 2) K.ribbon(0, SW, y); });
+      for (let x = 40; x < SW; x += 90) K.rect(s, x, 44, 7, 5, C('#161b24'));
+      if (K.lit) {                                             // the halo, lit
+        const g = s.createLinearGradient(0, ry, 0, ry + rh);
+        g.addColorStop(0, 'rgb(' + byte(c0[0] * 0.55) + ',' + byte(c0[1] * 0.55) + ',' + byte(c0[2] * 0.55) + ')');
+        g.addColorStop(0.7, hc[0]);
+        g.addColorStop(1, 'rgb(' + byte(c0[0] * 0.5 + 128) + ',' + byte(c0[1] * 0.5 + 128) + ',' + byte(c0[2] * 0.5 + 128) + ')');
+        s.fillStyle = g; s.fillRect(0, ry, SW, rh);
+        for (let x = 0; x < SW; x += 90) { s.fillStyle = hc[1]; s.globalAlpha = 0.85; s.fillRect(x + 60, ry + 2, 30, rh - 4); s.globalAlpha = 1; }
+        const gl = s.createLinearGradient(0, ry + rh + 1, 0, ry + rh + 30);
+        gl.addColorStop(0, 'rgba(' + rgb0 + ',0.55)'); gl.addColorStop(1, 'rgba(' + rgb0 + ',0)');
+        s.fillStyle = gl; s.fillRect(0, ry + rh + 1, SW, 29);
+        const up = s.createLinearGradient(0, 0, 0, ry);
+        up.addColorStop(0, 'rgba(' + rgb0 + ',0)'); up.addColorStop(1, 'rgba(' + rgb0 + ',0.5)');
+        s.fillStyle = up; s.fillRect(0, 0, SW, ry);
+      } else {
+        K.rect(s, 0, ry, SW, rh, C('#f1f3f5')); K.rect(s, 0, ry + rh - 3, SW, 3, C('#dfe4ea'));
+      }
+      for (let x = 0; x < SW; x += 18) {                       // the roof's fabric panels
+        const c = K.lit ? 'rgba(255,255,255,0.3)' : C('#c5ced8');
+        K.line(s, x, ry + rh - 1, x + 9, ry, c); K.line(s, x + 9, ry, x + 18, ry + rh - 1, c);
+      }
+      K.rect(s, 0, ry - 1, SW, 1, K.lit ? 'rgba(255,255,255,0.8)' : C('#ffffff'));
+      K.rect(s, 0, ry + rh, SW, 1, K.L('#fffbea', '#c2c9d2'));
+      K.rect(s, 0, ry + rh + 1, SW, 2, C('#242b37'));
+      K.evenPools = true;
+    }
+  };
+
+  /* The fence: sponsor-style boards, with the ground's name on every third one */
+  function fence(key, time) {
+    const T = TIMES[time], c = canvas(480, 8), b = c.getContext('2d'), r = rng(7);
+    b.fillStyle = T.boards[0]; b.fillRect(0, 0, 480, 8);
+    const ink = ['#ffb21a', '#4fcf83', '#5aaeff', '#d8343f', '#ece8dd'];
+    const name = NAMES[key] || '';
+    const nameW = name ? (width5(name) + 6 > 40 ? 80 : 40) : 40;
+    let x = 0, i = 0;
+    while (x < 480) {
+      const isName = name && i % 3 === 2, w = isName ? nameW : 40;
+      b.fillStyle = T.boards[1]; b.fillRect(x, 0, 1, 8);
+      if (isName) {
+        b.globalAlpha = time === 'night' ? 0.8 : 0.95;
+        text5(b, name, x + 1 + Math.floor((w - width5(name)) / 2), 1, '#f4f1e8');
+      } else {
+        b.fillStyle = ink[Math.floor(r() * ink.length)];
+        b.globalAlpha = T.boards[2];
+        let bx = x + 5 + Math.floor(r() * 6);
+        for (let k = 0; k < 5; k++) { const bw = 2 + Math.floor(r() * 4); b.fillRect(bx, 2 + Math.floor(r() * 2), bw, 3); bx += bw + 1; }
+      }
+      b.globalAlpha = 1;
+      x += w; i++;
+    }
+    return c;
+  }
+
+  const cache = {};
+  function build(at, time, home) {
+    const key = PAINT[at] ? at : 'generic';
+    const tm = key === 'generic' ? 'night' : (TIMES[time] ? time : 'night');
+    const id = key + '|' + tm + '|' + (home || []).join(',');
+    if (cache[id]) return cache[id];
+    const K = kit(tm, home, 11 + key.length * 7);
+    PAINT[key](K);
+    const T = K.T;
+    const v = {
+      key: key, time: tm, roofed: !!K.roofed, far: K.far, stand: K.stand, boards: fence(key, tm),
+      sky: K.roofed ? [[0, '#0c1119'], [1, '#0c1119']] : T.sky, stars: K.roofed ? 0 : T.stars,
+      grass: T.grass, stripe: T.stripe, line: T.line, pool: T.pool, pools: K.evenPools || K.roofed ? null : K.pools,
+      // how the players' shadows fall: under lights (several, faint), in sunshine (one, crisp) or at dusk (one, long)
+      shadow: K.roofed || tm === 'night' ? 'lights' : tm === 'day' ? 'sun' : 'dusk'
+    };
+    cache[id] = v;
+    return v;
+  }
+
+  root.BON_VENUES = {
+    build: build, text5: text5, width5: width5, names: NAMES,
+    SPX: SPX, FPX: FPX, SX0: SX0, FX0: FX0, SY: SY, SW: SW, SH: SH, FW: FW, FH: FH
+  };
+})(window);
+/* Bontillion pitch: a side-on, pixel-art match on a canvas, at the opposition's home ground (venues.js),
+   by day, at twilight or under lights.
    Each kick is acted out by little players: run-up, kick, flight past the distance gates, lead and mark.
    The camera follows the ball and zooms in on the kick and the mark. */
 (function (root) {
   'use strict';
 
+  const VEN = root.BON_VENUES;
   const W = 360, H = 196;            // canvas pixels
   const P = 2;                       // one sprite pixel = 2 canvas pixels
   const PPM = 6;                     // canvas px per metre along the ground
@@ -1141,7 +1961,9 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   const GOAL = 160, CENTRE = 80;
   const POSTS = [-9.6, -3.2, 3.2, 9.6];
   const GATES = [['n15', 10], ['grub', 15], ['chip', 20], ['punt', 40], ['banana', 60]];
-  const TIER_COL = { out: '#ff6b5e', n15: '#dfe3ea', grub: '#c99460', chip: '#f4cc4f', punt: '#4fcf83', banana: '#5aaeff', siren: '#ffd54a' };
+  const BW = 78;                     // the in-stand scoreboard, in canvas pixels
+  const EVEN_POOLS = [-170, -100, -30, 40, 110, 180, 250, 320];
+  const TIER_COL = { out: '#ff6b5e', n15: '#dfe3ea', grub: '#c99460', chip: '#f4cc4f', punt: '#4fcf83', banana: '#5aaeff', post: '#c3a6ff', siren: '#ffd54a' };
 
   const KITS = {
     home: { jumper: '#1c2d55', yoke: '#ffb21a', shorts: '#ece8dd', sock: '#1c2d55', band: '#ffb21a', boot: '#101010' },
@@ -1172,24 +1994,45 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     WBD: { jumper: '#2a5bd7', yoke: '#e21937', shorts: '#f2f0ea', sock: '#2a5bd7', band: '#e21937' }
   };
   Object.keys(CLUB_KITS).forEach(function (k) { CLUB_KITS[k].boot = '#101010'; });
-  // 3 x 5 LED font for the scoreboard
-  const FONT = {
-    '0': '111101101101111', '1': '010110010010111', '2': '111001111100111', '3': '111001111001111', '4': '101101111001001',
-    '5': '111100111001111', '6': '111100111101111', '7': '111001001010010', '8': '111101111101111', '9': '111101111001111',
-    '.': '000000000000010', ' ': '000000000000000', '-': '000000111000000', '!': '010010010000010',
-    A: '010101111101101', B: '110101110101110', C: '011100100100011', D: '110101101101110', E: '111100110100111',
-    F: '111100110100100', G: '011100101101011', H: '101101111101101', I: '111010010010111', J: '001001001101010',
-    K: '101101110101101', L: '100100100100111', M: '101111111101101', N: '110101101101101', O: '010101101101010',
-    P: '110101110100100', Q: '010101101110011', R: '110101110101101', S: '011100010001110', T: '111010010010010',
-    U: '101101101101111', V: '101101101101010', W: '101101111111101', X: '101101010101101', Y: '101101010010010', Z: '111001010100111'
+  CLUB_KITS.PTA = CLUB_KITS.POR;
+  /* Pick your club: your side runs out in its real home colours. (The table above shows each club as an opponent,
+     in colours that read against navy.) Where the two sides would look alike, yours wears its clash strip. */
+  const OWN = {
+    ADE: { jumper: '#0f2c5c', yoke: '#d71f3a', shorts: '#0f2c5c', sock: '#0f2c5c', band: '#ffd200', pat: 'hoops' },
+    BRI: { jumper: '#7a0d2b', yoke: '#0055a3', shorts: '#7a0d2b', sock: '#7a0d2b', band: '#fdbe57', pat: 'yoke' },
+    CAR: { jumper: '#0e1e2d', yoke: '#f2f0ea', shorts: '#0e1e2d', sock: '#0e1e2d', band: '#f2f0ea', pat: 'mono' },
+    MEL: { jumper: '#0f1131', yoke: '#cc2031', shorts: '#0f1131', sock: '#cc2031', band: '#0f1131', pat: 'yoke' },
+    PTA: { jumper: '#111111', yoke: '#00a3a7', shorts: '#111111', sock: '#111111', band: '#f2f0ea' },
+    WCE: { jumper: '#00308f', yoke: '#f2a900', shorts: '#00308f', sock: '#00308f', band: '#f2a900', pat: 'yoke' }
   };
-  function ledText(g, str, x, y, col, scale) {
-    const k = scale || 1;
-    g.fillStyle = col;
-    for (let i = 0; i < str.length; i++) {
-      const m = FONT[str[i]] || FONT[' '];
-      for (let b = 0; b < 15; b++) if (m[b] === '1') g.fillRect(x + i * 4 * k + (b % 3) * k, y + Math.floor(b / 3) * k, k, k);
-    }
+  Object.keys(OWN).forEach(function (k) { OWN[k].boot = '#101010'; });
+  const CLUBS = ['ADE', 'BRI', 'CAR', 'COL', 'ESS', 'FRE', 'GEE', 'GCS', 'GWS', 'HAW', 'MEL', 'NTH', 'PTA', 'RIC', 'STK', 'SYD', 'WCE', 'WBD'];
+  function rgb(hex) { const n = parseInt(hex.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+  function ownKit(ab) { return OWN[ab] || CLUB_KITS[ab] || null; }
+  function clashKit(ab) {
+    if (OWN[ab]) return CLUB_KITS[ab];
+    const k = CLUB_KITS[ab], c = rgb(k.jumper), light = 0.3 * c[0] + 0.59 * c[1] + 0.11 * c[2] > 170;
+    const main = light ? k.yoke : k.jumper, white = '#f2f0ea';
+    // a plain strip, so stripes and hoops can't be mistaken for each other
+    return light ? { jumper: main, yoke: white, shorts: main, sock: main, band: white, boot: '#101010' }
+      : { jumper: white, yoke: main, shorts: main, sock: main, band: white, boot: '#101010' };
+  }
+  // how a jumper reads from the boundary: its main colour, or the mix where it's striped or hooped
+  function tone(k) {
+    const a = rgb(k.jumper);
+    if (k.pat !== 'stripes' && k.pat !== 'hoops') return a;
+    const b = rgb(k.yoke);
+    return [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2, (a[2] + b[2]) / 2];
+  }
+  function alike(k1, k2) { const a = tone(k1), b = tone(k2); return Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]) < 90; }
+  /* Who wears what. No club (or playing your own club): our navy and amber against the opposition table above.
+     With a club: both sides in home colours, yours in its clash strip if they'd look alike. */
+  function strips(club, opp) {
+    const def = { us: KITS.home, them: CLUB_KITS[opp] || KITS.away, me: 'YOU' };
+    if (!club || !CLUB_KITS[club] || club === opp || (club === 'PTA' && opp === 'POR')) return def;
+    const them = ownKit(opp) || KITS.away;
+    const us = [ownKit(club), clashKit(club)].filter(function (k) { return !alike(k, them); })[0];
+    return us ? { us: us, them: them, me: club } : { us: KITS.home, them: CLUB_KITS[opp] || KITS.away, me: club };
   }
   const SKIN = ['#f1c9a0', '#e0ac69', '#c68642', '#8d5524', '#5c3a21'];
   const HAIR = ['#2b1d14', '#5a3825', '#151515', '#b5854b', '#3a2a20'];
@@ -1232,46 +2075,27 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     fist: function (t) { return { fl: [0.15, 0.2], bl: [-0.12, 0.2], fa: [2.9, 0.9 + Math.sin(t * 10) * 0.3], ba: [0.2, 0.4], lean: 0, crouch: 0, z: Math.abs(Math.sin(t * 6)) * 3 }; },
     hands: function () { return { fl: [0.05, 0.1], bl: [-0.05, 0.1], fa: [1.45, 1.6], ba: [1.3, 1.7], lean: -0.1, crouch: 0, z: 0 }; },
     signal: function () { return { fl: [0.05, 0.1], bl: [-0.05, 0.1], fa: [1.57, 0.02], ba: [1.5, 0.02], lean: 0, crouch: 0, z: 0 }; },
+    signal1: function () { return { fl: [0.05, 0.1], bl: [-0.05, 0.1], fa: [1.57, 0.02], ba: [0.15, 0.3], lean: 0, crouch: 0, z: 0 }; },
+    wave1: function (t) { return { fl: [0.05, 0.1], bl: [-0.05, 0.1], fa: [2.45 + Math.sin(t * 15) * 0.5, 0.1], ba: [0.15, 0.3], lean: 0, crouch: 0, z: 0 }; },
     wave: function (t) { return { fl: [0.05, 0.1], bl: [-0.05, 0.1], fa: [2.45 + Math.sin(t * 15) * 0.5, 0.1], ba: [2.45 - Math.sin(t * 15) * 0.5, 0.1], lean: 0, crouch: 0, z: 0 }; },
     playOn: function (t) { return { fl: [0.05, 0.1], bl: [-0.05, 0.1], fa: [1.45 + Math.sin(t * 11) * 0.55, 0.05], ba: [0.15, 0.3], lean: 0.05, crouch: 0, z: 0 }; },
     bounce: function (k) { return { fl: [0.2, 0.3], bl: [-0.25, 0.3], fa: [lerp(2.8, 0.4, easeIn(k)), 0.1], ba: [0.2, 0.3], lean: lerp(0, 0.9, k), crouch: lerp(0, 1.2, k), z: 0 }; },
     sad: function () { return { fl: [0.05, 0.1], bl: [-0.05, 0.1], fa: [0.3, 2.3], ba: [0.2, 2.4], lean: 0.4, crouch: 0.4, z: 0 }; }
   };
 
-  /* ---------- Static textures, made once */
+  /* ---------- The stars, placed once */
   let TEX = null;
   function textures() {
     if (TEX) return TEX;
     const r = rng(7);
-    const crowd = document.createElement('canvas'); crowd.width = 720; crowd.height = 38;
-    const g = crowd.getContext('2d');
-    g.fillStyle = '#0b1323'; g.fillRect(0, 0, 720, 38);
-    const dim = ['#1d2a44', '#22304d', '#283857', '#31415f'];
-    const bright = ['#ffb21a', '#c8323b', '#ece8dd', '#4a8fd6', '#46c37b', '#7a4e2d'];
-    for (let y = 1; y < 38; y += 3) {
-      for (let x = 0; x < 720; x += 2) {
-        if (r() < 0.86) {
-          g.fillStyle = r() < 0.86 ? dim[Math.floor(r() * dim.length)] : bright[Math.floor(r() * bright.length)];
-          g.fillRect(x, y + (r() < 0.5 ? 0 : 1), 2, 2);
-        }
-      }
-      if (y % 12 === 10) { g.fillStyle = '#060b16'; g.fillRect(0, y + 1, 720, 1); }
-    }
-    const boards = document.createElement('canvas'); boards.width = 480; boards.height = 8;
-    const b = boards.getContext('2d');
-    b.fillStyle = '#0c1628'; b.fillRect(0, 0, 480, 8);
-    const ink = ['#ffb21a', '#4fcf83', '#5aaeff', '#d8343f', '#ece8dd'];
-    for (let x = 0; x < 480; x += 40) {
-      b.fillStyle = '#19263f'; b.fillRect(x, 0, 1, 8);
-      b.fillStyle = ink[Math.floor(r() * ink.length)];
-      b.globalAlpha = 0.55;
-      let bx = x + 5 + Math.floor(r() * 6);
-      for (let i = 0; i < 5; i++) { const w = 2 + Math.floor(r() * 4); b.fillRect(bx, 2 + Math.floor(r() * 2), w, 3); bx += w + 1; }
-      b.globalAlpha = 1;
-    }
     const stars = [];
     for (let i = 0; i < 46; i++) stars.push({ x: r() * 720, y: r() * 48, p: r() * 6.28, b: 0.25 + r() * 0.6 });
-    TEX = { crowd: crowd, boards: boards, stars: stars };
+    // rain streaks, wind lines and blown leaves: fixed lanes, moved by the clock
+    const rain = [], gusts = [], leaves = [];
+    for (let i = 0; i < 110; i++) rain.push({ x: r() * (W + 60), y: r() * H, v: 0.8 + r() * 0.5, big: r() < 0.12 });
+    for (let i = 0; i < 12; i++) gusts.push({ y: 12 + r() * 172, len: 18 + r() * 30, v: 0.7 + r() * 0.6, p: r() });
+    for (let i = 0; i < 20; i++) leaves.push({ y: 96 + r() * 96, v: 0.6 + r() * 0.8, p: r() * 6.28, c: ['#b08a3a', '#8a6a2a', '#e8e4d8', '#6f8a3a'][i % 4] });
+    TEX = { stars: stars, rain: rain, gusts: gusts, leaves: leaves };
     return TEX;
   }
 
@@ -1286,8 +2110,18 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     const ctx = buf.getContext('2d');
     view.imageSmoothingEnabled = false;
     const tex = textures();
-    const sky = ctx.createLinearGradient(0, 0, 0, 60); sky.addColorStop(0, '#02050c'); sky.addColorStop(1, '#0c1830');
-    const grass = ctx.createLinearGradient(0, 108, 0, H); grass.addColorStop(0, '#174f2a'); grass.addColorStop(0.45, '#1f7139'); grass.addColorStop(1, '#2a8b48');
+    // The ground and the light: the far strip, the stands, the fence, the sky and the grass all come from the venue
+    let V = null, sky = null, grass = null;
+    function setVenue(at, time, home) {
+      const v = VEN.build(at, time, home);
+      if (v === V) return;
+      V = v;
+      sky = ctx.createLinearGradient(0, 0, 0, 100);
+      V.sky.forEach(function (c) { sky.addColorStop(c[0], c[1]); });
+      grass = ctx.createLinearGradient(0, 108, 0, H);
+      grass.addColorStop(0, V.grass[0]); grass.addColorStop(0.45, V.grass[1]); grass.addColorStop(1, V.grass[2]);
+    }
+    setVenue(null, 'night', null);
 
     function actor(kit, skin, hair) { return { kit: KITS[kit], skin: SKIN[skin], hair: HAIR[hair], x: 0, d: 0, f: 1, pose: POSE.stand(0), vis: true }; }
     const A = {
@@ -1304,9 +2138,11 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       ball: { x: 0, d: 0.4, z: 0, rot: 0, held: 'a', vis: true, s: 1 },
       gates: [], gateFrom: 0, gateFade: 0,
       script: null, mode: 'idle', t: 0, last: 0,
-      cheer: 0, flash: 0, flashCol: '#fff', iris: 1, flags: 0, flagT: 0,
+      cheer: 0, flash: 0, flashCol: '#fff', iris: 1, flags: 0, flagN: 2, flagT: 0,
+      shake: 0, spark: 0,
       running: false, raf: 0, visible: true, trail: [],
-      board: null, boardTex: null, boardFlash: 0
+      board: null, boardTex: null, boardFlash: 0, boardWord: 'GOAL', wordTex: {},
+      wx: null, club: null, setShot: false, banner: null, party: null
     };
 
     function emit(name, data) { if (opts.onEvent) try { opts.onEvent(name, data || {}); } catch (e) { /* ignore */ } }
@@ -1375,6 +2211,8 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
           if (kit.pat === 'stripes') col = ((cx - x0) & 1) ? kit.yoke : kit.jumper;
           else if (kit.pat === 'hoops') col = ((cy - top) & 1) ? kit.yoke : kit.jumper;
           else if (kit.pat === 'sash') col = (Math.abs((cx - x0) - (cy - top) * 0.6) < 0.8) ? kit.yoke : kit.jumper;
+          else if (kit.pat === 'yoke') col = cy <= top + 1 ? kit.yoke : kit.jumper;                    // colour across the shoulders only
+          else if (kit.pat === 'mono') col = (cy === top + 2 && cx > x0 && cx < x0 + 3) ? kit.yoke : kit.jumper;      // a plain jumper with a monogram
           cell(cx, cy, col);
         }
       }
@@ -1404,6 +2242,20 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     function shadow(x, d, z, w) {
       const sx = px(x, d), sy = py(d);
       const k = clamp(1 - z / 90, 0.3, 1);
+      if (V.shadow === 'sun') {
+        // sunshine: one crisp shadow
+        ctx.fillStyle = 'rgba(0,0,0,' + (0.3 * k).toFixed(2) + ')';
+        ctx.beginPath(); ctx.ellipse(sx + 2 + w * 0.45, sy + 1.5, w * 1.05 * k, 2.3 * k, 0, 0, Math.PI * 2); ctx.fill();
+        return;
+      }
+      if (V.shadow === 'dusk') {
+        // a low sun: one long shadow, and a first faint one from the lights
+        ctx.fillStyle = 'rgba(0,0,0,' + (0.24 * k).toFixed(2) + ')';
+        ctx.beginPath(); ctx.ellipse(sx + 2 + w * 1.25, sy + 1.5, w * 1.9 * k, 2.1 * k, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = 'rgba(0,0,0,' + (0.14 * k).toFixed(2) + ')';
+        ctx.beginPath(); ctx.ellipse(sx + 1, sy + 1, w * k, 2.2 * k, 0, 0, Math.PI * 2); ctx.fill();
+        return;
+      }
       ctx.fillStyle = 'rgba(0,0,0,' + (0.34 * k).toFixed(2) + ')';
       ctx.beginPath(); ctx.ellipse(sx + 1, sy + 1, w * k, 2.2 * k, 0, 0, Math.PI * 2); ctx.fill();
       // floodlights throw extra faint shadows
@@ -1431,17 +2283,22 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       }
     }
 
-    function drawPosts(x, d, tall) {
+    function drawPosts(x, d, tall, wob) {
       const sx = px(x, d), sy = py(d), h = tall ? 46 : 26;
       ctx.fillStyle = '#f4f1e8'; ctx.fillRect(Math.round(sx) - 1, Math.round(sy - h), 2, h);
       ctx.fillStyle = '#b9b4a6'; ctx.fillRect(Math.round(sx), Math.round(sy - h), 1, h);
+      if (wob) {
+        // struck: the top of the post shudders
+        ctx.fillStyle = '#f4f1e8'; ctx.fillRect(Math.round(sx) - 1 + wob, Math.round(sy - h), 2, 22);
+        ctx.fillStyle = '#b9b4a6'; ctx.fillRect(Math.round(sx) + wob, Math.round(sy - h), 1, 22);
+      }
       ctx.fillStyle = '#ffb21a'; ctx.fillRect(Math.round(sx) - 2, Math.round(sy - 8), 4, 8);
       ctx.fillStyle = '#c98b12'; ctx.fillRect(Math.round(sx) + 1, Math.round(sy - 8), 1, 8);
     }
 
     function drawFlags(a, info, t) {
       // goal umpire's flags, held in both hands
-      [info.hand, info.hand2].forEach(function (h, i) {
+      (st.flagN === 1 ? [info.hand] : [info.hand, info.hand2]).forEach(function (h, i) {
         const wob = Math.sin(t * 16 + i * 1.7) * 2;
         ctx.fillStyle = '#9c968a'; ctx.fillRect(Math.round(h.x), Math.round(h.y - 9), 1, 9);
         ctx.fillStyle = '#ffffff'; ctx.fillRect(Math.round(h.x + (a.f > 0 ? 1 : -6)), Math.round(h.y - 9 + wob * 0.3), 6, 4);
@@ -1452,33 +2309,16 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     function render(now) {
       const cam = st.cam, t = now;
       // sky and stars
-      ctx.fillStyle = sky; ctx.fillRect(0, 0, W, 60);
-      tex.stars.forEach(function (s) {
+      ctx.fillStyle = sky; ctx.fillRect(0, 0, W, 108);
+      if (V.stars > 0) tex.stars.forEach(function (s) {
         const x = ((s.x - cam.x * PPM * 0.05) % 720 + 720) % 720;
         if (x > W) return;
-        const b = s.b * (0.6 + 0.4 * Math.sin(t * 1.7 + s.p));
+        const b = s.b * (0.6 + 0.4 * Math.sin(t * 1.7 + s.p)) * V.stars;
         ctx.fillStyle = 'rgba(255,255,255,' + b.toFixed(2) + ')'; ctx.fillRect(Math.round(x), Math.round(s.y), 1, 1);
       });
-      // floodlight towers
-      for (let i = -2; i < 6; i++) {
-        const wx = i * 70 - 30;
-        const x = (wx - cam.x) * PPM * 0.28 + W / 2;
-        if (x < -40 || x > W + 40) continue;
-        const gl = ctx.createRadialGradient(x, 14, 2, x, 14, 46);
-        gl.addColorStop(0, 'rgba(255,246,214,0.42)'); gl.addColorStop(1, 'rgba(255,246,214,0)');
-        ctx.fillStyle = gl; ctx.fillRect(x - 46, 0, 92, 70);
-        ctx.fillStyle = '#18233a'; ctx.fillRect(Math.round(x) - 1, 18, 2, 44);
-        ctx.fillStyle = '#1d2a44'; ctx.fillRect(Math.round(x) - 8, 7, 16, 11);
-        ctx.fillStyle = '#fffbea';
-        for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++) ctx.fillRect(Math.round(x) - 6 + c * 4, 9 + r * 3, 2, 2);
-      }
-      // stands
-      ctx.fillStyle = '#080e1b'; ctx.fillRect(0, 54, W, 6);
-      ctx.fillStyle = '#0b1323'; ctx.fillRect(0, 60, W, 40);
-      const off = ((cam.x * PPM * 0.5) % 720 + 720) % 720;
-      const w1 = Math.min(W, 720 - off);
-      ctx.drawImage(tex.crowd, off, 0, w1, 38, 0, 61, w1, 38);
-      if (w1 < W) ctx.drawImage(tex.crowd, 0, 0, W - w1, 38, w1, 61, W - w1, 38);
+      // the far strip (light towers, skyline, trees), then the stands
+      ctx.drawImage(V.far, Math.round((VEN.FX0 - cam.x) * PPM * 0.28 + W / 2), 0);
+      ctx.drawImage(V.stand, Math.round((VEN.SX0 - cam.x) * PPM * 0.5 + W / 2), VEN.SY);
       if (st.cheer > 0) {
         // the crowd rises and the camera flashes go off
         ctx.fillStyle = 'rgba(255,236,190,' + (0.12 * st.cheer).toFixed(2) + ')'; ctx.fillRect(0, 60, W, 40);
@@ -1487,33 +2327,39 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
           for (let i = 0; i < 26 * st.cheer; i++) { ctx.fillStyle = '#ffffff'; ctx.fillRect((r() * W) | 0, 61 + ((r() * 36) | 0), 1, 1); }
         }
       }
+      if (st.wx === 'rain') {
+        // low cloud: the sky and the far side dull right down, the stands a little
+        const c = V.time === 'night' ? '8,13,26' : V.time === 'twilight' ? '34,34,62' : '76,86,104';
+        ctx.fillStyle = 'rgba(' + c + ',' + (V.time === 'day' ? 0.62 : 0.4) + ')'; ctx.fillRect(0, 0, W, 60);
+        ctx.fillStyle = 'rgba(' + c + ',' + (V.time === 'day' ? 0.3 : 0.22) + ')'; ctx.fillRect(0, 60, W, 40);
+      }
       // the scoreboards, set into the stands at each end of the wing
       if (st.board && opts.boards !== false) {
-        if (!st.boardTex) st.boardTex = boardTexture(false);
+        if (!st.boardTex) st.boardTex = boardTexture(null);
         const flashOn = st.boardFlash > 0 && (noFlash || Math.floor(st.boardFlash * 5) % 2 === 0);
-        const bt = flashOn ? (st.goalTex || (st.goalTex = boardTexture(true))) : st.boardTex;
+        const bt = flashOn ? (st.wordTex[st.boardWord] || (st.wordTex[st.boardWord] = boardTexture(st.boardWord))) : st.boardTex;
         // Either side of the centre, spaced so both are in shot at the bounce however narrow the view
         // (a tall phone view is zoomed in and shows less of the width).
         // The idle camera sits at the bounce + 4 m, zoomed to 1.35.
         const half = W / Math.max(1.35, canvas.height / H) / 2;
-        const d = clamp((half - 40) / 3, 14, 40);
+        const d = clamp((half - BW / 2 - 4) / 3, 15, 40);
         [84 - d, 84 + d].forEach(function (wx) {
-          const bx = Math.round((wx - cam.x) * PPM * 0.5 + W / 2 - 33);
-          if (bx < -70 || bx > W + 4) return;
+          const bx = Math.round((wx - cam.x) * PPM * 0.5 + W / 2 - BW / 2);
+          if (bx < -BW - 4 || bx > W + 4) return;
           ctx.globalAlpha = st.gates.length ? 0.35 : 1;     // stay out of the way of the landing labels
-          ctx.fillStyle = 'rgba(255,178,26,0.06)'; ctx.fillRect(bx - 3, 62, 72, 29);
+          ctx.fillStyle = 'rgba(255,178,26,0.06)'; ctx.fillRect(bx - 3, 62, BW + 6, 29);
           ctx.drawImage(bt, bx, 64);
           ctx.globalAlpha = 1;
         });
       }
       // fence boards
-      const offb = ((cam.x * PPM * 0.85) % 480 + 480) % 480;
+      const offb = Math.round(((cam.x * PPM * 0.85) % 480 + 480) % 480);
       const wb = Math.min(W, 480 - offb);
-      ctx.drawImage(tex.boards, offb, 0, wb, 8, 0, 100, wb, 8);
-      if (wb < W) ctx.drawImage(tex.boards, 0, 0, W - wb, 8, wb, 100, W - wb, 8);
+      ctx.drawImage(V.boards, offb, 0, wb, 8, 0, 100, wb, 8);
+      if (wb < W) ctx.drawImage(V.boards, 0, 0, W - wb, 8, wb, 100, W - wb, 8);
       // grass with mown stripes
       ctx.fillStyle = grass; ctx.fillRect(0, 108, W, H - 108);
-      ctx.fillStyle = 'rgba(255,255,255,0.045)';
+      ctx.fillStyle = 'rgba(255,255,255,' + V.stripe + ')';
       const s0 = Math.floor((cam.x - 40) / 12), s1 = Math.ceil((cam.x + 40) / 12);
       for (let i = s0; i <= s1; i++) {
         if (i % 2) continue;
@@ -1522,16 +2368,17 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
         ctx.moveTo(px(x0, -28), py(-28)); ctx.lineTo(px(x1, -28), py(-28)); ctx.lineTo(px(x1, 31), py(31)); ctx.lineTo(px(x0, 31), py(31));
         ctx.closePath(); ctx.fill();
       }
-      // pools of floodlight on the grass
-      for (let i = -2; i < 6; i++) {
-        const x = ((i * 70 - 30) - cam.x) * PPM * 0.28 + W / 2;
-        if (x < -80 || x > W + 80) continue;
+      if (st.wx === 'rain') { ctx.fillStyle = 'rgba(8,22,50,0.17)'; ctx.fillRect(0, 108, W, H - 108); }      // wet turf
+      // pools of floodlight on the grass, under each tower (or evenly, where the lights are in the roof)
+      if (V.pool > 0) (V.pools || EVEN_POOLS).forEach(function (m) {
+        const x = (m - cam.x) * PPM * 0.28 + W / 2;
+        if (x < -80 || x > W + 80) return;
         const pg = ctx.createRadialGradient(x, 150, 4, x, 150, 70);
-        pg.addColorStop(0, 'rgba(255,248,220,0.07)'); pg.addColorStop(1, 'rgba(255,248,220,0)');
+        pg.addColorStop(0, 'rgba(255,248,220,' + V.pool + ')'); pg.addColorStop(1, 'rgba(255,248,220,0)');
         ctx.fillStyle = pg; ctx.fillRect(x - 70, 108, 140, H - 108);
-      }
+      });
       // markings
-      const L = 'rgba(244,241,232,0.62)';
+      const L = 'rgba(244,241,232,' + V.line + ')';
       line(0, 109, W, 109, 'rgba(244,241,232,0.5)');
       [55, 105].forEach(function (x) { worldLine(x, -28, x, 31, L); });
       for (let i = 0; i < 64; i++) {
@@ -1570,7 +2417,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       const items = [];
       POSTS.forEach(function (dd, i) {
         const tall = i === 1 || i === 2;
-        items.push({ d: dd, draw: function () { drawPosts(GOAL, dd, tall); } });
+        items.push({ d: dd, draw: function () { drawPosts(GOAL, dd, tall, i === 2 && st.shake > 0 ? Math.round(Math.sin(t * 70) * 1.6 * st.shake) : 0); } });
         items.push({ d: dd, draw: function () { drawPosts(0, dd, tall); } });
       });
       const infos = {};
@@ -1602,11 +2449,31 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
               ctx.fillRect(Math.round(p[0] - st.cam.x * PPM) - 1, Math.round(p[1]) - 1, 2, 2);
             });
           }
-          drawBall(bx, by, B.rot, B.s * (1 + B.z / 200), !!st.script);
+          drawBall(bx, by, B.rot, B.s * (1 + B.z / 200), !!st.script && V.shadow !== 'sun');
         } });
       } else st.trail = [];
+      if (st.banner) items.push({ d: -3, draw: drawBanner });
       items.sort(function (a, b) { return a.d - b.d; });
       items.forEach(function (it) { it.draw(); });
+      if (st.wx) drawWeather(t);
+      if (st.party) {
+        // premiership confetti
+        const r = rng(5), cols = st.party.cols, age = t - st.party.t0;
+        for (let i = 0; i < 130; i++) {
+          const x0 = r() * (W + 40) - 20, sp = 24 + r() * 30, ph = r() * 6.28;
+          const y = ((r() * (H + 10) + age * sp) % (H + 10)) - 6, x = x0 + Math.sin(age * 2.2 + ph) * 7;
+          ctx.fillStyle = cols[i % cols.length];
+          ctx.fillRect(x | 0, y | 0, i % 3 ? 2 : 3, Math.sin(age * 9 + ph) > 0 ? 2 : 1);
+        }
+      }
+      if (st.spark > 0) {
+        // the ball cannons into the post
+        const qx = px(GOAL, 3.2), qy = py(3.2) - 33, n = 2 + Math.round((1 - st.spark) * 7);
+        ctx.fillStyle = '#ffffff';
+        [[1, 0], [-1, 0], [0, 1], [0, -1], [1, 1], [-1, -1], [1, -1], [-1, 1]].forEach(function (v) {
+          ctx.fillRect(Math.round(qx + v[0] * n) - 1, Math.round(qy + v[1] * n) - 1, 2, 2);
+        });
+      }
 
       // full-screen flash (goals, the siren)
       if (st.flash > 0 && !noFlash) {
@@ -1640,9 +2507,68 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       }
     }
 
+    /* Rain falls across the whole picture; wind sends streaks and leaves down the ground. Looks only. */
+    function drawWeather(t) {
+      const cam = st.cam;
+      if (st.wx === 'rain') {
+        const night = V.time === 'night', span = W + 60;
+        tex.rain.forEach(function (d) {
+          const sp = d.v * (d.big ? 430 : 330);
+          const y = ((d.y + t * sp) % (H + 12)) - 6;
+          const x = (((d.x - t * sp * 0.22 - cam.x * PPM * (d.big ? 1 : 0.6)) % span) + span) % span - 30;
+          ctx.fillStyle = 'rgba(206,222,255,' + (d.big ? 0.58 : night ? 0.32 : 0.4) + ')';
+          ctx.fillRect(x | 0, y | 0, 1, d.big ? 4 : 3);
+          ctx.fillRect((x | 0) - 1, (y | 0) + (d.big ? 4 : 3), 1, d.big ? 3 : 2);
+        });
+        const r = rng(((t * 9) | 0) + 3);                      // drops hitting the turf
+        ctx.fillStyle = 'rgba(222,236,255,0.34)';
+        for (let i = 0; i < 9; i++) { const x = (r() * W) | 0, y = 112 + ((r() * (H - 114)) | 0); ctx.fillRect(x - 1, y, 3, 1); }
+      } else if (st.wx === 'wind') {
+        // gusts running down the ground: pale bands across the grass, streaks in the air, leaves and litter
+        for (let i = 0; i < 3; i++) {
+          const gx = (((t * 190 + i * 210) % (W + 260)) - 130), a = 0.05 + 0.03 * Math.sin(t * 1.3 + i);
+          ctx.fillStyle = 'rgba(255,255,255,' + a.toFixed(3) + ')';
+          ctx.beginPath(); ctx.moveTo(gx, 110); ctx.lineTo(gx + 46, 110); ctx.lineTo(gx + 96, H); ctx.lineTo(gx + 50, H); ctx.closePath(); ctx.fill();
+        }
+        tex.gusts.forEach(function (g) {
+          const span = W + 120, x = ((g.p * span + t * g.v * 520) % span) - 60;
+          const a = Math.max(0.16, (V.time === 'day' ? 0.42 : 0.3) + 0.16 * Math.sin(t * 2 + g.p * 9));
+          ctx.fillStyle = 'rgba(255,255,255,' + a.toFixed(2) + ')';
+          ctx.fillRect(x | 0, g.y | 0, g.len | 0, 1);
+          ctx.fillRect((x | 0) + 6, (g.y | 0) + 2, (g.len * 0.55) | 0, 1);
+        });
+        tex.leaves.forEach(function (l, i) {
+          const span = W + 40, x = (((i * 61 + t * l.v * 260 - cam.x * PPM * 0.9) % span) + span) % span - 20;
+          const y = l.y + Math.sin(t * 6 + l.p) * 6;
+          ctx.fillStyle = l.c;
+          ctx.fillRect(x | 0, y | 0, 2, 2);
+          if (Math.sin(t * 9 + l.p) > 0) ctx.fillRect((x | 0) + 2, (y | 0) - 1, 1, 1);
+        });
+      }
+    }
+
+    /* The run-through banner: crepe paper on two poles. Once it's torn the middle is gone and the rest flaps. */
+    function drawBanner() {
+      const b = st.banner, bx = Math.round(px(b.x, -3)), by = Math.round(py(-3));
+      const w = b.tex.width, h = b.tex.height, top = by - 54, x0 = bx - w / 2;
+      ctx.fillStyle = '#d8d2c2'; ctx.fillRect(x0 - 2, top - 2, 2, 56); ctx.fillRect(x0 + w, top - 2, 2, 56);
+      ctx.fillStyle = '#8f897a'; ctx.fillRect(x0 - 1, top - 2, 1, 56); ctx.fillRect(x0 + w + 1, top - 2, 1, 56);
+      if (b.torn == null) { ctx.drawImage(b.tex, x0, top); return; }
+      const k = Math.min(1, b.torn * 2.4), keep = Math.round(lerp(w / 2, 9, k)), flap = k >= 1 ? Math.round(Math.sin(st.t * 17) * 1.4) : 0;
+      ctx.drawImage(b.tex, 0, 0, keep, h, x0, top + flap, keep, h);
+      ctx.drawImage(b.tex, w - keep, 0, keep, h, x0 + w - keep, top - flap, keep, h);
+      const r = rng(91);
+      for (let i = 0; i < 28; i++) {                            // scraps of paper
+        const a = r() * 6.28, sp = 16 + r() * 50, life = b.torn * (0.8 + r() * 0.7), out = Math.min(1, life * 1.7);
+        const x = bx + Math.cos(a) * sp * out + life * 24, y = top + h / 2 + Math.sin(a) * sp * 0.5 * out + life * life * 44;
+        if (y > by + 6 || life > 1.7) continue;
+        ctx.fillStyle = i % 3 ? b.paper : b.ink; ctx.fillRect(x | 0, y | 0, 2, 2);
+      }
+    }
+
     /* ---------- Placement */
     function placeIdle(pos, centre) {
-      st.pos = pos;
+      st.pos = pos; st.setShot = false;
       const c = A[st.carrier], m = A[st.mate];
       c.x = pos + 0.2; c.d = 0.4; c.f = 1; c.vis = true;
       m.x = Math.min(pos + 16, GOAL - 6); m.d = -2; m.f = -1; m.vis = m.x > pos + 4;
@@ -1663,6 +2589,17 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       A.opp.pose = POSE.ready(t + 0.4);
       A.ump.pose = POSE.stand(t + 0.8);
       A.gu.pose = POSE.stand(t); A.gu0.pose = POSE.stand(t + 2);
+      if (st.setShot) {
+        // a set shot: the kicker walks back off the mark, eyes on goal, while the umpire holds the line
+        const back = st.pos - 4.6;
+        if (c.x > back + 0.05) { c.x = Math.max(back, c.x - 0.085); c.f = 1; c.pose = POSE.runBall(-t * 8); }
+        A.ump.x += (st.pos + 0.9 - A.ump.x) * 0.09; A.ump.d += (-1.7 - A.ump.d) * 0.09; A.ump.f = 1; A.ump.pose = POSE.signal1();
+        st.cam.tx = st.pos + 1.5;
+      }
+      if (st.party) {
+        c.pose = POSE.celebrate(t); m.pose = POSE.celebrate(t + 0.4); m.f = -1;
+        A.opp.pose = POSE.sad(); A.ump.pose = POSE.stand(t);
+      }
     }
 
     /* ---------- One kick, acted out */
@@ -1670,29 +2607,29 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       if (k.timeout) return noKick(k);
       return new Promise(function (resolve) {
         const tier = k.tier, from = k.from;
-        const siren = tier === 'siren', out = tier === 'out', goal = !!k.goal;
+        const siren = tier === 'siren', out = tier === 'out', goal = !!k.goal, post = !!k.behind;
         const ground = tier === 'n15' || tier === 'grub';
-        const land = out ? from + 16 : goal ? GOAL + 6 : k.to;
+        const land = out ? from + 16 : goal ? GOAL + 6 : post ? GOAL - 0.4 : k.to;
         const dist = Math.max(4, land - from);
         const kicker = A[st.carrier], recv = A[st.mate], opp = A.opp, ump = A.ump;
         const T0 = siren ? 1.25 : 0;
-        const T1 = T0 + (siren ? 0.8 : 0.5);
+        const T1 = T0 + (siren ? 0.8 : st.setShot ? 0.95 : 0.5);     // a set shot comes in off a longer run
         const fly = out ? 0.95 : ground ? 0.55 + dist * 0.03 : Math.min(2.5, 0.6 + dist * 0.023);
         const T2 = T1 + fly;
-        const settle = goal ? (siren ? 2.9 : 2.3) : out ? 1.25 : 1.15;
+        const settle = goal ? (siren ? 2.9 : 2.3) : post ? 2.4 : out ? 1.25 : 1.15;
         const T3 = T2 + settle;
-        const apex = out ? 32 : tier === 'n15' ? 8 : tier === 'grub' ? 0 : tier === 'chip' ? 24 : tier === 'punt' ? 48 : tier === 'banana' ? 62 : goal ? (siren ? 92 : 56) : 40;
+        const apex = out ? 32 : tier === 'n15' ? 8 : tier === 'grub' ? 0 : tier === 'chip' ? 24 : tier === 'punt' ? 48 : tier === 'banana' ? 62 : goal ? (siren ? 92 : 56) : post ? 52 : 40;
         const catchH = tier === 'chip' ? 18 : tier === 'punt' ? 34 : tier === 'banana' ? 58 : 4;
         // gates the ball will pass
         st.gates = GATES.map(function (g) { return { key: g[0], x: from + g[1], lit: false }; })
           .filter(function (g) { return g.x < GOAL - 1; });
         st.gateFade = 1;
         // receiver gets into position
-        recv.vis = !goal && !out;
+        recv.vis = !goal && !out && !post;
         recv.x = land + (ground ? 7 : 10); recv.d = ground ? 1.2 : -1.2; recv.f = -1;
         opp.vis = tier === 'banana' || tier === 'punt';
         opp.x = land + (tier === 'banana' ? 0.9 : 3.8); opp.d = recv.d - (tier === 'banana' ? 0.9 : 2.2); opp.f = -1;
-        if (goal) { A.c.vis = true; A.c.x = GOAL - 9; A.c.d = 3; A.c.f = 1; }
+        if (goal || post) { A.c.vis = true; A.c.x = GOAL - 9; A.c.d = post ? -2 : 3; A.c.f = 1; }
         const startX = kicker.x;
         let fired = {};
         const once = function (key, fn) { if (!fired[key]) { fired[key] = true; fn(); } };
@@ -1744,8 +2681,9 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
                 bx = lerp(from + 0.1, land, easeOut(u)); bz = u < 0.6 ? apex * 4 * (u / 0.6) * (1 - u / 0.6) + 3 : 4 * Math.abs(Math.sin((u - 0.6) * 9)) * (1 - u) + 2;
               } else {
                 bx = lerp(from + 0.1, land, u);
-                bz = apex * 4 * u * (1 - u) + lerp(4, goal ? 30 : catchH, u);
+                bz = apex * 4 * u * (1 - u) + lerp(4, goal || post ? 30 : catchH, u);
                 if (tier === 'banana') bd = 0.4 - 6 * Math.sin(Math.PI * u);
+                if (post) bd = lerp(0.4, 3.0, easeIn(u));          // drifting towards the near goal post
               }
               st.ball.x = bx; st.ball.z = bz; st.ball.d = bd; st.ball.s = bs;
               st.ball.rot += (tier === 'punt' || tier === 'chip' ? -0.5 : 0.7);
@@ -1774,7 +2712,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
                   recv.pose = u < 0.88 ? POSE.run(tt * 15) : POSE.chest(j);
                 }
               }
-              if (goal) {
+              if (goal || post) {
                 A.c.pose = POSE.run(tt * 14); A.c.x = lerp(GOAL - 12, GOAL - 6, u);
               }
               ump.x += (bx - 8 - ump.x) * 0.02; ump.pose = POSE.run(tt * 10);
@@ -1790,7 +2728,8 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
             once('land', function () {
               st.gates.forEach(function (g) { if (!g.lit && !out && g.x <= land + 0.01) { g.lit = true; emit('gate', { key: g.key }); } });
               emit('land', { tier: tier, goal: goal });
-              if (goal) { st.cheer = 1; st.flags = 1; st.flash = siren ? 0.9 : 0.5; st.flashCol = siren ? '#ffd54a' : '#ffffff'; st.boardFlash = 1.8; emit('goal', { siren: siren }); }
+              if (goal) { st.cheer = 1; st.flags = 1; st.flagN = 2; st.flash = siren ? 0.9 : 0.5; st.flashCol = siren ? '#ffd54a' : '#ffffff'; st.boardWord = 'GOAL'; st.boardFlash = 1.8; emit('goal', { siren: siren }); }
+              else if (post) { st.flags = 1; st.flagN = 1; st.shake = 1; st.spark = 1; st.flash = 0.25; st.flashCol = '#ffffff'; st.boardWord = 'BEHIND'; st.boardFlash = 1.8; emit('behind'); }
               else if (out) emit('out');
               else if (ground) emit('playon');
               else emit('mark', { specky: tier === 'banana' });
@@ -1802,6 +2741,17 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
               A.c.pose = POSE.celebrate(tt + 0.5); A.c.f = -1;
               st.cam.tx = GOAL - 2; st.cam.tz = 1.6; st.cam.tfy = LANE - 34;
               if (s > 0.72) st.iris = Math.max(0, 1 - (s - 0.72) / 0.28 * 1.05);
+            } else if (post) {
+              // off the post and back into play, as the goal umpire signals one behind
+              const rb = Math.min(1, s * 2.4);
+              st.ball.x = lerp(GOAL - 0.4, GOAL - 8, rb); st.ball.d = lerp(3.0, 6, rb);
+              st.ball.z = rb < 1 ? Math.max(0, 30 + 40 * rb - 70 * rb * rb) : 5 * Math.abs(Math.sin((s - 0.42) * 16)) * Math.max(0, 1 - s * 1.4);
+              st.ball.rot += 0.9;
+              A.gu.pose = s < 0.3 ? POSE.signal1() : POSE.wave1(tt);
+              kicker.pose = POSE.hands(); kicker.f = 1;
+              A.c.pose = s < 0.2 ? POSE.run(tt * 14) : POSE.sad(); A.c.f = 1;
+              st.cam.tx = GOAL - 3; st.cam.tz = 1.6; st.cam.tfy = LANE - 34;
+              if (s > 0.74) st.iris = Math.max(0, 1 - (s - 0.74) / 0.26 * 1.05);
             } else if (out) {
               st.ball.vis = s < 0.15;
               kicker.pose = POSE.hands(); ump.pose = POSE.playOn(tt);
@@ -1834,11 +2784,11 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
           },
           finish: function () {
             st.gateFade = 1;
-            if (goal) {
+            if (goal || post) {
               // centre bounce: a fresh passage of play from the middle
               const prevCarrier = st.carrier;
               st.carrier = st.mate === 'a' ? 'b' : st.mate; st.mate = prevCarrier;
-              st.cheer = 0; st.flags = 0; st.gates = [];
+              st.cheer = 0; st.flags = 0; st.shake = 0; st.spark = 0; st.gates = [];
               placeIdle(CENTRE, true); snapCam(); st.iris = 0.02; st.irisOpen = true;
             } else if (out) {
               st.gates = [];
@@ -1923,6 +2873,54 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       }
     }
 
+    /* ---------- A milestone game: the side runs through a banner. o = {top, sub, paper, ink} */
+    function banner(o) {
+      return new Promise(function (resolve) {
+        o = o || {};
+        const paper = o.paper || '#ffb21a', ink = o.ink || '#1c2d55';
+        const tx = document.createElement('canvas'); tx.width = 58; tx.height = 34;
+        const g = tx.getContext('2d');
+        g.fillStyle = paper; g.fillRect(0, 0, 58, 34);
+        g.fillStyle = 'rgba(0,0,0,0.11)';
+        for (let y = 3; y < 34; y += 4) g.fillRect(0, y, 58, 1);            // crepe paper, in strips
+        g.fillStyle = ink; g.fillRect(0, 0, 58, 1); g.fillRect(0, 33, 58, 1); g.fillRect(0, 0, 1, 34); g.fillRect(57, 0, 1, 34);
+        const top = String(o.top || ''), sub2 = String(o.sub || '');
+        const k = VEN.width5(top, 2) <= 52 ? 2 : 1;
+        VEN.text5(g, top, Math.round((58 - VEN.width5(top, k)) / 2), k === 2 ? 5 : 9, ink, k);
+        VEN.text5(g, sub2, Math.round((58 - VEN.width5(sub2, 1)) / 2), 23, ink, 1);
+        const bx = CENTRE - 7, stopAt = [CENTRE + 0.2, CENTRE - 2.8, CENTRE - 5.2];
+        st.banner = { x: bx, tex: tx, paper: paper, ink: ink, torn: null };
+        const runners = [A[st.carrier], A[st.mate], A.c];
+        runners.forEach(function (a, i) { a.vis = true; a.f = 1; a.d = [0.4, 2.3, -1.3][i]; a.x = bx - 20; });
+        A.opp.vis = false; A.ump.vis = true; A.ump.x = CENTRE + 4; A.ump.d = -3; A.ump.f = -1;
+        st.ball.held = st.carrier; st.ball.vis = true;
+        st.mode = 'idle'; st.gates = []; st.iris = 1;
+        st.cam.x = st.cam.tx = bx - 5; st.cam.z = st.cam.tz = 1.2; st.cam.fy = st.cam.tfy = LANE - 40;
+        let tornAt = -1;
+        st.script = {
+          t0: st.t, dur: 3.4,
+          update: function (t) {
+            runners.forEach(function (a, i) {
+              const run = Math.max(0, t * 11 - i * 3.4);                   // they come through one after another
+              a.x = Math.min(bx - 20 + run, stopAt[i]);
+              const moving = run > 0 && a.x < stopAt[i] - 0.05;
+              a.pose = moving ? (i === 0 ? POSE.runBall(t * 15) : POSE.run(t * 15 + i)) : (run > 0 ? POSE.celebrate(t + i * 0.4) : POSE.ready(t + i));
+            });
+            A.ump.pose = POSE.stand(t);
+            if (tornAt < 0 && runners[0].x >= bx - 0.6) { tornAt = t; st.cheer = 1; emit('banner'); }
+            if (tornAt >= 0) st.banner.torn = t - tornAt;
+            st.cam.tx = clamp(runners[0].x + 2, bx - 5, CENTRE + 2); st.cam.tz = 1.32; st.cam.tfy = LANE - 38;
+            if (t > 3.05) st.iris = Math.max(0, 1 - (t - 3.05) / 0.35 * 1.05);
+          },
+          finish: function () {
+            st.banner = null; st.cheer = 0;
+            placeIdle(CENTRE, true); snapCam(); st.iris = 0.02;
+            resolve();
+          }
+        };
+      });
+    }
+
     /* ---------- Intro: from the wide shot down to the kick-in */
     function intro(pos) {
       return new Promise(function (resolve) {
@@ -1947,6 +2945,8 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       if (st.cheer > 0 && !st.script) st.cheer = Math.max(0, st.cheer - dt);
       if (st.flash > 0) st.flash = Math.max(0, st.flash - dt * 1.6);
       if (st.boardFlash > 0) st.boardFlash = Math.max(0, st.boardFlash - dt);
+      if (st.shake > 0) st.shake = Math.max(0, st.shake - dt * 1.8);
+      if (st.spark > 0) st.spark = Math.max(0, st.spark - dt * 3.5);
       // Calm: one steady zoom and a slower, softer pan. Full: the camera pushes in on the kick and the mark.
       if (calm) st.cam.tz = 1.4;
       // While a question box covers the top of the view (phones), tilt up so the players stand low in the frame
@@ -1964,36 +2964,45 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     function start() { if (st.running) return; st.running = true; st.last = 0; st.raf = requestAnimationFrame(frame); }
     function stop() { st.running = false; cancelAnimationFrame(st.raf); }
 
-    /* The scoreboard: opposition on top, us underneath, in goals.behinds and points. */
-    function boardTexture(goal) {
-      const c = document.createElement('canvas'); c.width = 66; c.height = 25;
+    /* The scoreboard: opposition on top, us underneath, in goals.behinds and points.
+       With a word ("GOAL", "BEHIND") it is the board's flash instead. */
+    function boardTexture(word) {
+      const c = document.createElement('canvas'); c.width = BW; c.height = 25;
       const g = c.getContext('2d');
-      g.fillStyle = '#0a101d'; g.fillRect(0, 0, 66, 25);
-      g.fillStyle = '#24324f'; g.fillRect(1, 1, 64, 23);
-      g.fillStyle = '#03060c'; g.fillRect(2, 2, 62, 21);
-      if (goal) {
-        ledText(g, 'GOAL', 17, 7, '#ffd54a', 2);
+      g.fillStyle = '#0a101d'; g.fillRect(0, 0, BW, 25);
+      g.fillStyle = '#24324f'; g.fillRect(1, 1, BW - 2, 23);
+      g.fillStyle = '#03060c'; g.fillRect(2, 2, BW - 4, 21);
+      if (word) {
+        const k = VEN.width5(word, 2) <= BW - 8 ? 2 : 1;
+        VEN.text5(g, word, Math.round((BW - VEN.width5(word, k)) / 2), k === 2 ? 6 : 9, word === 'BEHIND' ? TIER_COL.post : '#ffd54a', k);
         return c;
       }
       const b = st.board;
       const row = function (y, name, s3, col) {
-        ledText(g, name, 5, y, col);
-        const gs = String(s3[0]), bs = String(s3[1]), ps = String(s3[2]);
-        ledText(g, gs, 33 - gs.length * 4, y, col);
-        ledText(g, '.', 32, y, col);
-        ledText(g, bs, 36, y, col);
-        ledText(g, ps, 62 - ps.length * 4, y, col);
+        const gb = s3[0] + '.' + s3[1], ps = String(s3[2]);
+        VEN.text5(g, name, 4, y, col);
+        VEN.text5(g, gb, 52 - VEN.width5(gb), y, col);
+        VEN.text5(g, ps, 74 - VEN.width5(ps), y, col);
       };
-      row(5, b.ab, b.them, '#e8e4d8');
-      row(14, 'YOU', b.us, '#ffb21a');
+      row(4, b.ab, b.them, '#e8e4d8');
+      row(14, b.me || 'YOU', b.us, '#ffb21a');
       return c;
     }
+    // m = {ab, us, them, at, time, wx, club}: the scoreboard, both sides' colours, the home ground and the weather
     function setMatch(m) {
-      if (!m) { st.board = null; st.boardTex = null; return; }
-      st.board = { ab: String(m.ab || 'OPP').toUpperCase().slice(0, 3), us: m.us, them: m.them };
-      st.boardTex = null;
+      if (!m) { st.board = null; st.boardTex = null; st.wx = null; setVenue(null, 'night', null); return; }
+      st.board = { ab: String(m.ab || 'OPP').toUpperCase().slice(0, 3), us: m.us, them: m.them, me: 'YOU' };
+      st.boardTex = null; st.wordTex = {};
       const kit = CLUB_KITS[st.board.ab];
-      A.opp.kit = kit || KITS.away;
+      const sp = strips(m.club || null, st.board.ab);
+      A.a.kit = A.b.kit = A.c.kit = sp.us; A.opp.kit = sp.them;
+      st.board.me = sp.me; st.club = sp.me === 'YOU' ? null : sp.me;
+      setVenue(m.at, m.time, kit ? [kit.jumper, kit.yoke] : null);
+      st.wx = V.roofed ? null : (m.wx === 'rain' || m.wx === 'wind' ? m.wx : null);      // under a shut roof it's dry and still
+    }
+    function setScore(m) {
+      if (!st.board || !m) return;
+      st.board.us = m.us; st.board.them = m.them; st.boardTex = null;
     }
 
     /* Size the view to the box it sits in (CSS px). Width stays 360 world pixels; height follows the box. */
@@ -2008,20 +3017,49 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
 
     return {
       start: start, stop: stop, resize: resize,
-      setPlay: function (pos, centre) { st.mode = 'idle'; st.script = null; st.gates = []; st.cheer = 0; st.flags = 0; st.iris = 1; placeIdle(pos, centre); snapCam(); },
-      intro: intro, kick: kick, skip: skip, attract: attract,
+      setPlay: function (pos, centre) { st.mode = 'idle'; st.script = null; st.banner = null; st.party = null; st.boardFlash = 0; st.gates = []; st.cheer = 0; st.flags = 0; st.shake = 0; st.spark = 0; st.iris = 1; placeIdle(pos, centre); snapCam(); },
+      intro: intro, kick: kick, skip: skip, attract: attract, banner: banner,
+      // once a game: the kicker goes back for a set shot (the app stops the shot clock)
+      setShot: function () { if (!st.script && st.mode === 'idle') st.setShot = true; },
+      // the flag is won: confetti in these colours, and the scoreboard says so
+      party: function (cols) {
+        st.party = { cols: cols && cols.length ? cols : ['#ffb21a', '#1c2d55', '#f4f1e8'], t0: st.t };
+        st.cheer = 1; st.boardWord = 'PREMIERS'; st.boardFlash = 9;
+      },
+      /* One still frame for the result picture: the players at the centre, taking the result as it came.
+         mood = 'won' | 'lost' | 'drew'; o = {z, fy, party: [colours]} */
+      snap: function (mood, o) {
+        o = o || {};
+        st.mode = 'still'; st.script = null; st.banner = null; st.gates = []; st.iris = 1; st.flash = 0; st.flags = 0;
+        const c = A[st.carrier], m = A[st.mate], T = 0.7;
+        c.x = CENTRE - 2.2; c.d = 0.6; c.f = 1; c.vis = true;
+        m.x = CENTRE + 2.8; m.d = -0.8; m.f = -1; m.vis = true;
+        A.c.vis = true; A.c.x = CENTRE - 5.6; A.c.d = 2.4; A.c.f = 1;
+        A.opp.vis = true; A.opp.x = CENTRE + 8; A.opp.d = 1.8; A.opp.f = -1;
+        A.ump.vis = false;
+        if (mood === 'won') { c.pose = POSE.celebrate(T); m.pose = POSE.celebrate(T + 0.3); A.c.pose = POSE.fist(T); A.opp.pose = POSE.sad(); st.cheer = 1; }
+        else if (mood === 'lost') { c.pose = POSE.sad(); m.pose = POSE.hands(); A.c.pose = POSE.sad(); A.opp.pose = POSE.celebrate(T); st.cheer = 0; }
+        else { c.pose = POSE.hands(); m.pose = POSE.stand(T); A.c.pose = POSE.stand(T + 1); A.opp.pose = POSE.hands(); st.cheer = 0; }
+        A.gu.pose = POSE.stand(0); A.gu0.pose = POSE.stand(2);
+        st.ball.held = st.carrier; st.ball.vis = true;
+        st.cam.x = st.cam.tx = CENTRE + 4; st.cam.z = st.cam.tz = o.z || 1; st.cam.fy = st.cam.tfy = o.fy == null ? LANE - 28 : o.fy;
+        st.party = o.party ? { cols: o.party, t0: st.t - 4 } : null;
+        render(st.t + 1.2);
+      },
       setCalm: function (on) { calm = !!on; noFlash = calm || !!opts.noFlash; },
-      setMatch: setMatch,
+      setMatch: setMatch, setScore: setScore,
       setIdleFeet: function (f) {
         idleFeet = f || null;
         if (!idleFeet && !st.script && st.mode === 'idle') st.cam.tfy = LANE - 28;
       },
+      // hold the camera on one spot (the share picture and the ground checks use this)
+      look: function (x, z, fy) { st.mode = 'still'; st.cam.x = st.cam.tx = x; st.cam.z = st.cam.tz = z; st.cam.fy = st.cam.tfy = fy == null ? LANE - 28 : fy; },
       busy: function () { return !!st.script; },
       clearGates: function () { st.gates = []; }
     };
   }
 
-  root.BON_SCENE = { create: create, W: W, H: H, TIER_COL: TIER_COL };
+  root.BON_SCENE = { create: create, W: W, H: H, TIER_COL: TIER_COL, CLUBS: CLUBS, ownKit: ownKit, strips: strips };
 })(window);
 
 </script>
@@ -2095,14 +3133,29 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
         o.connect(f); f.connect(g); g.connect(master); o.start(t); o.stop(t + L + 0.1);
       });
     },
+    // the ball cannons into the post: a ringing clang, then the crowd's groan
+    post: function (t) {
+      tone('triangle', 1180, 1160, t, 0.5, 0.2, 0.002, 0.42);
+      tone('sine', 1770, 1750, t, 0.4, 0.1, 0.002, 0.35);
+      tone('square', 590, 585, t, 0.22, 0.05, 0.002, 0.18);
+      noise(t, 0.05, 0.3, 'highpass', 2500, 0.8, 0.002, 0.04);
+      const f = noise(t + 0.14, 1.3, 0.3, 'bandpass', 520, 0.6, 0.18, 0.9);
+      f.frequency.linearRampToValueAtTime(300, t + 1.2);
+    },
     tick: function (t) { tone('square', 1250, 1250, t, 0.04, 0.06, 0.002, 0.02); },
     reveal: function (t, rank) {
-      const base = [196, 262, 294, 330, 392, 440, 523][rank || 0];
+      const base = [196, 262, 294, 330, 392, 440, 523][Math.min(6, rank || 0)];
       tone('square', base, base, t, 0.09, 0.08, 0.004, 0.05);
       if (rank > 0) tone('square', base * 1.5, base * 1.5, t + 0.09, 0.12, 0.07, 0.004, 0.08);
       if (rank >= 5) tone('square', base * 2, base * 2, t + 0.2, 0.18, 0.07, 0.004, 0.12);
     },
     click: function (t) { tone('square', 880, 880, t, 0.03, 0.04, 0.002, 0.02); },
+    // one sharp blast: the umpire holds the mark for a set shot
+    setshot: function (t) { const o = tone('sine', 2850, 2850, t, 0.3, 0.2, 0.01, 0.05), l = ac.createOscillator(), lg = ac.createGain(); l.frequency.value = 38; lg.gain.value = 70; l.connect(lg); lg.connect(o.frequency); l.start(t); l.stop(t + 0.4); },
+    // crepe paper giving way as the side runs through the banner
+    tear: function (t) { const f = noise(t, 0.38, 0.5, 'highpass', 900, 0.6, 0.004, 0.3); f.frequency.exponentialRampToValueAtTime(4200, t + 0.3); },
+    // the flag is won
+    fanfare: function (t) { [392, 523, 659, 784, 659, 784, 1047].forEach(function (f, i) { tone('square', f, f, t + i * 0.13, i === 6 ? 0.5 : 0.11, 0.09, 0.004, i === 6 ? 0.4 : 0.05); }); },
     key: function (t) { tone('square', 1600, 1600, t, 0.018, 0.018, 0.001, 0.012); }
   };
 
@@ -2116,6 +3169,53 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       if (!a || !FX[name]) return;
       try { FX[name](a.currentTime + 0.01, arg); } catch (e) { /* audio is optional */ }
     }
+  };
+})(window);
+
+</script>
+<script>
+/* Bontillion numbers: anonymous counts of plays, kicks and results, for whoever runs the game.
+   No cookies, nothing kept on the device, no names and no accounts: events go to PostHog in its cookieless mode.
+   The build switches it on (stats.json -> window.BON_STATS = {key, host}). It stays off in previews and on any
+   site other than the game's own, so test plays and copies never count. */
+(function (root) {
+  'use strict';
+  root.BON_TRACK = function () {};
+  const cfg = root.BON_STATS;
+  if (!cfg || !cfg.key || root.BON_PREVIEW) return;
+  let here = '';
+  try { here = root.location.hostname; } catch (e) { return; }
+  if ((cfg.sites || ['bontillion.io', 'www.bontillion.io']).indexOf(here) < 0) return;
+  const host = cfg.host || 'https://eu.i.posthog.com';
+  /* PostHog's loader, cut down to what the game uses: window.posthog is a queue that fills until their
+     library arrives and replays it (the same shape their own snippet makes). */
+  let ph = root.posthog;
+  if (!ph || !ph.__SV) {
+    ph = root.posthog = [];
+    ph._i = []; ph.__SV = 1; ph.people = [];
+    ['capture', 'register'].forEach(function (m) {
+      ph[m] = function () { ph.push([m].concat(Array.prototype.slice.call(arguments))); };
+    });
+    ph._i.push([cfg.key, {
+      api_host: host,
+      defaults: '2026-05-30',
+      cookieless_mode: 'always',          // no cookies, no local storage: visitors are counted by a daily server-side hash
+      person_profiles: 'never',
+      autocapture: false,
+      capture_pageview: true,
+      disable_session_recording: true
+    }, 'posthog']);
+    const s = document.createElement('script');
+    s.async = true; s.crossOrigin = 'anonymous';
+    s.src = host.replace('.i.posthog.com', '-assets.i.posthog.com') + '/static/array.js';
+    (document.head || document.documentElement).appendChild(s);
+  }
+  root.BON_TRACK = function (name, props) {
+    try {
+      const p = {};
+      Object.keys(props || {}).forEach(function (k) { if (props[k] !== undefined && props[k] !== null) p[k] = props[k]; });
+      root.posthog.capture(name, p);
+    } catch (e) { /* never in the way of the game */ }
   };
 })(window);
 
@@ -2136,7 +3236,8 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   // The phone's reduce-motion setting only removes flashing and blinking. The kick always plays:
   // it is how the game tells you how far your answer went. "Motion: calm" in the menu tones down the camera.
   const osReduce = mq('(prefers-reduced-motion: reduce)');
-  const RANK = { out: 0, n15: 1, grub: 2, chip: 3, punt: 4, banana: 5, siren: 6 };
+  const RANK = { out: 0, n15: 1, grub: 2, post: 2, chip: 3, punt: 4, banana: 5, siren: 6 };
+  const SORT = { out: 0, n15: 1, grub: 2, chip: 3, punt: 4, banana: 5, post: 6, siren: 7 };     // the order answers are listed in
 
   /* ---------- Storage: this browser only. The game still runs if storage is blocked. */
   const memory = {};
@@ -2166,6 +3267,20 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     const r = ROUNDS.filter(function (x) { return x.n === n; })[0];
     return 'bontillion:v2:r' + ((r && r.key) || n);
   };
+
+  /* ---------- Numbers for whoever runs the game: anonymous counts, no cookies. Nothing is sent unless the build
+     switches it on (stats.json), and never from a preview or from a copy on another site. See stats.js. */
+  function track(name, props) { try { if (window.BON_TRACK) window.BON_TRACK(name, props || {}); } catch (e) { /* never in the way */ } }
+
+  /* ---------- Your club (optional): your side wears its colours and the scoreboard carries its name */
+  const CLUB_NAMES = {
+    ADE: 'Adelaide', BRI: 'Brisbane Lions', CAR: 'Carlton', COL: 'Collingwood', ESS: 'Essendon', FRE: 'Fremantle', GEE: 'Geelong',
+    GCS: 'Gold Coast', GWS: 'GWS Giants', HAW: 'Hawthorn', MEL: 'Melbourne', NTH: 'North Melbourne', PTA: 'Port Adelaide',
+    RIC: 'Richmond', STK: 'St Kilda', SYD: 'Sydney', WCE: 'West Coast', WBD: 'Western Bulldogs'
+  };
+  const CLUB_KEY = 'bontillion:club';
+  let CLUB = null;
+  function meName(ab) { return SCN.strips(CLUB, ab).me; }
 
   /* ---------- Device. Phones and tablets get the one-screen layout and the game's own keys,
      so the phone's keyboard never pushes the pitch off screen. */
@@ -2218,7 +3333,8 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     chip: ['............', '............', '............', '.....oo.....', '...o....o...', '..o......o..', '.o........o.', '.o.........o', 'BB..........', 'gggggggggggg'],
     punt: ['....oooo....', '...o....o...', '..o......o..', '..o.......o.', '.o........o.', '.o.........o', '.o.........o', 'o...........', 'BB..........', 'gggggggggggg'],
     banana: ['.......ooo..', '.....o....o.', '....o......o', '...o.......o', '..o.......o.', '..o......o..', '.o.....oo...', '.o..........', 'BB..........', 'gggggggggggg'],
-    siren: ['.....SS.....', '....SSSS....', '.....SS.....', '....P..P....', '.P..P..P..P.', '.P..P..P..P.', '.P..P..P..P.', '.P..P..P..P.', '.P..PBBP..P.', 'gggggggggggg']
+    siren: ['.....SS.....', '....SSSS....', '.....SS.....', '....P..P....', '.P..P..P..P.', '.P..P..P..P.', '.P..P..P..P.', '.P..P..P..P.', '.P..PBBP..P.', 'gggggggggggg'],
+    post: ['.....o...o..', '......o.o...', '....P.BBP...', '....PBB.Po..', '.P..P...P.P.', '.P..P...P.P.', '.P..P...P.P.', '.P..P...P.P.', '.P..P...P.P.', 'gggggggggggg']
   };
   const TCOL = SCN.TIER_COL;
   function icon(key, cls) {
@@ -2236,12 +3352,18 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   const FLAVOUR = {
     out: 'Not one of the accepted answers.',
     n15: 'Everyone had that one. The umpire calls play on.',
-    grub: 'Thought it was clever. So did everyone else.',
+    grub: 'Nearly everyone had that one too.',
     chip: 'Neat and tidy. Taken on the chest.',
     punt: 'Most people missed that one. Lovely kick.',
     banana: 'A deep cut, curled in from the pocket.',
+    post: 'The clever pick that everyone goes for. Off the post.',
     siren: 'One in a Bontillion.'
   };
+  const POST_LINES = [
+    'The clever pick that everyone goes for. Off the post, and back to the centre.',
+    'Everyone thinks only they remember that one. Off the post, and back to the centre.',
+    'Too many people had the same bright idea. Off the post, and back to the centre.'
+  ];
 
   /* ---------- State */
   const S = { screen: 'home', round: null, prog: null, clock: null, paused: false, pausedAt: 0, busy: false, lastTick: -1, kickAt: 0, typed: '' };
@@ -2398,7 +3520,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   /* ---------- Home */
   function renderLadder(el) {
     el.innerHTML = B.TIERS.map(function (t) {
-      const m = t.key === 'siren' ? 'GOAL' : (t.m ? '+' + t.m + ' m' : '0 m');
+      const m = t.tag || (t.m ? '+' + t.m + ' m' : '0 m');
       return '<li class="rung' + (t.key === 'siren' ? ' rung-siren' : '') + '" style="--tc:var(--t-' + t.key + ')">' + icon(t.key) +
         '<span class="rung-main"><span class="rung-name">' + esc(t.name) + '</span><span class="rung-blurb">' + esc(t.blurb) + '</span></span>' +
         '<span class="rung-m">' + m + '</span></li>';
@@ -2408,14 +3530,16 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   function scoreNow() { return B.scoreAfter(S.round, S.prog ? S.prog.kicks : []); }
   function boardFor(r, kicks) {
     const sc = B.scoreAfter(r, kicks || []);
-    return { ab: sc.ab, us: sc.us, them: sc.them };
+    return { ab: sc.ab, us: sc.us, them: sc.them, at: sc.at, time: sc.time, wx: sc.wx, club: CLUB };
   }
   function marginTxt(m) { return m > 0 ? '+' + m : m < 0 ? '−' + (-m) : '0'; }
   // "One goal wins it." or, when you start a multiple of 6 down, "One goal draws it, two goals win it."
-  function drawLine(start) {
+  function drawLine(start, r) {
     const W = ['', 'One goal', 'Two goals', 'Three goals', 'Four goals'];
     if (start.deficit > 0 && start.deficit % 6 === 0) {
       const d = start.deficit / 6;
+      // a final can't be drawn: level at the siren means extra time
+      if (r && r.final) return W[d] + (d === 1 ? ' forces' : ' force') + ' extra time, ' + W[start.need].toLowerCase() + ' win it.';
       return W[d] + (d === 1 ? ' draws' : ' draw') + ' it, ' + W[start.need].toLowerCase() + ' win it.';
     }
     return start.need === 1 ? 'One goal wins it.' : start.need + ' goals to win.';
@@ -2440,17 +3564,66 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     const row = function (name, s3, cls) {
       return '<span class="mb-row ' + cls + '"><span class="mb-n">' + esc(name) + '</span><span class="mb-g">' + s3[0] + '.' + s3[1] + '</span><span class="mb-p">' + s3[2] + '</span></span>';
     };
-    return row(sc.ab, sc.them, 'mb-them') + row('YOU', sc.us, 'mb-us');
+    return row(sc.ab, sc.them, 'mb-them') + row(meName(sc.ab), sc.us, 'mb-us');
+  }
+
+  /* ---------- The season and the finals. A season is its home-and-away rounds, then four finals that everyone
+     plays: win all four and the flag is yours. Twelve wins in the season proper earns the double chance. */
+  const seasonOf = function (r) { return (r && r.season) || 1; };
+  function outcomeOf(r) { const p = store.get(KEY(r.n)); return p && p.done ? B.scoreAfter(r, p.kicks).outcome : null; }
+  function seasonState(s) {
+    const rs = ROUNDS.filter(function (r) { return seasonOf(r) === s; });
+    let wins = 0, played = 0, f1 = null;
+    const res = {};
+    rs.forEach(function (r) {
+      const o = outcomeOf(r);
+      if (r.final) { if (o) res[r.final] = o; if (r.final === 'F1') f1 = store.get(KEY(r.n)); }
+      else if (o) { played++; if (o === 'won') wins++; }
+    });
+    // the double chance is settled as week one of the finals starts, and can't be earned after it
+    const dc = f1 && f1.dc != null ? !!f1.dc : wins >= B.DC_WINS;
+    return { season: s, wins: wins, played: played, dc: dc, res: res, run: B.finalsRun(res, dc), finals: rs.filter(function (r) { return !!r.final; }) };
+  }
+  function rname(r) { return B.roundName(r, !!(r && r.final === 'F1') && seasonState(seasonOf(r)).dc); }
+  function flagsWon() {
+    const seen = {};
+    ROUNDS.forEach(function (r) { seen[seasonOf(r)] = true; });
+    return Object.keys(seen).filter(function (s) { return seasonState(+s).run.flag; }).length;
+  }
+  // Where this player's finals stand, said in a line, for the home screen and full time
+  function finalsLine(r) {
+    if (!r || !r.final) return '';
+    const ss = seasonState(seasonOf(r)), run = ss.run, mine = ss.res[r.final];
+    if (run.flag) return '🏆 Premiers! The flag is yours.';
+    if (run.out) return run.out === r.final ? 'Knocked out. There\'s always next season.' : 'Your flag hopes ended in the ' + B.roundName({ final: run.out }, false) + ', but every game still counts on your record.';
+    if (r.final === 'F1' && mine === 'lost') return 'Beaten, but the double chance keeps you alive.';
+    if (r.final === 'F1' && !mine) return ss.dc ? 'You earned the double chance: lose this one and you\'re still alive.' : 'Sudden death from here. Win all four finals and the flag is yours.';
+    const left = B.FINAL_KEYS.filter(function (k) { return ss.res[k] !== 'won' && !(k === 'F1' && run.lifeUsed); }).length;
+    return left === 1 ? 'One win from the flag.' : left + ' wins from the flag.';
+  }
+  // Late in the season proper: how close the double chance is
+  function seasonLine(s) {
+    const ss = seasonState(s);
+    if (!ss.finals.length || !ss.played) return '';
+    if (ss.run.played) return '';
+    const part = '<b>' + ss.wins + '</b> ' + (ss.wins === 1 ? 'win' : 'wins') + ' this season';
+    return ss.wins >= B.DC_WINS ? part + ': you\'ve earned the double chance in the finals.' : part + '. ' + B.DC_WINS + ' earns the double chance in the finals.';
   }
 
   function renderHome() {
     const r = currentRound();
-    $('#home-round').textContent = 'ROUND ' + r.n + ' · ' + fmtDate(r.date).toUpperCase() + (PREVIEW ? ' · PREVIEW' : '');
+    $('#home-round').textContent = rname(r).toUpperCase() + ' · ' + fmtDate(r.date).toUpperCase() + (PREVIEW ? ' · PREVIEW' : '');
     const p = store.get(KEY(r.n));
     const start = B.scoreAfter(r, []);
     $('#home-board').innerHTML = miniBoard(p && p.done ? B.scoreAfter(r, p.kicks) : start);
-    $('#home-match').innerHTML = 'Last quarter v <b>' + esc(start.opp) + '</b>. You\'re ' + start.deficit + ' down. ' +
-      drawLine(start);
+    // "Last quarter v Richmond, a night game at the MCG in the rain. You're 5 down. One goal wins it."
+    $('#home-match').innerHTML = 'Last quarter v <b>' + esc(start.opp) + '</b>' +
+      (start.venue ? ', a ' + esc(start.slot.toLowerCase()) + ' at ' + esc(start.venue) + (start.weather ? ' ' + esc(start.weather) : '') : '') +
+      '. You\'re ' + start.deficit + ' down. ' + drawLine(start, r);
+    const fl = $('#home-finals'), fline = finalsLine(r) || seasonLine(seasonOf(r));
+    fl.hidden = !fline; fl.innerHTML = fline;
+    const hc = $('#home-club');
+    hc.hidden = !!store.get(CLUB_KEY);
     ensureHome().setMatch(boardFor(r, p ? p.kicks : []));
     const lb = logbook(), rec = $('#home-record');
     rec.hidden = !lb.played;
@@ -2462,11 +3635,12 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     if (p && p.done) {
       const res = B.scoreAfter(r, p.kicks);
       btn.textContent = 'See full time ▸';
-      st.innerHTML = 'Round ' + r.n + ': <b>' + esc(B.resultLine(res)) + '</b> v ' + esc(res.opp);
+      st.innerHTML = esc(rname(r)) + ': <b>' + esc(B.resultLine(res)) + '</b> v ' + esc(res.opp);
       startCountdown();
     } else if (p && (p.kicks.length || p.startedAt)) {
       btn.textContent = 'Resume ▸';
-      st.textContent = 'You\'re up to kick ' + Math.min(p.kicks.length + (p.revealPending ? 0 : 1), 7) + ' of 7.';
+      st.textContent = p.kicks.length >= B.KICKS && !(p.kicks.length === B.KICKS && p.revealPending) ? 'You\'re in extra time.'
+        : 'You\'re up to kick ' + Math.min(p.kicks.length + (p.revealPending ? 0 : 1), 7) + ' of 7.';
     } else {
       btn.textContent = 'Run out ▸';
       st.textContent = '';
@@ -2485,12 +3659,17 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     $('#hud-margin-u').textContent = Math.abs(sc.margin) === 1 ? 'pt' : 'pts';
     $('#hud-need').textContent = needTxt(sc);
     const cur = p.revealPending ? p.kicks.length - 1 : p.kicks.length;
-    $('#hud-kick').textContent = 'Kick ' + Math.min(cur + 1, 7) + ' of 7';
-    $('#pips').innerHTML = S.round.prompts.map(function (q, i) {
-      const k = p.kicks[i];
-      if (k) return '<span class="pip done" style="--tc:var(--t-' + k.tier + ')"></span>';
-      return '<span class="pip' + (i === cur ? ' now' : '') + '"></span>';
-    }).join('');
+    const et = cur >= B.KICKS && (p.kicks.length > B.KICKS || B.inExtraTime(S.round, p.kicks));        // extra time: up to three more kicks
+    $('#hud-kick').textContent = et ? 'Extra time ' + Math.min(cur - B.KICKS + 1, B.EXTRA) + ' of ' + B.EXTRA
+      : 'Kick ' + Math.min(cur + 1, B.KICKS) + ' of ' + B.KICKS;
+    let pips = '';
+    for (let i = 0; i < (et ? B.KICKS + B.EXTRA : B.KICKS); i++) {
+      const k = p.kicks[i], cls = i >= B.KICKS ? ' pip-et' : '';
+      pips += k ? '<span class="pip done' + cls + '" style="--tc:var(--t-' + k.tier + ')"></span>' : '<span class="pip' + cls + (i === cur ? ' now' : '') + '"></span>';
+    }
+    $('#pips').innerHTML = pips;
+    $('#pips').classList.toggle('et', et);
+    renderSetShot();
     renderTrack();
   }
   function renderTrack() {
@@ -2536,7 +3715,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     }, function () {
       if (btn) { btn.disabled = false; btn.textContent = was; }
       if (S.screen !== 'home' && S.screen !== 'archive') go('home');
-      toast('Couldn\'t load Round ' + r.n + '. Check your connection and try again.');
+      toast('Couldn\'t load ' + (r.final ? 'the ' + rname(r) : 'Round ' + (r.rn || r.n)) + '. Check your connection and try again.');
     });
   }
   function startRoundNow(r, fromTap) {
@@ -2548,14 +3727,23 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     show('play');
     const sc = ensurePlay();
     const last = S.prog.kicks[S.prog.kicks.length - 1];
-    // every passage starts with a centre bounce: the first kick, and the one after each goal
-    const centre = !last || !!last.goal;
+    // every passage starts with a centre bounce: the first kick, the one after each score, and extra time
+    const centre = !last || !!last.goal || !!last.behind || (S.prog.kicks.length === B.KICKS && !S.prog.revealPending);
     const fresh = !S.prog.kicks.length && !S.prog.startedAt;
     sc.setPlay(S.prog.pos, centre);
     sc.setMatch(boardFor(r, S.prog.kicks));
-    if (fresh) sc.intro(S.prog.pos);
     clearOverlays();
     renderHud();
+    if (fresh) {
+      // settled as the side runs out: which game of yours this is and, in week one of the finals, the double chance
+      S.prog.game = logbook().played + 1;
+      if (r.final === 'F1') S.prog.dc = seasonState(seasonOf(r)).dc;
+      saveProg();
+      track('round started', roundProps(r));
+      const ms = B.milestone(S.prog.game);
+      if (ms) { runThrough(ms, fromTap); return; }
+      sc.intro(S.prog.pos);
+    }
     if (S.prog.revealPending && last) {
       showPromptText(S.prog.kicks.length - 1);
       $('#hud-clock').textContent = '–';
@@ -2564,10 +3752,35 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       showPrompt(fromTap);
     }
   }
+  // What every stats event says about the round (no names, nothing about the person)
+  function roundProps(r) {
+    const m = B.matchOf(r), lb = logbook();
+    return { round: r.n, round_name: rname(r), opponent: m.opp, ground: m.venue, time_of_day: m.time, weather: m.wx || 'fine',
+      archive: r.n !== currentRound().n, games_played: lb.played, streak: lb.streak, club: CLUB || 'none', final: r.final || '' };
+  }
+  /* A milestone game (the 5th, the 10th, every 10th after): the side runs through a banner before the first bounce */
+  function runThrough(n, focus) {
+    const sc = ensurePlay(), kit = SCN.strips(CLUB, B.matchOf(S.round).ab).us;
+    S.busy = true; S.kickAt = Date.now(); S.bannerN = n;
+    $('#prompt-card').hidden = true; $('#keys').hidden = true; $('#reveal').hidden = true;
+    $('#qbox').classList.add('away');
+    $$('.p-eyebrow').forEach(function (e) { e.textContent = 'A milestone'; });
+    $$('.p-q').forEach(function (e) { e.textContent = 'Game ' + n + '! Here comes the banner.'; });
+    $$('.p-fine, .p-fine-short').forEach(function (e) { e.textContent = ''; });
+    $('#hud-clock').textContent = '–';
+    $('#skip-btn').hidden = false;
+    sc.setIdleFeet(null);
+    track('milestone', { games: n, club: CLUB || 'none' });
+    sc.banner({ top: String(n), sub: 'GAMES', paper: kit.yoke, ink: kit.jumper }).then(function () {
+      S.busy = false; $('#skip-btn').hidden = true;
+      if (S.screen === 'play' && S.prog && !S.prog.kicks.length && !S.prog.done) showPrompt(focus);
+    });
+  }
   function cur() { return S.round.prompts[S.prog.idx]; }
   function showPromptText(i) {
     const p = S.round.prompts[i];
-    $$('.p-eyebrow').forEach(function (e) { e.textContent = 'Prompt ' + (i + 1) + ' of 7 · ' + p.cat; });
+    const eyebrow = i >= B.KICKS ? 'Extra time · next score wins' : 'Prompt ' + (i + 1) + ' of 7 · ' + p.cat;
+    $$('.p-eyebrow').forEach(function (e) { e.textContent = eyebrow; });
     $$('.p-q').forEach(function (e) { e.textContent = p.q; });
     $$('.p-fine').forEach(function (e) { e.textContent = (p.fine ? p.fine + ' ' : '') + '▸ Rarer answers kick further'; });
     $$('.p-fine-short').forEach(function (e) { e.textContent = p.fine || ''; });
@@ -2598,12 +3811,41 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     renderHud();
     if (shellOn()) layout();
     startClock();
+    if (S.prog.frozen && playScene) playScene.setShot();      // back after a reload, still lining it up
     if (focus && !gameKeys()) { try { inp.focus({ preventScroll: true }); } catch (e) { inp.focus(); } }
   }
 
   /* Shot clock */
   function remaining() { return Math.max(0, B.SHOT_CLOCK - (Date.now() - S.prog.startedAt) / 1000); }
-  function startClock() { stopClock(); tick(); S.clock = setInterval(tick, 100); }
+  function startClock() { stopClock(); if (S.prog && S.prog.frozen) { showFrozen(); return; } tick(); S.clock = setInterval(tick, 100); }
+  function showFrozen() {
+    $('#hud-clock').textContent = 'SET';
+    $('#clock-box').classList.remove('hot');
+    const bar = $('#timebar');
+    bar.style.transform = 'scaleX(1)'; bar.parentNode.classList.remove('hot'); bar.parentNode.classList.add('frozen');
+    $('#screen-play').classList.remove('urgent');
+    renderSetShot();
+  }
+  /* The set shot: once a game, stop the shot clock for the kick you're on. Tap the clock. */
+  function takeSetShot() {
+    if (!typingOpen() || S.prog.ss != null) return;
+    S.prog.ss = S.prog.idx; S.prog.frozen = true;
+    saveProg();
+    stopClock(); showFrozen();
+    SND.play('setshot');
+    callout('Set shot<small>Clock stopped · take your time</small>', 'punt', 1900);
+    if (playScene) playScene.setShot();
+    track('set shot', { round: S.round.n, kick: S.prog.idx + 1 });
+  }
+  function renderSetShot() {
+    const p = S.prog, el = $('#hud-clock-s'), box = $('#clock-box');
+    if (!p || !el) return;
+    const avail = p.ss == null && !p.done;
+    el.textContent = p.frozen ? 'clock stopped' : avail ? 'set shot ▸' : 'secs';
+    box.classList.toggle('ss-on', avail);
+    box.classList.toggle('frozen', !!p.frozen);
+    box.setAttribute('aria-disabled', avail ? 'false' : 'true');
+  }
   function stopClock() { if (S.clock) clearInterval(S.clock); S.clock = null; }
   function setClockUi(rem) {
     const s = Math.ceil(rem);
@@ -2611,11 +3853,12 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     $('#clock-box').classList.toggle('hot', s <= 5 && rem > 0);
     const bar = $('#timebar');
     bar.style.transform = 'scaleX(' + (rem / B.SHOT_CLOCK).toFixed(3) + ')';
+    bar.parentNode.classList.remove('frozen');
     bar.parentNode.classList.toggle('hot', s <= 8);
     $('#screen-play').classList.toggle('urgent', s <= 8 && rem > 0);
   }
   function tick() {
-    if (S.paused || !S.prog || !S.prog.startedAt) return;
+    if (S.paused || !S.prog || !S.prog.startedAt || S.prog.frozen) return;
     const rem = remaining();
     setClockUi(rem);
     const s = Math.ceil(rem);
@@ -2691,14 +3934,23 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     stopClock();
     S.paused = false;
     $('#screen-play').classList.remove('urgent');
-    $('#clock-box').classList.remove('hot');
+    $('#clock-box').classList.remove('hot', 'frozen');
     let tier = 'out', name = '', note = '';
-    if (res.status === 'ok') { tier = res.entry.t; name = res.entry.n; if (tier === 'siren') note = res.entry.x || ''; }
+    if (res.status === 'ok') { tier = res.entry.t; name = res.entry.n; if (tier === 'siren' || tier === 'post') note = res.entry.x || ''; }
     else if (res.timeUp) note = 'The shot clock ran out.';
     else note = res.note || '';
     const k = B.applyKick(S.prog.pos, tier);
-    const kick = { input: text, name: name, tier: tier, note: note, metres: k.metres, goal: k.goal, from: k.from, to: k.to, next: k.next, timeUp: !!res.timeUp };
+    const kick = { input: text, name: name, tier: tier, note: note, metres: k.metres, goal: k.goal, behind: !!k.behind, from: k.from, to: k.to, next: k.next, timeUp: !!res.timeUp };
+    if (S.prog.frozen) kick.setShot = true;
+    $('#hud-clock-s').textContent = 'secs';
+    const secs = S.prog.startedAt && !S.prog.frozen ? Math.min(B.SHOT_CLOCK, Math.round((Date.now() - S.prog.startedAt) / 1000)) : null;
+    S.prog.frozen = false;
     S.prog.kicks.push(kick);
+    track('kick', {
+      round: S.round.n, kick: S.prog.kicks.length, prompt: cur().id, tier: tier, right: tier !== 'out', timed_out: !!res.timeUp,
+      set_shot: !!kick.setShot, extra_time: S.prog.kicks.length > B.KICKS, seconds: secs,
+      wrong_answer: tier === 'out' && text ? text.toLowerCase().slice(0, 40) : undefined
+    });
     S.prog.pos = k.next;
     S.prog.revealPending = true;
     S.prog.startedAt = null;
@@ -2804,7 +4056,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       const pill = $('#pill');
       if (kick.input) { pill.textContent = '“' + truncate(kick.input, 22) + '”'; pill.hidden = false; }
       $('#skip-btn').hidden = false;
-      sc.kick({ from: kick.from, to: kick.to, next: kick.next, tier: kick.tier, goal: kick.goal, timeout: kick.timeUp }).then(function () {
+      sc.kick({ from: kick.from, to: kick.to, next: kick.next, tier: kick.tier, goal: kick.goal, behind: kick.behind, timeout: kick.timeUp }).then(function () {
         S.busy = false;
         $('#skip-btn').hidden = true;
         $('#pill').hidden = true;
@@ -2833,22 +4085,26 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     if (S.screen !== 'play') return;
     const last = S.prog && S.prog.kicks[S.prog.kicks.length - 1];
     switch (name) {
+      case 'banner': SND.play('tear'); SND.play('crowd'); callout('Game ' + (S.bannerN || '') + '!<small>Through the banner</small>', 'siren', 2000); break;
       case 'siren': SND.play('siren', 1.4); callout('Siren!', 'siren', 1200); break;
       case 'contact': SND.play('kick'); break;
       case 'gate': SND.play('gate', RANK[d.key]); break;
       case 'mark': SND.play('whistle'); callout(d.specky ? 'Specky!' : 'Mark!', last && last.tier); break;
       case 'playon': SND.play('playon'); callout('Play on', last && last.tier); break;
       case 'out': SND.play('out'); callout(last && last.timeUp ? 'Too slow' : 'Out on the full', 'out'); break;
-      case 'goal': {
-        SND.play('crowd', d.siren);
+      case 'goal':
+      case 'behind': {
+        if (name === 'goal') SND.play('crowd', d.siren); else SND.play('post');
         // the kick is already on the books: update the scoreboard and the HUD as it goes through
         const sc = scoreNow();
-        if (playScene) playScene.setMatch(boardFor(S.round, S.prog.kicks));
+        if (playScene) playScene.setScore(boardFor(S.round, S.prog.kicks));
         $('#hud-margin').textContent = marginTxt(sc.margin);
+        $('#hud-margin-u').textContent = Math.abs(sc.margin) === 1 ? 'pt' : 'pts';
         $('#score-box').dataset.state = sc.margin > 0 ? 'up' : sc.margin < 0 ? 'down' : 'level';
         $('#hud-need').textContent = needTxt(sc);
         bump($('#hud-margin'));
-        callout((sc.margin > 0 && sc.margin <= 6 ? 'In front!' : 'Goal!') + '<small>' + (d.siren ? 'After the siren · ' : '') + standing(sc) + '</small>', d.siren ? 'siren' : 'chip', 1800);
+        if (name === 'goal') callout((sc.margin > 0 && sc.margin <= 6 ? 'In front!' : 'Goal!') + '<small>' + (d.siren ? 'After the siren · ' : '') + standing(sc) + '</small>', d.siren ? 'siren' : 'chip', 1800);
+        else callout('Hit the post!<small>One behind · ' + standing(sc) + '</small>', 'post', 1800);
         break;
       }
       case 'land':
@@ -2891,15 +4147,19 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   function showReveal(kick) {
     S.revealShown = true;
     const t = B.TIER[kick.tier];
-    const last = S.prog.kicks.length >= 7;
+    const last = B.isOver(S.round, S.prog.kicks);
+    const toEt = !last && S.prog.kicks.length === B.KICKS;                                   // a final, level after seven
+    const etLost = last && S.prog.kicks.length > B.KICKS && !kick.goal && !kick.behind;      // extra time ran out
     const said = kick.input ? '“' + esc(kick.input) + '”' : 'No answer';
     const matched = kick.name && B.norm(kick.name) !== B.norm(kick.input) ? ' <span>· ' + esc(kick.name) + '</span>' : '';
     const togo = B.GROUND - kick.next;
     const after = B.scoreAfter(S.round, S.prog.kicks);
     const metresLine = kick.goal
       ? '+' + kick.metres + ' m · GOAL! · ' + standing(after)
+      : kick.behind ? '1 behind · ' + standing(after)
       : (kick.metres ? '+' + kick.metres + ' m · ' : '0 m · ') + togo + ' m to goal';
-    const note = kick.note || FLAVOUR[kick.tier];
+    const note = etLost ? 'No score in extra time. ' + B.matchOf(S.round).opp + ' scramble a behind to win it by a point.'
+      : kick.note || (kick.tier === 'post' ? POST_LINES[(S.round.n + S.prog.kicks.length) % POST_LINES.length] : FLAVOUR[kick.tier]);
     const el = $('#reveal');
     el.style.setProperty('--tc', 'var(--t-' + kick.tier + ')');
     el.innerHTML = '<div class="reveal-body">' + (kick.tier === 'siren' ? '<span class="reveal-badge">One in a Bontillion</span>' : '') +
@@ -2908,7 +4168,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       '<p class="reveal-ans">' + said + matched + '</p>' +
       '<p class="reveal-m">' + metresLine + '</p>' +
       '<p class="reveal-note">' + esc(note) + '</p></div>' +
-      '<button type="button" class="btn btn-mint" id="next-btn">' + (last ? 'Full time ▸' : 'Next kick ▸') + '</button>';
+      '<button type="button" class="btn btn-mint" id="next-btn">' + (last ? 'Full time ▸' : toEt ? 'Extra time ▸' : 'Next kick ▸') + '</button>';
     $('#prompt-card').hidden = true;
     $('#keys').hidden = true;
     $('#qbox').classList.add('away');
@@ -2918,7 +4178,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     fitReveal();
     SND.play('reveal', RANK[kick.tier]);
     renderHud();
-    if (kick.goal) bump($('#hud-margin'));
+    if (kick.goal || kick.behind) bump($('#hud-margin'));
     try { $('#next-btn').focus({ preventScroll: true }); } catch (e) { /* ignore */ }
   }
 
@@ -2938,24 +4198,53 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     clearOverlays();
     S.prog.revealPending = false;
     S.prog.idx = S.prog.kicks.length;
-    if (S.prog.idx >= 7) { finishRound(); return; }
+    if (B.isOver(S.round, S.prog.kicks)) { finishRound(); return; }
+    if (S.prog.idx === B.KICKS) { startExtraTime(); return; }
     saveProg();
     showPrompt(true);
   }
 
+  /* A final that's level after seven kicks: a fresh centre bounce, up to three more kicks, next score wins */
+  function startExtraTime() {
+    S.prog.pos = B.START;
+    saveProg();
+    ensurePlay().setPlay(B.START, true);
+    SND.play('siren', 1.6);
+    track('extra time', { round: S.round.n });
+    showPrompt(true);
+    callout('Extra time!<small>Three more kicks · next score wins</small>', 'siren', 2400);
+  }
+
+  const flagKey = function (season) { return 'bontillion:flag:s' + season; };
   function finishRound() {
     S.prog.done = true;
     saveProg();
+    const r = S.round, sc = scoreNow();
+    if (playScene) playScene.setScore(boardFor(r, S.prog.kicks));       // extra time can end with their point
+    renderHud();
+    // the flag is celebrated once, on the win that completes the four finals
+    let flag = false;
+    if (r.final && seasonState(seasonOf(r)).run.flag && !store.get(flagKey(seasonOf(r)))) { flag = true; store.set(flagKey(seasonOf(r)), r.n); }
+    const props = roundProps(r);
+    props.result = sc.outcome; props.margin = sc.margin; props.goals = sc.goals; props.behinds = sc.behinds;
+    props.siren_goals = S.prog.kicks.filter(function (k) { return k.tier === 'siren'; }).length;
+    props.set_shot = S.prog.ss != null; props.extra_time = S.prog.kicks.length > B.KICKS; props.flag = flag; props.game_number = S.prog.game || null;
+    track('round finished', props);
     // keep the last card up while the scores are checked, so nothing goes blank
     const nb = $('#next-btn');
-    if (nb) { nb.disabled = true; nb.textContent = 'Checking the scores…'; }
+    if (nb) { nb.disabled = true; nb.textContent = flag ? 'Premiers!' : 'Checking the scores…'; }
     SND.play('siren', 2.2);
-    callout('Full time<small>' + esc(B.resultLine(scoreNow())) + '</small>', null, 1700);
+    if (flag) {
+      const kit = SCN.strips(CLUB, sc.ab).us;
+      if (playScene) playScene.party([kit.jumper, kit.yoke, '#ffd54a', '#f4f1e8', '#ffd54a']);
+      setTimeout(function () { SND.play('fanfare'); SND.play('crowd', true); }, 900);
+      callout('Premiers!<small>The flag is yours</small>', 'siren', 4300);
+    } else callout('Full time<small>' + esc(B.resultLine(sc)) + '</small>', null, 1700);
     const stage = $('#stage');
     const chk = document.createElement('div');
     chk.className = 'checking'; chk.innerHTML = '<span>Checking the scores…</span>';
-    setTimeout(function () { stage.appendChild(chk); }, UI.calm ? 300 : 1100);
-    setTimeout(function () { chk.remove(); renderFull(); show('full'); }, UI.calm ? 1000 : 2300);
+    if (!flag) setTimeout(function () { stage.appendChild(chk); }, UI.calm ? 300 : 1100);
+    setTimeout(function () { chk.remove(); renderFull(); show('full'); }, (UI.calm ? 1000 : 2300) + (flag ? 3300 : 0));
   }
 
   /* ---------- Results */
@@ -2980,9 +4269,15 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     });
     g += '<line x1="28" x2="' + (W - 6) + '" y1="' + (top - 8) + '" y2="' + (top - 8) + '" stroke="#ffd54a" stroke-opacity=".45" stroke-dasharray="4 3"/>' +
       '<text x="4" y="' + (top - 5) + '" fill="#ffd54a" font-size="8" font-family="DotGothic16, monospace">GOAL</text>';
+    const step = kicks.length > B.KICKS ? Math.floor(288 / kicks.length) : 44;
+    if (kicks.length > B.KICKS) {
+      const ex = 46 + 6.5 * step;
+      g += '<line x1="' + ex + '" x2="' + ex + '" y1="' + (top - 14) + '" y2="' + (base + 30) + '" stroke="#ffd54a" stroke-opacity=".5" stroke-dasharray="2 3"/>' +
+        '<text x="' + (ex + 3) + '" y="' + (top - 16) + '" fill="#ffd54a" font-size="7" font-family="Silkscreen, monospace">EXTRA TIME</text>';
+    }
     kicks.forEach(function (k, i) {
-      const cx = 46 + i * 44, col = TCOL[k.tier];
-      const yy = k.tier === 'siren' ? top - 8 : y(k.metres);
+      const cx = 46 + i * step, col = TCOL[k.tier];
+      const yy = k.tier === 'siren' || k.behind ? top - 8 : y(k.metres);
       g += '<line x1="' + cx + '" x2="' + cx + '" y1="' + base + '" y2="' + (yy + 10) + '" stroke="' + col + '" stroke-width="1.5" stroke-dasharray="2 2"/>';
       const m = ICON[k.tier];
       let r = '';
@@ -2993,10 +4288,11 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       }
       g += '<svg x="' + (cx - 12) + '" y="' + (yy - 10) + '" width="24" height="20" viewBox="0 0 12 10" shape-rendering="crispEdges">' + r + '</svg>';
       if (k.goal) g += '<text x="' + cx + '" y="' + (yy - 14) + '" text-anchor="middle" fill="#ffd54a" font-size="8" font-family="Silkscreen, monospace">GOAL</text>';
+      else if (k.behind) g += '<text x="' + cx + '" y="' + (yy - 14) + '" text-anchor="middle" fill="' + col + '" font-size="8" font-family="Silkscreen, monospace">POST</text>';
       g += '<text x="' + cx + '" y="' + (base + 18) + '" text-anchor="middle" fill="#cfe9d6" font-size="10" font-family="DotGothic16, monospace">' + (i + 1) + '</text>' +
-        '<text x="' + cx + '" y="' + (base + 28) + '" text-anchor="middle" fill="#8fbf9f" font-size="7" font-family="DotGothic16, monospace">' + (k.metres ? '+' + k.metres : '0') + 'm</text>';
+        '<text x="' + cx + '" y="' + (base + 28) + '" text-anchor="middle" fill="#8fbf9f" font-size="7" font-family="DotGothic16, monospace">' + (k.behind ? '1 pt' : (k.metres ? '+' + k.metres : '0') + 'm') + '</text>';
     });
-    return '<svg class="kicklog" viewBox="0 0 ' + W + ' 200" role="img" aria-label="Your seven kicks by distance">' + g + '</svg>';
+    return '<svg class="kicklog" viewBox="0 0 ' + W + ' 200" role="img" aria-label="Your kicks by distance">' + g + '</svg>';
   }
 
   function logbook() {
@@ -3015,7 +4311,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     const sirens = played.reduce(function (n, x) { return n + x.p.kicks.filter(function (k) { return k.tier === 'siren'; }).length; }, 0);
     return {
       played: played.length, streak: streak, bestStreak: bestStreak, wins: wins, draws: draws, losses: played.length - wins - draws,
-      best: best, sirens: sirens, pct: played.length ? Math.round(100 * wins / played.length) : 0
+      best: best, sirens: sirens, pct: played.length ? Math.round(100 * wins / played.length) : 0, flags: flagsWon()
     };
   }
 
@@ -3024,12 +4320,14 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     const cell = function (v, label) { return '<div class="st"><b>' + v + '</b><span>' + label + '</span></div>'; };
     return '<div class="stats">' + cell(lb.played, 'Played') + cell(lb.wins, 'Won') + cell(lb.draws, 'Drawn') + cell(lb.losses, 'Lost') +
       cell(lb.played ? lb.pct + '%' : '–', 'Win rate') + cell(lb.streak, 'Streak') + cell(lb.bestStreak, 'Best streak') + cell(lb.sirens, 'Siren goals') + '</div>' +
-      (lb.best ? '<p class="stats-best">Best result: <b>' + esc(B.resultLine(lb.best)) + '</b> v ' + esc(lb.best.opp) + '</p>' : '');
+      (lb.best ? '<p class="stats-best">Best result: <b>' + esc(B.resultLine(lb.best)) + '</b> v ' + esc(lb.best.opp) + '</p>' : '') +
+      (lb.flags ? '<p class="stats-best">🏆 Premierships: <b>' + lb.flags + '</b></p>' : '') +
+      (seasonLine(seasonOf(currentRound())) ? '<p class="stats-best">' + seasonLine(seasonOf(currentRound())) + '</p>' : '');
   }
   function countdownHtml(nr) { return '<span class="countdown" data-t="' + parseDate(nr.date).getTime() + '">--:--:--</span>'; }
   function nextLine(nr, after) {
-    return nr ? '<p class="note">Round ' + nr.n + ' drops at midnight, your time: ' + countdownHtml(nr) + '</p>'
-      : '<p class="note">Round ' + (after + 1) + ' isn\'t out yet. Check back soon.</p>';
+    return nr ? '<p class="note">' + (nr.final ? 'The ' + esc(rname(nr)) : 'Round ' + (nr.rn || nr.n)) + ' drops at midnight, your time: ' + countdownHtml(nr) + '</p>'
+      : '<p class="note">The next round isn\'t out yet. Check back soon.</p>';
   }
 
   /* ---------- Half-time oranges (the tip jar; see DONATE) */
@@ -3092,47 +4390,217 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       (lb.draws ? ' · ' + part(lb.draws, 'draw', 'draws') : '');
   }
 
+  /* ---------- The result as a picture: the final scoreboard at the ground, for the group chat.
+     Drawn in the game's own pixel letters, so it looks the same on every phone. */
+  const CARD = { n: null, blob: null, file: null, name: '' };
+  let cardScene = null, cardView = null;
+  const CUP = ['.GGGGGGGGG.', 'GGgGGGGGGGG', 'G.gGGGGGG.G', 'G.gGGGGGG.G', '.GgGGGGGGG.', '..gGGGGGG..', '...gGGGG...', '....gGG....', '.....G.....', '.....G.....', '...GGGGG...', '..gGGGGGG..'];
+  function cupSvg() {
+    let r = '';
+    CUP.forEach(function (row, y) {
+      for (let x = 0; x < row.length; x++) if (row[x] !== '.') r += '<rect x="' + x + '" y="' + y + '" width="1" height="1" fill="' + (row[x] === 'g' ? '#fff3b0' : '#ffd54a') + '"/>';
+    });
+    return '<svg class="cup-ic" viewBox="0 0 11 12" aria-hidden="true">' + r + '</svg>';
+  }
+  function buildCard(r, p, sc, note) {
+    const CW = 360, CH = 452, K = 3, V5 = window.BON_VENUES;
+    const base = document.createElement('canvas'); base.width = CW; base.height = CH;
+    const g = base.getContext('2d');
+    const up = function (x) { return String(x).toUpperCase().replace(/[^A-Z0-9 .!\-]/g, ''); };
+    const mid = function (str, y, col, k) { V5.text5(g, str, Math.round((CW - V5.width5(str, k || 1)) / 2), y, col, k || 1); };
+    g.fillStyle = '#050a14'; g.fillRect(0, 0, CW, CH);
+    // masthead: the name, the round and the day
+    V5.text5(g, 'BONTILLION', 10, 6, '#ffb42e', 2);
+    const label = up(r.final ? rname(r) : 'Round ' + (r.rn || r.n)), when = up(fmtDate(r.date));
+    V5.text5(g, label, CW - 10 - V5.width5(label), 4, '#e8e4d8');
+    V5.text5(g, when, CW - 10 - V5.width5(when), 15, '#8493b3');
+    // the ground at full time, with the players taking it as it came
+    if (!cardScene) { cardView = document.createElement('canvas'); cardScene = SCN.create(cardView, { noFlash: true }); }
+    const kit = SCN.strips(CLUB, sc.ab).us;
+    cardScene.setPlay(B.START, true);
+    cardScene.setMatch(boardFor(r, p.kicks));
+    cardScene.snap(sc.outcome, { party: note === 'PREMIERS!' ? [kit.jumper, kit.yoke, '#ffd54a', '#f4f1e8', '#ffd54a'] : null });
+    g.drawImage(cardView, 0, 26);
+    let y = 26 + SCN.H + 12;
+    const pts = Math.abs(sc.margin);
+    mid(sc.outcome === 'won' ? 'WON BY ' + pts : sc.outcome === 'lost' ? 'LOST BY ' + pts : 'DREW', y, sc.outcome === 'won' ? '#4fcf83' : sc.outcome === 'lost' ? '#ff6b5e' : '#ffb42e', 4);
+    y += 36;
+    mid(up('v ' + sc.opp + (sc.venue ? ' at ' + sc.venue : '')), y, '#e8e4d8');
+    y += 13;
+    mid(up('From ' + sc.deficit + ' down - ' + sc.goals + (sc.goals === 1 ? ' goal' : ' goals') + (sc.behinds ? ' ' + sc.behinds + (sc.behinds === 1 ? ' behind' : ' behinds') : '') +
+      (p.kicks.length > B.KICKS ? ' - extra time' : '')), y, '#8493b3');
+    y += 16;
+    // the scoreboard
+    const bx = 96, bw = 168;
+    g.fillStyle = '#24324f'; g.fillRect(bx, y, bw, 42);
+    g.fillStyle = '#03060c'; g.fillRect(bx + 2, y + 2, bw - 4, 38);
+    const line = function (yy, name, s3, col) {
+      const gb = s3[0] + '.' + s3[1], ps = String(s3[2]);
+      V5.text5(g, name, bx + 8, yy, col, 2);
+      V5.text5(g, gb, bx + 112 - V5.width5(gb, 2), yy, col, 2);
+      V5.text5(g, ps, bx + bw - 8 - V5.width5(ps, 2), yy, col, 2);
+    };
+    line(y + 5, sc.ab, sc.them, '#e8e4d8'); line(y + 23, meName(sc.ab), sc.us, '#ffb21a');
+    y += 52;
+    // the kicks, as their icons
+    const n = p.kicks.length, tile = n > B.KICKS ? 26 : 30, gap = n > B.KICKS ? 4 : 6;
+    let x = Math.round((CW - (n * tile + (n - 1) * gap + (n > B.KICKS ? 8 : 0))) / 2);
+    p.kicks.forEach(function (k, i) {
+      if (i === B.KICKS) x += 8;
+      const col = TCOL[k.tier], m = ICON[k.tier];
+      g.fillStyle = col; g.fillRect(x, y, tile, tile);
+      g.fillStyle = '#0a1426'; g.fillRect(x + 1, y + 1, tile - 2, tile - 2);
+      const ox = x + Math.round((tile - 24) / 2), oy = y + Math.round((tile - 20) / 2);
+      for (let yy = 0; yy < m.length; yy++) for (let xx = 0; xx < m[yy].length; xx++) {
+        const ch = m[yy][xx];
+        if (ch === '.') continue;
+        g.fillStyle = ch === 'B' ? '#e23b48' : ch === 'g' ? '#2a7c45' : ch === 'P' ? '#f4f1e8' : ch === 'S' ? '#ffd54a' : col;
+        g.fillRect(ox + xx * 2, oy + yy * 2, 2, 2);
+      }
+      x += tile + gap;
+    });
+    y += tile + 11;
+    if (note) mid(up(note), y + (note.length <= 14 ? 0 : 4), '#ffd54a', note.length <= 14 ? 2 : 1);
+    mid('BONTILLION.IO', CH - 30, '#ffb42e', 2);
+    mid('THE DAILY KICK-TO-KICK', CH - 11, '#8493b3');
+    const out = document.createElement('canvas'); out.width = CW * K; out.height = CH * K;
+    const og = out.getContext('2d');
+    og.imageSmoothingEnabled = false;
+    og.drawImage(base, 0, 0, out.width, out.height);
+    return out;
+  }
+  // Drawn as soon as full time shows, so it's ready to hand to the share sheet inside the tap
+  function prepareCard(r, p, sc, note) {
+    CARD.n = null; CARD.blob = null; CARD.file = null;
+    const panel = $('#card-panel'), img = $('#card-img');
+    if (!panel || !img) return;
+    let cv;
+    try { cv = buildCard(r, p, sc, note); img.src = cv.toDataURL('image/png'); } catch (e) { return; }
+    panel.hidden = false;
+    CARD.name = 'bontillion-' + (r.final ? r.final.toLowerCase() : 'round-' + r.n) + '.png';
+    try {
+      cv.toBlob(function (blob) {
+        if (!blob) return;
+        CARD.n = r.n; CARD.blob = blob;
+        try { CARD.file = new File([blob], CARD.name, { type: 'image/png' }); } catch (e) { CARD.file = null; }
+        const cc = $('#card-copy');
+        try { if (cc && !UI.touch && navigator.clipboard && navigator.clipboard.write && window.ClipboardItem) cc.hidden = false; } catch (e) { /* no picture copying here */ }
+      }, 'image/png');
+    } catch (e) { /* the picture still shows; sharing falls back to the words */ }
+  }
+  /* A copy of the game on claude.ai can't download on its own: its host saves the file, after asking.
+     HOST is null on the game's own site, false where that host can't save, and the saver where it can. */
+  let HOST = null;
+  try {
+    if (window.claude && typeof window.claude.use === 'function') {
+      HOST = false;
+      window.claude.use('downloads').then(function (d) { if (d) HOST = d; }, function () { /* stays false */ });
+    }
+  } catch (e) { /* not on claude.ai */ }
+  function saveCard() {
+    const st = $('#card-status'), hold = 'Touch and hold (or right-click) the picture to save it.';
+    if (HOST === false) { st.textContent = hold; return; }
+    if (HOST && CARD.blob) {
+      st.textContent = 'Saving…';
+      try {
+        HOST.save({ filename: CARD.name || 'bontillion.png', data: CARD.blob }).then(function () {
+          st.textContent = 'Saved.'; track('shared', { round: S.round.n, how: 'saved picture' });
+        }, function (err) { st.textContent = err && err.code === 'declined' ? 'Not saved.' : hold; });
+      } catch (e) { st.textContent = hold; }
+      return;
+    }
+    try {
+      const a = document.createElement('a');
+      a.download = CARD.name || 'bontillion.png';
+      a.href = CARD.blob ? URL.createObjectURL(CARD.blob) : $('#card-img').src;
+      document.body.appendChild(a); a.click(); a.remove();
+      st.textContent = UI.touch ? 'Saved. If it didn\'t, touch and hold the picture.' : 'Saved to your downloads.';
+      track('shared', { round: S.round.n, how: 'saved picture' });
+    } catch (e) { st.textContent = hold; }
+  }
+  function copyCard() {
+    const st = $('#card-status');
+    try {
+      navigator.clipboard.write([new window.ClipboardItem({ 'image/png': CARD.blob })]).then(function () {
+        st.textContent = 'Picture copied. Paste it into the group chat.';
+        track('shared', { round: S.round.n, how: 'copied picture' });
+      }, function () { st.textContent = 'This browser blocked copying. Save the picture instead.'; });
+    } catch (e) { st.textContent = 'This browser can\'t copy pictures. Save it instead.'; }
+  }
+
   function renderFull() {
     const r = S.round, p = S.prog, sc = B.scoreAfter(r, p.kicks);
-    const share = B.shareText(r, p.kicks);
-    const row = p.kicks.map(function (k) { return B.TIER[k.tier].emoji; }).join('');
+    const season = seasonOf(r), ss = r.final ? seasonState(season) : null;
+    const flagHere = !!r.final && store.get(flagKey(season)) === r.n;
+    const ms = B.milestone(p.game || 0);
+    // lines that ride along with the shared result, and the one line on the picture
+    const extras = [];
+    let note = '';
+    if (r.final) {
+      const nextKey = B.FINAL_KEYS[B.FINAL_KEYS.indexOf(r.final) + 1];
+      if (flagHere) { extras.push('🏆 PREMIERS!'); note = 'PREMIERS!'; }
+      else if (ss.run.out === r.final) { extras.push('Knocked out'); note = 'KNOCKED OUT'; }
+      else if (sc.outcome === 'lost' && r.final === 'F1' && ss.run.lifeUsed) { extras.push('Alive on the double chance'); note = 'ALIVE ON THE DOUBLE CHANCE'; }
+      else if (sc.outcome === 'won' && ss.run.alive && nextKey) { extras.push('Through to the ' + B.FINALS[nextKey]); note = 'THROUGH TO THE ' + B.FINALS[nextKey]; }
+    }
+    if (ms) { extras.push('🎽 Game ' + ms); if (!note) note = 'GAME ' + ms; }
+    const share = B.shareText(r, p.kicks, { dc: !!p.dc, lines: extras });
+    const em = function (k) { return B.TIER[k.tier].emoji; };
+    const row = p.kicks.slice(0, B.KICKS).map(em).join('') + (p.kicks.length > B.KICKS ? ' ⏱ ' + p.kicks.slice(B.KICKS).map(em).join('') : '');
     const v = VERDICT.filter(function (x) { return sc.margin >= x.lo && sc.margin <= x.hi; })[0] || VERDICT[0];
     const word = sc.outcome === 'won' ? 'Won' : sc.outcome === 'lost' ? 'Lost' : 'Drew';
     const by = sc.margin ? 'by ' + Math.abs(sc.margin) + (Math.abs(sc.margin) === 1 ? ' point' : ' points') : 'Scores level';
     const lb = logbook();
     const nr = nextRound();
 
-    const tally = r.prompts.map(function (q, i) {
-      const k = p.kicks[i];
-      const ans = k ? (k.input ? esc(truncate(k.input, 26)) + (k.name && B.norm(k.name) !== B.norm(k.input) ? ' <i>· ' + esc(k.name) + '</i>' : '') : '<i>No answer</i>') : '';
-      return '<div class="tally-item" style="--tc:var(--t-' + (k ? k.tier : 'n15') + ')">' +
+    const tally = p.kicks.map(function (k, i) {
+      const q = r.prompts[i];
+      const ans = k.input ? esc(truncate(k.input, 26)) + (k.name && B.norm(k.name) !== B.norm(k.input) ? ' <i>· ' + esc(k.name) + '</i>' : '') : '<i>No answer</i>';
+      return '<div class="tally-item" style="--tc:var(--t-' + k.tier + ')">' +
         '<button type="button" class="tally-row" aria-expanded="false" data-i="' + i + '">' +
-        '<span class="tally-n">' + (i + 1) + '</span>' + icon(k ? k.tier : 'n15') +
-        '<span class="tally-txt"><span class="tally-q">' + esc(q.q) + '</span><span class="tally-a">' + ans + '</span></span>' +
-        '<span class="tally-m">' + (k && k.goal ? 'GOAL' : (k && k.metres ? '+' + k.metres : '0') + ' m') + '</span><span class="tally-x">+</span></button>' +
+        '<span class="tally-n">' + (i < B.KICKS ? i + 1 : 'ET') + '</span>' + icon(k.tier) +
+        '<span class="tally-txt"><span class="tally-q">' + esc(q.q) + '</span><span class="tally-a">' + ans + (k.setShot ? ' <i>· set shot</i>' : '') + '</span></span>' +
+        '<span class="tally-m">' + (k.goal ? 'GOAL' : k.behind ? 'POST' : (k.metres ? '+' + k.metres : '0') + ' m') + '</span><span class="tally-x">+</span></button>' +
         '<div class="tally-body" hidden></div></div>';
     }).join('');
+    const vs = B.votes(p.kicks);
+    const votesHtml = !vs.length ? '' : '<section class="panel"><h2 class="label">Best on ground <span>your 3 · 2 · 1</span></h2><ol class="votes">' + vs.map(function (x) {
+      return '<li style="--tc:var(--t-' + x.kick.tier + ')"><b>' + x.votes + '</b>' + icon(x.kick.tier) + '<span class="votes-n">' + esc(x.kick.name) +
+        '<small>' + esc(B.TIER[x.kick.tier].short) + ' · ' + (x.i < B.KICKS ? 'kick ' + (x.i + 1) : 'extra time') + '</small></span></li>';
+    }).join('') + '</ol></section>';
 
     const nextHtml = nextLine(nr, currentRound().n);
 
     $('#screen-full').innerHTML =
-      '<div class="res-head"><span class="chip-led">ROUND #' + r.n + ' · FULL TIME</span></div>' +
-      '<div class="res-score res-' + sc.outcome + '"><div class="res-big"><span class="led">' + word + '</span><span class="res-unit">' + esc(by) + '</span></div>' +
+      '<div class="res-head"><span class="chip-led">' + (r.final ? esc(rname(r)).toUpperCase() : 'ROUND #' + r.n) + ' · FULL TIME</span></div>' +
+      '<div class="res-score res-' + sc.outcome + '">' + (flagHere ? '<div class="res-cup">' + cupSvg() + '<span class="led">Premiers</span>' + cupSvg() + '</div>' : '') +
+      '<div class="res-big"><span class="led">' + word + '</span><span class="res-unit">' + esc(by) + '</span></div>' +
       '<div class="mini-board res-board">' + miniBoard(sc) + '</div>' +
-      '<p class="res-m">From ' + sc.deficit + ' down v ' + esc(sc.opp) + ': ' + sc.goals + (sc.goals === 1 ? ' goal' : ' goals') + ' in 7 kicks</p>' +
-      '<p class="res-row" aria-label="Your seven kicks">' + row + '</p></div>' +
-      '<div class="btn-row"><button type="button" class="btn btn-red" id="copy-btn">Copy result</button><button type="button" class="btn" data-go="archive">Archive ↺</button></div>' +
-      '<p class="copy-status" id="copy-status" aria-live="polite"></p>' +
+      '<p class="res-m">From ' + sc.deficit + ' down v ' + esc(sc.opp) + ': ' + sc.goals + (sc.goals === 1 ? ' goal' : ' goals') +
+      (sc.behinds ? ', ' + sc.behinds + (sc.behinds === 1 ? ' behind' : ' behinds') : '') + ' in ' + p.kicks.length + ' kicks' + (p.kicks.length > B.KICKS ? ', after extra time' : '') + '</p>' +
+      (r.final ? '<p class="finals-line">' + finalsLine(r) + '</p>' : '') +
+      (ms ? '<p class="finals-line">🎽 Game ' + ms + ' for you. They made you a banner.</p>' : '') +
+      '<p class="res-row" aria-label="Your kicks">' + row + '</p></div>' +
+      '<div class="btn-row"><button type="button" class="btn btn-red" id="copy-btn">' + (canShare() ? 'Share ▸' : 'Copy result') + '</button><button type="button" class="btn" data-go="archive">Archive ↺</button></div>' +
+      '<p class="copy-status" id="copy-status" aria-live="polite">' + (canShare() ? '<button type="button" class="link-btn" id="copy-alt">or copy the words</button>' : '') + '</p>' +
       '<pre class="share-pre" id="share-text" hidden>' + esc(share) + '</pre>' +
+      '<section class="panel card-panel" id="card-panel" hidden><h2 class="label">Result picture <span>to share</span></h2>' +
+      '<img class="card-img" id="card-img" alt="Your result as a picture: the final scoreboard at the ground and your kicks">' +
+      '<div class="btn-row"><button type="button" class="btn" id="card-save">Save picture</button><button type="button" class="btn" id="card-copy" hidden>Copy picture</button></div>' +
+      '<p class="copy-status" id="card-status" aria-live="polite"></p></section>' +
       '<section class="panel"><h2 class="label">Your record <span>no do-overs</span></h2>' + statsHtml(lb) + nextHtml + '</section>' +
-      orangesCard() +
+      orangesCard() + votesHtml +
       '<section class="panel"><h2 class="label">The kick log <span>longer = rarer</span></h2>' + kickLogSvg(p.kicks) + '</section>' +
       '<section class="panel"><h2 class="label">The verdict</h2><ul class="verdict">' + VERDICT.map(function (x) {
         return '<li class="' + (x === v ? 'me' : '') + '"><span class="v-band">' + x.band + '</span><span><b>' + esc(x.title) + '.</b> ' + esc(x.line) + '</span></li>';
       }).join('') + '</ul></section>' +
       '<section class="panel"><h2 class="label">The tally <span>tap for every answer</span></h2><div class="tally">' + tally + '</div></section>';
 
-    $('#copy-btn').addEventListener('click', function () { copyShare(share); });
+    $('#copy-btn').addEventListener('click', function () { shareResult(share); });
+    const alt = $('#copy-alt');
+    if (alt) alt.addEventListener('click', function () { copyShare(share); });
+    $('#card-save').addEventListener('click', saveCard);
+    $('#card-copy').addEventListener('click', copyCard);
     const ob = $('#oranges-btn');
     if (ob) ob.addEventListener('click', openOranges);
     $$('[data-go]', $('#screen-full')).forEach(wireGo);
@@ -3140,6 +4608,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       btn.addEventListener('click', function () { toggleTally(btn, r.prompts[+btn.dataset.i], p.kicks[+btn.dataset.i]); });
     });
     startCountdown();
+    prepareCard(r, p, sc, note);
   }
 
   function toggleTally(btn, q, k) {
@@ -3151,10 +4620,10 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     body.hidden = false;
     if (body.dataset.built) return;
     body.dataset.built = '1';
-    const order = ['siren', 'banana', 'punt', 'chip', 'grub', 'n15'];
+    const order = ['siren', 'post', 'banana', 'punt', 'chip', 'grub', 'n15'];
     const counts = {};
     q.answers.forEach(function (a) { counts[a.t] = (counts[a.t] || 0) + 1; });
-    const names = { siren: 'Siren goal', banana: 'Banana', punt: 'Drop punt', chip: 'Chip', grub: 'Grubber', n15: 'Not 15' };
+    const names = { siren: 'Siren goal', post: 'Hit the post', banana: 'Banana', punt: 'Drop punt', chip: 'Chip', grub: 'Grubber', n15: 'Not 15' };
     body.innerHTML = '<div class="chips"><button type="button" class="chip-btn" aria-pressed="true" data-t="">All ' + q.answers.length + '</button>' +
       order.filter(function (t) { return counts[t]; }).map(function (t) {
         return '<button type="button" class="chip-btn" aria-pressed="false" data-t="' + t + '" style="--tc:var(--t-' + t + ')">' + names[t] + ' ' + counts[t] + '</button>';
@@ -3162,13 +4631,13 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       '<label class="sr-only" for="search-' + q.id + '">Search answers</label><input class="search" id="search-' + q.id + '" type="search" placeholder="Search all answers…" autocomplete="off">' +
       '<ul class="ans-list"></ul><p class="ans-count"></p>';
     const list = $('.ans-list', body), count = $('.ans-count', body), search = $('.search', body);
-    const sorted = q.answers.slice().sort(function (a, b) { return RANK[b.t] - RANK[a.t] || a.n.localeCompare(b.n); });
+    const sorted = q.answers.slice().sort(function (a, b) { return SORT[b.t] - SORT[a.t] || a.n.localeCompare(b.n); });
     let filt = '';
     function draw() {
       const qn = B.norm(search.value);
       const items = sorted.filter(function (a) { return (!filt || a.t === filt) && (!qn || B.norm(a.n + ' ' + (a.a || []).join(' ')).indexOf(qn) >= 0); });
       list.innerHTML = items.map(function (a) {
-        const m = a.t === 'siren' ? 'GOAL' : '+' + B.TIER[a.t].m + 'm';
+        const m = B.TIER[a.t].tag || '+' + B.TIER[a.t].m + 'm';
         return '<li class="' + (k && k.name === a.n ? 'mine' : '') + '" style="--tc:var(--t-' + a.t + ')">' + icon(a.t) +
           '<span class="ans-n">' + esc(a.n) + (k && k.name === a.n ? ' · your answer' : '') + (a.d ? '<small>' + esc(a.d) + '</small>' : '') + (a.x ? '<em>' + esc(a.x) + '</em>' : '') + '</span>' +
           '<span class="ans-m">' + m + '</span></li>';
@@ -3186,8 +4655,25 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     draw();
   }
 
+  /* Phones open their own share sheet (Messages, WhatsApp, anything); elsewhere the result is copied, ready to paste */
+  function canShare() { try { return UI.touch && typeof navigator.share === 'function'; } catch (e) { return false; } }
+  function canShareCard() {
+    try { return !!(CARD.file && S.round && CARD.n === S.round.n && navigator.canShare && navigator.canShare({ files: [CARD.file] })); } catch (e) { return false; }
+  }
+  function shareResult(text) {
+    if (!canShare()) { copyShare(text); return; }
+    const pic = canShareCard();
+    track('shared', { round: S.round.n, how: pic ? 'picture' : 'words' });
+    try {
+      navigator.share(pic ? { files: [CARD.file], text: text } : { text: text }).then(function () { /* sent, or handed to another app */ }, function (err) {
+        // closing the share sheet isn't a failure; anything else falls back to copying
+        if (!err || err.name !== 'AbortError') copyShare(text);
+      });
+    } catch (e) { copyShare(text); }
+  }
   function copyShare(text) {
     const st = $('#copy-status');
+    track('shared', { round: S.round ? S.round.n : null, how: 'copied words' });
     const fallback = function () {
       const pre = $('#share-text');
       pre.hidden = false;
@@ -3235,7 +4721,9 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
         meta = B.resultLine(res) + ' · ' + p.kicks.map(function (k) { return B.TIER[k.tier].emoji; }).join('');
         label = 'Full time';
       } else if (p && (p.kicks.length || p.startedAt)) { meta = 'In progress'; label = 'Resume'; }
-      return '<li class="panel arch-item"><div><h2>Round ' + r.n + '</h2><p class="arch-meta">' + esc(fmtDate(r.date, true)) + ' · v ' + esc(B.matchOf(r).opp) + ' · ' + meta + '</p></div>' +
+      const mm = B.matchOf(r);
+      return '<li class="panel arch-item"><div><h2>' + esc(r.final ? rname(r) : 'Round ' + (r.rn || r.n)) + '</h2><p class="arch-meta">' + esc(fmtDate(r.date, true)) + ' · v ' + esc(mm.opp) +
+        (mm.venue ? ' at ' + esc(mm.venue) : '') + ' · ' + meta + '</p></div>' +
         '<button type="button" class="btn ' + (label === 'Play' ? 'btn-red' : '') + '" data-round="' + r.n + '">' + label + ' ▸</button></li>';
     }).join('');
     $$('[data-round]', $('#arch-list')).forEach(function (b) {
@@ -3285,6 +4773,44 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       layout();
     }
   }
+  function kitSvg(kit) {
+    let r = '<rect x="0" y="0" width="1" height="2" fill="' + kit.jumper + '"/><rect x="7" y="0" width="1" height="2" fill="' + kit.jumper + '"/>';
+    for (let y = 0; y < 6; y++) for (let x = 0; x < 6; x++) {
+      let c = (y === 0 || y === 3) ? kit.yoke : kit.jumper;
+      if (kit.pat === 'stripes') c = (x & 1) ? kit.yoke : kit.jumper;
+      else if (kit.pat === 'hoops') c = (y & 1) ? kit.yoke : kit.jumper;
+      else if (kit.pat === 'sash') c = Math.abs(x - y * 0.9 - 0.3) < 1 ? kit.yoke : kit.jumper;
+      else if (kit.pat === 'yoke') c = y <= 1 ? kit.yoke : kit.jumper;
+      else if (kit.pat === 'mono') c = (y === 2 && (x === 2 || x === 3)) ? kit.yoke : kit.jumper;
+      r += '<rect x="' + (x + 1) + '" y="' + y + '" width="1" height="1" fill="' + c + '"/>';
+    }
+    r += '<rect x="1" y="6" width="6" height="1" fill="' + kit.shorts + '"/><rect x="1" y="7" width="2" height="1" fill="' + kit.shorts + '"/><rect x="5" y="7" width="2" height="1" fill="' + kit.shorts + '"/>';
+    return '<svg class="kit-ic" viewBox="0 0 8 8" aria-hidden="true">' + r + '</svg>';
+  }
+  function setClub(code) {
+    CLUB = CLUB_NAMES[code] ? code : null;
+    store.set(CLUB_KEY, CLUB || 'none');
+    $('#tile-club').textContent = CLUB ? 'Club: ' + CLUB_NAMES[CLUB] : 'Pick your club';
+    track('club picked', { club: CLUB || 'none' });
+    // repaint whatever is showing
+    if (S.screen === 'home') renderHome();
+    if (playScene && S.round && S.prog) playScene.setMatch(boardFor(S.round, S.prog.kicks));
+    if (S.screen === 'full' && S.round && S.prog && S.prog.done) renderFull();
+  }
+  function openClub() {
+    const dlg = $('#club'), grid = $('#club-grid');
+    const opt = function (code, name, kit) {
+      return '<button type="button" class="club-opt" data-club="' + code + '" aria-pressed="' + ((CLUB || '') === code ? 'true' : 'false') + '">' + kitSvg(kit) + '<span>' + esc(name) + '</span></button>';
+    };
+    grid.innerHTML = SCN.CLUBS.map(function (c) { return opt(c, CLUB_NAMES[c], SCN.ownKit(c)); }).join('') + opt('', 'No club', SCN.strips(null, '').us);
+    $$('.club-opt', grid).forEach(function (b) {
+      b.addEventListener('click', function () {
+        setClub(b.dataset.club);
+        $$('.club-opt', grid).forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      });
+    });
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
   function openMenu() { $('#menu').hidden = false; const f = $('.tile', $('#menu')); if (f) try { f.focus({ preventScroll: true }); } catch (e) { f.focus(); } }
   function closeMenu() {
     $('#menu').hidden = true;
@@ -3302,6 +4828,13 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     });
     $('#kick-btn').addEventListener('click', function (e) { e.preventDefault(); submit($('#answer').value, false); });
     $('#skip-btn').addEventListener('click', function (e) { e.stopPropagation(); if (playScene && playScene.busy()) playScene.skip(); });
+    // the set shot: tap the shot clock (once a game)
+    const cb = $('#clock-box');
+    cb.addEventListener('click', takeSetShot);
+    cb.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); takeSetShot(); } });
+    const cdlg = $('#club');
+    $('#club-close').addEventListener('click', function () { if (cdlg.close) cdlg.close(); else cdlg.removeAttribute('open'); });
+    $('#home-club-btn').addEventListener('click', openClub);
     $('#stage').addEventListener('click', function (e) { if (S.busy && e.target.id !== 'skip-btn') trySkip(); });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && !$('#menu').hidden) { closeMenu(); return; }
@@ -3360,12 +4893,38 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
         else if (a === 'help') { closeMenu(); openHelp(); }
         else if (a === 'stats') { closeMenu(); openStats(); }
         else if (a === 'oranges') { closeMenu(); openOranges(); }
+        else if (a === 'club') { closeMenu(); openClub(); }
         else if (a === 'sound') { SND.unlock(); setSound(!SND.isOn()); }
         else if (a === 'motion') setCalm(!UI.calm);
         else if (a === 'keys') { setKbd(UI.kbd === 'game' ? 'phone' : 'game'); }
+        else if ((a === 'pv-five' || a === 'pv-finals') && PREVIEW) {
+          // Preview only: put results on the books so a banner or the Grand Final can be tried without playing up to them
+          const fake = function (r, win) {
+            const kicks = [];
+            let pos = B.START;
+            for (let i = 0; i < B.KICKS; i++) {
+              const tier = win && i < 3 ? 'siren' : 'out', k = B.applyKick(pos, tier);
+              kicks.push({ input: win && i < 3 ? 'preview' : 'x', name: win && i < 3 ? 'Preview' : '', tier: tier, note: '', metres: k.metres, goal: k.goal, behind: false, from: k.from, to: k.to, next: k.next, timeUp: false });
+              pos = k.next;
+            }
+            store.set(KEY(r.n), { n: r.n, idx: B.KICKS, pos: pos, kicks: kicks, startedAt: null, revealPending: false, done: true });
+          };
+          const open = function (r) { const p = store.get(KEY(r.n)); return !(p && (p.done || p.kicks.length || p.startedAt)); };
+          if (a === 'pv-five') {
+            const need = Math.max(0, 4 - logbook().played);
+            available().filter(function (r) { return !r.final && r.n !== currentRound().n && open(r); }).slice(0, need).forEach(function (r) { fake(r, false); });
+            $('#tile-pv-five').textContent = logbook().played === 4 ? 'Done: your next game is your 5th' : 'You\'ve played ' + logbook().played + ' (reset first for a 5th)';
+          } else {
+            ROUNDS.filter(function (r) { return r.final && r.final !== 'GF' && r.date <= todayStr() && open(r); }).forEach(function (r) { fake(r, true); });
+            $('#tile-pv-finals').textContent = 'Done: win the Grand Final for the flag';
+          }
+          if (S.screen === 'home') renderHome();
+          if (S.screen === 'archive') renderArchive();
+        }
         else if (a === 'reset' && PREVIEW) {
           if (!armed) { armed = true; $('#tile-reset').textContent = 'Tap again to wipe your results'; return; }
           store.clearAll(); armed = false; $('#tile-reset').textContent = 'Results wiped';
+          ROUNDS.forEach(function (r) { memory[flagKey(seasonOf(r))] = 'null'; try { window.localStorage.removeItem(flagKey(seasonOf(r))); } catch (e) { /* blocked */ } });
           closeMenu(); stopClock(); S.prog = null; go('home');
         }
       });
@@ -3390,9 +4949,13 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   function boot(data) {
     UI.touch = detectTouch();
     UI.kbd = store.get('bontillion:keys') === 'phone' ? 'phone' : 'game';
+    const c0 = store.get(CLUB_KEY);
+    CLUB = CLUB_NAMES[c0] ? c0 : null;
     renderLadder($('#ladder'));
     renderLadder($('#help-ladder'));
     wire();
+    $('#tile-club').textContent = CLUB ? 'Club: ' + CLUB_NAMES[CLUB] : 'Pick your club';
+    try { $('#help-privacy').hidden = !(window.BON_STATS && window.BON_STATS.key); } catch (e) { /* ignore */ }
     $('#tile-keys-btn').hidden = !UI.touch;
     $('#tile-keys').textContent = 'Keys: ' + (UI.kbd === 'game' ? 'game' : 'phone');
     setCalm(store.get('bontillion:motion') === 'calm');
