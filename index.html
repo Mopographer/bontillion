@@ -3936,7 +3936,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   function trophies() {
     const out = [], seasons = {};
     ROUNDS.forEach(function (r) { seasons[seasonOf(r)] = true; });
-    let perfect = 0, sirens = 0, run = 0, bestRun = 0, comeback = 0, bag = 0, etWin = false, games = 0, sharp = 0;
+    let perfect = 0, sirens = 0, run = 0, bestRun = 0, comeback = 0, bag = 0, posts = 0, games = 0, sharp = 0;
     ROUNDS.forEach(function (r) {
       const p = store.get(KEY(r.n));
       if (!p || !p.done) { run = 0; return; }
@@ -3944,12 +3944,12 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       if (p.kicks.slice(0, B.KICKS).every(function (k) { return k.tier !== 'out'; })) perfect++;
       sirens += p.kicks.filter(function (k) { return k.tier === 'siren'; }).length;
       bag = Math.max(bag, p.kicks.filter(function (k) { return k.goal; }).length);
+      posts += p.kicks.filter(function (k) { return k.tier === 'post'; }).length;      // the answer everyone goes for: off the post, a behind
       sharp += p.kicks.filter(function (k) { return k.setShot && k.goal; }).length;      // went back for a set shot and kicked it
       const sc = B.scoreAfter(r, p.kicks), down = B.matchOf(r).deficit;
       if (sc.outcome === 'won') {
         run++; bestRun = Math.max(bestRun, run);
         if (down >= 12) comeback = Math.max(comeback, down);
-        if (r.final && p.kicks.length > B.KICKS) etWin = true;
       } else run = 0;
     });
     const GREY = '#6c7c96', GOLD = '#ffd54a';
@@ -3979,7 +3979,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     out.push({ won: comeback > 0, art: T_MEDAL(comeback ? '#ff6b5e' : GREY), name: 'The comeback', note: comeback ? 'Won from ' + comeback + ' points down' : 'Win from 12 or more down' });
     out.push({ won: bag >= 3, art: T_MEDAL(bag >= 3 ? GOLD : GREY), name: 'Bag of three', note: bag >= 3 ? bag + ' goals in one last quarter' : 'Kick three goals in a round' });
     out.push({ won: sharp > 0, art: T_MEDAL(sharp ? '#ff9f43' : GREY), name: 'Sharpshooter', note: sharp ? (sharp === 1 ? 'A set shot kicked for goal' : sharp + ' set shots kicked for goal') : 'Kick a goal from a set shot' });
-    out.push({ won: etWin, art: T_MEDAL(etWin ? '#5aaeff' : GREY), name: 'Cool head', note: etWin ? 'Won a final in extra time' : 'Win a final in extra time' });
+    out.push({ won: posts > 0, art: T_MEDAL(posts ? '#5aaeff' : GREY), name: 'Looks off line', note: posts ? (posts === 1 ? 'Hit the post once' : 'Hit the post ' + posts + ' times') : 'Hit the post for a behind' });
     const marks = [100, 50, 25, 10], got = marks.filter(function (m) { return games >= m; })[0], next = marks.slice().reverse().filter(function (m) { return games < m; })[0];
     out.push({ won: !!got, art: T_SHIELD(got ? '#f4cc4f' : GREY), name: got ? got + ' games' : '10 games', note: got ? games + ' played' + (next ? ', ' + next + ' is next' : '') : games + ' played so far' });
     return out;
