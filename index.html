@@ -619,6 +619,21 @@ html.shell .pips.et .pip { width: 7px; height: 7px; border-width: 1px; }
 /* ---------- Pick your club */
 .home-club { margin: 8px 0 0; text-align: center; font-size: 14px; }
 .home-club .link-btn { color: var(--led); }
+/* The ladder */
+.lad-box { border: 2px solid var(--edge); border-radius: 6px; background: linear-gradient(180deg, var(--panel-2), var(--panel)); padding: 6px 6px 4px; }
+.lad { width: 100%; border-collapse: collapse; font-family: var(--f-led); font-size: 15px; }
+.lad th { font-family: var(--f-label); font-size: 9px; letter-spacing: 0.12em; color: var(--dim); font-weight: 400; text-align: right; padding: 2px 4px 6px; }
+.lad td { text-align: right; padding: 3px 3px; color: var(--mist); white-space: nowrap; }
+.lad .lad-pos { text-align: left; color: var(--dim); width: 20px; }
+.lad .lad-club { text-align: left; color: var(--chalk); font-family: var(--f-px); font-size: 14px; white-space: nowrap; }
+.lad th.lad-club { color: var(--dim); font-family: var(--f-label); }
+.lad .lad-pts { color: var(--led); }
+.lad tr.lad-me td { background: rgba(255, 178, 26, 0.13); color: var(--led); }
+.lad tr.lad-me .lad-club { font-weight: 700; }
+.lad tr.lad-me b { font-family: var(--f-label); font-size: 8px; letter-spacing: 0.1em; background: var(--led); color: #1a1205; padding: 1px 4px; border-radius: 2px; margin-left: 3px; font-weight: 400; vertical-align: 2px; }
+.lad tr.lad-cut td { border-bottom: 2px dashed var(--mint); }
+.lad-foot { margin: 10px 2px 0; }
+.linkish { background: none; border: 0; padding: 0 0 1px; margin: 0 0 0 2px; font: inherit; color: var(--mint); border-bottom: 1px solid var(--mint); cursor: pointer; }
 .club-note { margin: 0 0 12px; }
 .club-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .club-opt { display: flex; align-items: center; gap: 9px; min-width: 0; padding: 7px 8px; border: 2px solid var(--edge); border-radius: 6px; background: #081120; color: var(--chalk); font: inherit; font-size: 14px; text-align: left; cursor: pointer; }
@@ -764,6 +779,7 @@ html.shell .pips.et .pip { width: 7px; height: 7px; border-width: 1px; }
       <button type="button" class="tile" data-menu="today"><span class="tile-ic">▼</span>Today's round</button>
       <button type="button" class="tile" data-menu="archive"><span class="tile-ic">↺</span>Archive</button>
       <button type="button" class="tile" data-menu="stats"><span class="tile-ic">▤</span>Your record</button>
+      <button type="button" class="tile" data-menu="table" id="tile-table"><span class="tile-ic">≡</span>The ladder</button>
       <button type="button" class="tile" data-menu="help"><span class="tile-ic">?</span>How to play</button>
       <button type="button" class="tile" data-menu="club"><span class="tile-ic">♥</span><span id="tile-club">Pick your club</span></button>
       <button type="button" class="tile" data-menu="sound"><span class="tile-ic">♪</span><span id="tile-sound">Sound: on</span></button>
@@ -797,7 +813,8 @@ html.shell .pips.et .pip { width: 7px; height: 7px; border-width: 1px; }
       <li><b>Mind the post.</b> Some prompts have one "clever" answer that everyone reaches for. It gets there from anywhere too, but it hits the post: one behind (1 point), and back to the centre.</li>
       <li><b>Nicknames and surnames are fine</b> and small typos are forgiven. If a surname fits two people, you'll be asked which one and the clock stops.</li>
       <li><b>One go per round, no do-overs.</b> Your results and record are saved in this browser.</li>
-      <li><b>Then come the finals.</b> After Round 23, four finals. Win all four and the flag is yours. Twelve wins in the season earns the double chance: lose the first final and you're still alive. A final can't be drawn: level after seven kicks means extra time, three more kicks from the centre, and the next score wins.</li>
+      <li><b>From Season 2, a season is a ladder.</b> Seventeen rounds, one against every other club. A win is four points, and the ladder (in the menu) shows where you sit among the 18 clubs. Pick your club to take its place.</li>
+      <li><b>Then come the finals.</b> Finish in the top eight to play them. The top four get a second chance in week one; fifth to eighth are out with one loss. Win the Grand Final and the flag is yours. A final can't be drawn: level after seven kicks means extra time, three more kicks from the centre, and the next score wins.</li>
       <li><b>Your 5th game, your 10th, and every 10th after</b> gets a banner to run through.</li>
       <li><b>In the menu:</b> pick your club and your side wears its colours. There's also sound, a calmer camera (Motion), and on phones you can swap the game's keys for your phone's own keyboard (Keys). Rain and wind are only for looks.</li>
     </ol>
@@ -815,6 +832,15 @@ html.shell .pips.et .pip { width: 7px; height: 7px; border-width: 1px; }
     <h2 id="stats-h" class="menu-title">Your record</h2>
     <div id="stats-body"></div>
     <div class="dialog-actions"><button type="button" class="btn btn-mint" id="stats-close">Done</button></div>
+  </div>
+</dialog>
+
+<!-- THE LADDER (Season 2 on) -->
+<dialog id="table" aria-labelledby="table-h">
+  <div class="dialog-inner">
+    <h2 id="table-h" class="menu-title">The ladder</h2>
+    <div id="table-body"></div>
+    <div class="dialog-actions"><button type="button" class="btn btn-mint" id="table-close">Done</button></div>
   </div>
 </dialog>
 
@@ -842,7 +868,7 @@ html.shell .pips.et .pip { width: 7px; height: 7px; border-width: 1px; }
 
 <script>
 /* Bontillion rounds. Each round's questions load from r/<n>.json when it's played. Generated by build.py */
-window.BON_ROUNDS = [{"n":1,"date":"2026-11-06","season":1,"match":{"opp":"Carlton","ab":"CAR","us":[9,10],"them":[11,9],"at":"mcg","time":"night"},"v":"56df64a554"},{"n":2,"date":"2026-11-07","season":1,"match":{"opp":"Essendon","ab":"ESS","us":[10,8],"them":[11,6],"at":"marvel","time":"night"},"v":"72ba0b7a1f"},{"n":3,"date":"2026-11-08","season":1,"match":{"opp":"Gold Coast","ab":"GCS","us":[9,9],"them":[10,6],"at":"pfs","time":"day"},"key":"3gc","v":"15017e8d0a"},{"n":4,"date":"2026-11-09","season":1,"match":{"opp":"Collingwood","ab":"COL","us":[9,8],"them":[10,8],"at":"mcg","time":"day"},"v":"370817ad46"},{"n":5,"date":"2026-11-10","season":1,"match":{"opp":"West Coast","ab":"WCE","us":[9,7],"them":[9,9],"at":"optus","time":"twilight"},"v":"fe5e53d2ee"},{"n":6,"date":"2026-11-11","season":1,"match":{"opp":"Brisbane","ab":"BRI","us":[6,8],"them":[9,7],"at":"gabba","time":"night"},"v":"418f7f105a"},{"n":7,"date":"2026-11-12","season":1,"match":{"opp":"Richmond","ab":"RIC","us":[11,9],"them":[12,8],"at":"mcg","time":"night"},"v":"67af59d64d"},{"n":8,"date":"2026-11-13","season":1,"match":{"opp":"Bulldogs","ab":"WBD","us":[10,12],"them":[12,10],"at":"marvel","time":"night"},"v":"99718a3a8f"},{"n":9,"date":"2026-11-14","season":1,"match":{"opp":"Geelong","ab":"GEE","us":[8,10],"them":[11,4],"at":"gmhba","time":"day"},"v":"2940ec751e"},{"n":10,"date":"2026-11-15","season":1,"match":{"opp":"Melbourne","ab":"MEL","us":[8,10],"them":[9,13],"at":"mcg","time":"twilight"},"v":"e7f7b9acf5"},{"n":11,"date":"2026-11-16","season":1,"match":{"opp":"North Melbourne","short":"North","ab":"NTH","us":[10,11],"them":[11,8],"at":"marvel","time":"day"},"v":"7194e99eb6"},{"n":12,"date":"2026-11-17","season":1,"match":{"opp":"Hawthorn","ab":"HAW","us":[7,8],"them":[9,9],"at":"mcg","time":"day"},"v":"d349693cd3"},{"n":13,"date":"2026-11-18","season":1,"match":{"opp":"St Kilda","ab":"STK","us":[9,9],"them":[10,9],"at":"marvel","time":"night"},"v":"33394d9028"},{"n":14,"date":"2026-11-19","season":1,"match":{"opp":"Port Adelaide","short":"Port","ab":"PTA","us":[9,12],"them":[10,11],"at":"adelaide","time":"night"},"v":"482864936f"},{"n":15,"date":"2026-11-20","season":1,"match":{"opp":"GWS","ab":"GWS","us":[8,7],"them":[9,11],"at":"engie","time":"twilight"},"v":"4251fa5523"},{"n":16,"date":"2026-11-21","season":1,"match":{"opp":"Fremantle","ab":"FRE","us":[8,8],"them":[10,9],"at":"optus","time":"night"},"v":"2521552109"},{"n":17,"date":"2026-11-22","season":1,"match":{"opp":"Adelaide","ab":"ADE","us":[10,10],"them":[12,10],"at":"adelaide","time":"twilight"},"v":"abbb2bc10d"},{"n":18,"date":"2026-11-23","season":1,"match":{"opp":"Sydney","ab":"SYD","us":[11,8],"them":[13,9],"at":"scg","time":"day","wx":"wind"},"v":"ca61971290"},{"n":19,"date":"2026-11-24","season":1,"match":{"opp":"Carlton","ab":"CAR","us":[9,11],"them":[10,12],"at":"mcg","time":"twilight","wx":"rain"},"v":"25661f7fd9"},{"n":20,"date":"2026-11-25","season":1,"match":{"opp":"Essendon","ab":"ESS","us":[8,10],"them":[9,7],"at":"marvel","time":"day"},"v":"9c64d78948"},{"n":21,"date":"2026-11-26","season":1,"match":{"opp":"Collingwood","ab":"COL","us":[10,8],"them":[11,10],"at":"mcg","time":"night"},"v":"66a3b15cda"},{"n":22,"date":"2026-11-27","season":1,"match":{"opp":"West Coast","ab":"WCE","us":[7,10],"them":[8,9],"at":"optus","time":"night"},"v":"a3a66630fa"},{"n":23,"date":"2026-11-28","season":1,"match":{"opp":"Brisbane","ab":"BRI","us":[12,7],"them":[14,8],"at":"gabba","time":"twilight","wx":"rain"},"v":"2f202fa7b7"},{"n":24,"date":"2026-11-29","season":1,"match":{"opp":"Hawthorn","ab":"HAW","us":[10,9],"them":[12,9],"at":"mcg","time":"night"},"final":"F1","v":"fbf7ba0994"},{"n":25,"date":"2026-11-30","season":1,"match":{"opp":"Sydney","ab":"SYD","us":[9,12],"them":[11,12],"at":"scg","time":"twilight"},"final":"SF","v":"693584faf1"},{"n":26,"date":"2026-12-01","season":1,"match":{"opp":"Fremantle","ab":"FRE","us":[11,7],"them":[13,7],"at":"optus","time":"night","wx":"wind"},"final":"PF","v":"75230ee047"},{"n":27,"date":"2026-12-02","season":1,"match":{"opp":"Brisbane","ab":"BRI","us":[11,10],"them":[13,11],"at":"mcg","time":"day"},"final":"GF","v":"758eb8651c"}];
+window.BON_ROUNDS = [{"n":1,"date":"2026-11-06","season":1,"match":{"opp":"Carlton","ab":"CAR","us":[9,10],"them":[11,9],"at":"mcg","time":"night"},"v":"56df64a554"},{"n":2,"date":"2026-11-07","season":1,"match":{"opp":"Essendon","ab":"ESS","us":[10,8],"them":[11,6],"at":"marvel","time":"night"},"v":"72ba0b7a1f"},{"n":3,"date":"2026-11-08","season":1,"match":{"opp":"Gold Coast","ab":"GCS","us":[9,9],"them":[10,6],"at":"pfs","time":"day"},"key":"3gc","v":"15017e8d0a"},{"n":4,"date":"2026-11-09","season":1,"match":{"opp":"Collingwood","ab":"COL","us":[9,8],"them":[10,8],"at":"mcg","time":"day"},"v":"370817ad46"},{"n":5,"date":"2026-11-10","season":1,"match":{"opp":"West Coast","ab":"WCE","us":[9,7],"them":[9,9],"at":"optus","time":"twilight"},"v":"fe5e53d2ee"},{"n":6,"date":"2026-11-11","season":1,"match":{"opp":"Brisbane","ab":"BRI","us":[6,8],"them":[9,7],"at":"gabba","time":"night"},"v":"418f7f105a"},{"n":7,"date":"2026-11-12","season":1,"match":{"opp":"Richmond","ab":"RIC","us":[11,9],"them":[12,8],"at":"mcg","time":"night"},"v":"67af59d64d"},{"n":8,"date":"2026-11-13","season":1,"match":{"opp":"Bulldogs","ab":"WBD","us":[10,12],"them":[12,10],"at":"marvel","time":"night"},"v":"99718a3a8f"},{"n":9,"date":"2026-11-14","season":1,"match":{"opp":"Geelong","ab":"GEE","us":[8,10],"them":[11,4],"at":"gmhba","time":"day"},"v":"2940ec751e"},{"n":10,"date":"2026-11-15","season":1,"match":{"opp":"Melbourne","ab":"MEL","us":[8,10],"them":[9,13],"at":"mcg","time":"twilight"},"v":"e7f7b9acf5"},{"n":11,"date":"2026-11-16","season":1,"match":{"opp":"North Melbourne","short":"North","ab":"NTH","us":[10,11],"them":[11,8],"at":"marvel","time":"day"},"v":"7194e99eb6"},{"n":12,"date":"2026-11-17","season":1,"match":{"opp":"Hawthorn","ab":"HAW","us":[7,8],"them":[9,9],"at":"mcg","time":"day"},"v":"d349693cd3"},{"n":13,"date":"2026-11-18","season":1,"match":{"opp":"St Kilda","ab":"STK","us":[9,9],"them":[10,9],"at":"marvel","time":"night"},"v":"33394d9028"},{"n":14,"date":"2026-11-19","season":1,"match":{"opp":"Port Adelaide","short":"Port","ab":"PTA","us":[9,12],"them":[10,11],"at":"adelaide","time":"night"},"v":"482864936f"},{"n":15,"date":"2026-11-20","season":1,"match":{"opp":"GWS","ab":"GWS","us":[8,7],"them":[9,11],"at":"engie","time":"twilight"},"v":"4251fa5523"},{"n":16,"date":"2026-11-21","season":1,"match":{"opp":"Fremantle","ab":"FRE","us":[8,8],"them":[10,9],"at":"optus","time":"night"},"v":"2521552109"},{"n":17,"date":"2026-11-22","season":1,"match":{"opp":"Adelaide","ab":"ADE","us":[10,10],"them":[12,10],"at":"adelaide","time":"twilight"},"v":"abbb2bc10d"},{"n":18,"date":"2026-11-23","season":2,"match":{"opp":"Sydney","ab":"SYD","us":[11,8],"them":[13,9],"at":"scg","time":"day","wx":"wind"},"rn":1,"v":"ca61971290"},{"n":19,"date":"2026-11-24","season":2,"match":{"opp":"Carlton","ab":"CAR","us":[9,11],"them":[10,12],"at":"mcg","time":"twilight","wx":"rain"},"rn":2,"v":"25661f7fd9"},{"n":20,"date":"2026-11-25","season":2,"match":{"opp":"Essendon","ab":"ESS","us":[8,10],"them":[9,7],"at":"marvel","time":"day"},"rn":3,"v":"9c64d78948"},{"n":21,"date":"2026-11-26","season":2,"match":{"opp":"Collingwood","ab":"COL","us":[10,8],"them":[11,10],"at":"mcg","time":"night"},"rn":4,"v":"66a3b15cda"},{"n":22,"date":"2026-11-27","season":2,"match":{"opp":"West Coast","ab":"WCE","us":[7,10],"them":[8,9],"at":"optus","time":"night"},"rn":5,"v":"a3a66630fa"},{"n":23,"date":"2026-11-28","season":2,"match":{"opp":"Brisbane","ab":"BRI","us":[12,7],"them":[14,8],"at":"gabba","time":"twilight","wx":"rain"},"rn":6,"v":"2f202fa7b7"},{"n":35,"date":"2026-12-10","season":2,"match":{"opp":"Hawthorn","ab":"HAW","us":[10,9],"them":[12,9],"at":"mcg","time":"night"},"final":"F1","v":"dd8997dac1"},{"n":36,"date":"2026-12-11","season":2,"match":{"opp":"Sydney","ab":"SYD","us":[9,12],"them":[11,12],"at":"scg","time":"twilight"},"final":"SF","v":"a293d82bec"},{"n":37,"date":"2026-12-12","season":2,"match":{"opp":"Fremantle","ab":"FRE","us":[11,7],"them":[13,7],"at":"optus","time":"night","wx":"wind"},"final":"PF","v":"19c3ddedf9"},{"n":38,"date":"2026-12-13","season":2,"match":{"opp":"Brisbane","ab":"BRI","us":[11,10],"them":[13,11],"at":"mcg","time":"day"},"final":"GF","v":"47d809c935"}];
 
 /* Half-time oranges: where the tip jar points. From donate.json */
 window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
@@ -1277,13 +1303,154 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     const em = function (k) { return TIER[k.tier].emoji; };
     let row = kicks.slice(0, KICKS).map(em).join('');
     if (kicks.length > KICKS) row += ' ⏱ ' + kicks.slice(KICKS).map(em).join('');
-    const head = 'Bontillion #' + round.n + (round.final ? ' · ' + roundName(round, o.dc) : '') + ' 🏉 v ' + r.opp +
+    const head = 'Bontillion #' + round.n + (o.name ? ' · ' + o.name : round.final ? ' · ' + roundName(round, o.dc) : '') + ' 🏉 v ' + r.opp +
       (r.venue ? ' at ' + r.venue : '') + (WX_EMOJI[r.wx] || '');
     const result = 'From ' + r.deficit + ' down: ' + resultLine(r) + (kicks.length > KICKS ? ' in extra time' : '');
     return [head, result, row].concat(o.lines || [], ['bontillion.io']).join('\n');
   }
 
+  /* ---------- A season with a ladder (Season 2 on).
+     You are one of the 18 clubs (or, with no club, a 19th side called You). Every club plays every other once over 17
+     rounds. The other clubs' results are made up, from a seed, so every player sees the same scores elsewhere; your own
+     row is what you did. Top eight play finals, by the real system: 1 v 4 and 2 v 3 (the losers get a second chance, the
+     winners a week off), 5 v 8 and 6 v 7 (sudden death), semis, preliminaries, the Grand Final. */
+  const CLUBS18 = [['ADE', 'Adelaide'], ['BRI', 'Brisbane'], ['WBD', 'Bulldogs'], ['CAR', 'Carlton'], ['COL', 'Collingwood'], ['ESS', 'Essendon'],
+    ['FRE', 'Fremantle'], ['GEE', 'Geelong'], ['GCS', 'Gold Coast'], ['GWS', 'GWS'], ['HAW', 'Hawthorn'], ['MEL', 'Melbourne'],
+    ['NTH', 'North Melbourne', 'North'], ['PTA', 'Port Adelaide', 'Port'], ['RIC', 'Richmond'], ['STK', 'St Kilda'], ['SYD', 'Sydney'], ['WCE', 'West Coast']];
+  const CLUB_NAME = { YOU: 'You' }, CLUB_SHORT = {};
+  CLUBS18.forEach(function (c) { CLUB_NAME[c[0]] = c[1]; if (c[2]) CLUB_SHORT[c[0]] = c[2]; });
+  const HOME_AT = { CAR: 'mcg', COL: 'mcg', RIC: 'mcg', MEL: 'mcg', HAW: 'mcg', ESS: 'marvel', STK: 'marvel', WBD: 'marvel', NTH: 'marvel', GEE: 'gmhba',
+    SYD: 'scg', GWS: 'engie', BRI: 'gabba', GCS: 'pfs', ADE: 'adelaide', PTA: 'adelaide', WCE: 'optus', FRE: 'optus' };
+  const LADDER_ROUNDS = 17, LADDER_FROM = 2;
+  const hasLadder = function (season) { return season >= LADDER_FROM; };
+  function hash32(str) { let h = 2166136261; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+  function rngOf(key) {
+    let a = hash32(key) || 1;
+    return function () { a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  }
+  function gauss(r) { const u = Math.max(1e-9, r()), v = r(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); }
+  const LEAGUES = {};
+  // The season's fixture (who plays whom each round, home side first) and how good each club is this year
+  function league(season) {
+    if (LEAGUES[season]) return LEAGUES[season];
+    const r = rngOf('bontillion season ' + season), order = CLUBS18.map(function (c) { return c[0]; });
+    for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)), x = order[i]; order[i] = order[j]; order[j] = x; }
+    const rating = {};
+    order.forEach(function (c) { rating[c] = gauss(r) * 5.5; });       // the best side wins about 13 of 17, the worst about 4
+    const n = order.length, t = order.slice(), rounds = [], homes = {};
+    order.forEach(function (c) { homes[c] = 0; });
+    for (let k = 0; k < n - 1; k++) {
+      const games = [];
+      for (let i = 0; i < n / 2; i++) {
+        // the side that has been at home less often is at home
+        let a = t[i], b = t[n - 1 - i];
+        if (homes[b] < homes[a] || (homes[a] === homes[b] && r() < 0.5)) { const x = a; a = b; b = x; }
+        homes[a]++; games.push([a, b]);
+      }
+      rounds.push(games);
+      t.splice(1, 0, t.pop());
+    }
+    return (LEAGUES[season] = { order: order, rating: rating, rounds: rounds });
+  }
+  // rn = 1..17. Who this club plays that round, and whether it is at home
+  function fixtureOf(season, rn, club) {
+    const g = (league(season).rounds[rn - 1] || []).filter(function (x) { return x[0] === club || x[1] === club; })[0];
+    return g ? { opp: g[0] === club ? g[1] : g[0], home: g[0] === club } : null;
+  }
+  // A made-up result between two other clubs: [home goals, home behinds, away goals, away behinds]
+  function simGame(season, rn, home, away) {
+    const L = league(season), r = rngOf('s' + season + ' r' + rn + ' ' + home + ' ' + away);
+    const one = function (x, y, edge) {
+      const mu = 84 + L.rating[x] - 0.4 * L.rating[y] + edge;
+      return [Math.max(3, Math.round(mu / 7.2 + gauss(r) * 2.6)), Math.max(2, Math.round(10 + gauss(r) * 3))];
+    };
+    const h = one(home, away, 3), a = one(away, home, 0);
+    if (h[0] * 6 + h[1] === a[0] * 6 + a[1]) h[1]++;          // no draws elsewhere: the home side finds a point
+    return [h[0], h[1], a[0], a[1]];
+  }
+  /* The ladder after `upto` rounds. me = your club's code, or null (you are then a 19th side). mine = { rn: [your points,
+     their points] } for the games you have played; a round you never played counts once it is marked [0, 0, 'forfeit']. */
+  function ladder(season, upto, me, mine) {
+    const L = league(season), T = {};
+    mine = mine || {};
+    const row = function (code) { return (T[code] = { code: code, name: CLUB_NAME[code], me: code === (me || 'YOU'), p: 0, w: 0, l: 0, d: 0, f: 0, a: 0 }); };
+    CLUBS18.forEach(function (c) { row(c[0]); });
+    if (!me) row('YOU');
+    const add = function (code, f, a) { const t = T[code]; t.p++; t.f += f; t.a += a; if (f > a) t.w++; else if (f < a) t.l++; else t.d++; };
+    const forfeit = function (loser, winner) { T[loser].p++; T[loser].l++; if (winner) { T[winner].p++; T[winner].w++; } };
+    for (let rn = 1; rn <= Math.min(upto, LADDER_ROUNDS); rn++) {
+      const m = mine[rn];
+      L.rounds[rn - 1].forEach(function (g) {
+        if (me && (g[0] === me || g[1] === me)) {
+          const o = g[0] === me ? g[1] : g[0];
+          if (!m) return;                                    // a game in hand
+          if (m[2] === 'forfeit') forfeit(me, o); else { add(me, m[0], m[1]); add(o, m[1], m[0]); }
+          return;
+        }
+        const s = simGame(season, rn, g[0], g[1]);
+        add(g[0], s[0] * 6 + s[1], s[2] * 6 + s[3]); add(g[1], s[2] * 6 + s[3], s[0] * 6 + s[1]);
+      });
+      if (!me && m) { if (m[2] === 'forfeit') forfeit('YOU'); else add('YOU', m[0], m[1]); }
+    }
+    const rows = Object.keys(T).map(function (k) { const t = T[k]; t.pts = 4 * t.w + 2 * t.d; t.pct = t.a ? 100 * t.f / t.a : (t.f ? 999 : 0); return t; });
+    rows.sort(function (x, y) { return y.pts - x.pts || y.pct - x.pct || y.f - x.f || (x.name < y.name ? -1 : 1); });
+    rows.forEach(function (t, i) { t.pos = i + 1; });
+    return rows;
+  }
+  const FINAL_TYPES = { QF: 'Qualifying Final', EF: 'Elimination Final', SF: 'Semi-Final', PF: 'Preliminary Final', GF: 'Grand Final' };
+  const FINAL_DAYS = { F1: 'Finals, week 1', SF: 'Finals, week 2', PF: 'Finals, week 3', GF: 'Grand Final day' };
+  /* The finals, from the final ladder. top8 = the codes of 1st to 8th; me = your code ('YOU' with no club); res = your own
+     finals so far, { F1: 'won' | 'lost', SF: …, PF: …, GF: … }. Games you are not in are made up, from the seed. */
+  function finalsDraw(season, top8, me, res) {
+    res = res || {};
+    const L = league(season), W = {}, Lo = {}, weeks = {}, inEight = top8.indexOf(me) >= 0;
+    let out = inEight ? null : 'MISS';
+    const seed = function (c) { const i = top8.indexOf(c); return i < 0 ? 99 : i; };
+    function play(id, key, type, a, b) {
+      if (!a || !b) return;
+      if (seed(b) < seed(a)) { const x = a; a = b; b = x; }                // the higher side on the ladder is at home
+      let w;
+      if (a === me || b === me) {
+        const opp = a === me ? b : a;
+        weeks[key] = { type: type, name: FINAL_TYPES[type], opp: opp, home: a === me, result: res[key] || null };
+        if (!res[key]) return;
+        w = res[key] === 'won' ? me : opp;
+        if (w !== me && type !== 'QF') out = key;
+      } else {
+        const p = 1 / (1 + Math.exp(-(((L.rating[a] || 0) - (L.rating[b] || 0)) / 6 + 0.25)));
+        w = rngOf('s' + season + ' final ' + id)() < p ? a : b;
+      }
+      W[id] = w; Lo[id] = w === a ? b : a;
+    }
+    play('QF1', 'F1', 'QF', top8[0], top8[3]); play('QF2', 'F1', 'QF', top8[1], top8[2]);
+    play('EF1', 'F1', 'EF', top8[4], top8[7]); play('EF2', 'F1', 'EF', top8[5], top8[6]);
+    play('SF1', 'SF', 'SF', Lo.QF1, W.EF1); play('SF2', 'SF', 'SF', Lo.QF2, W.EF2);
+    play('PF1', 'PF', 'PF', W.QF1, W.SF2); play('PF2', 'PF', 'PF', W.QF2, W.SF1);
+    play('GF', 'GF', 'GF', W.PF1, W.PF2);
+    // each of the four finals days, for you: a game ('play'), a week off, out of it, or not known yet
+    const wonQF = !!weeks.F1 && weeks.F1.type === 'QF' && res.F1 === 'won';
+    const state = {};
+    FINAL_KEYS.forEach(function (k) {
+      state[k] = weeks[k] ? 'play' : !inEight ? 'missed' : (out && FINAL_KEYS.indexOf(k) > FINAL_KEYS.indexOf(out)) ? 'out' : (k === 'SF' && wonQF) ? 'off' : 'tbc';
+    });
+    return { weeks: weeks, state: state, inEight: inEight, out: out, alive: !out, flag: W.GF === me, premier: W.GF || null,
+      secondChance: !!weeks.F1 && weeks.F1.type === 'QF' && res.F1 === 'lost', played: FINAL_KEYS.filter(function (k) { return weeks[k] && res[k]; }).length };
+  }
+  /* A round's match with the day's real opponent in it. m0 = the round's own match (the starting scores, the time of day,
+     the weather); at = the ground: the home side's, or the MCG for the Grand Final. */
+  function matchWith(m0, opp, homeCode, gf) {
+    const m = {};
+    Object.keys(m0).forEach(function (k) { m[k] = m0[k]; });
+    m.opp = CLUB_NAME[opp]; m.ab = opp; delete m.short;
+    if (CLUB_SHORT[opp]) m.short = CLUB_SHORT[opp];
+    m.at = gf ? 'mcg' : (HOME_AT[homeCode] || m0.at);
+    if (m.at === 'marvel') delete m.wx;                       // no weather under the roof
+    return m;
+  }
+
   const api = {
+    CLUBS18: CLUBS18, CLUB_NAME: CLUB_NAME, HOME_AT: HOME_AT, LADDER_ROUNDS: LADDER_ROUNDS, FINAL_TYPES: FINAL_TYPES, FINAL_DAYS: FINAL_DAYS,
+    hasLadder: hasLadder, league: league, fixtureOf: fixtureOf, simGame: simGame, ladder: ladder, finalsDraw: finalsDraw, matchWith: matchWith,
     TIERS: TIERS, TIER: TIER, GROUND: GROUND, CENTRE: CENTRE, START: START, SHOT_CLOCK: SHOT_CLOCK, KICKS: KICKS, EXTRA: EXTRA, VENUES: VENUES,
     FINALS: FINALS, FINAL_KEYS: FINAL_KEYS, DC_WINS: DC_WINS,
     norm: norm, dist: dist, judge: judge, applyKick: applyKick, summarise: summarise,
@@ -1970,7 +2137,10 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   const TIER_COL = { out: '#ff6b5e', n15: '#dfe3ea', grub: '#c99460', chip: '#f4cc4f', punt: '#4fcf83', banana: '#5aaeff', post: '#c3a6ff', siren: '#ffd54a' };
 
   const KITS = {
-    home: { jumper: '#1c2d55', yoke: '#ffb21a', shorts: '#ece8dd', sock: '#1c2d55', band: '#ffb21a', boot: '#101010' },
+    // No club: sky blue with amber, which no club wears. Navy and amber, the game's first strip, is now Adelaide's
+    // (it suits them better) and stays on as the clash strip for the one opponent in blue and white stripes.
+    home: { jumper: '#5cc8f0', yoke: '#ffb21a', shorts: '#16264a', sock: '#5cc8f0', band: '#ffb21a', boot: '#101010', ink: '#16264a' },
+    homeAlt: { jumper: '#1c2d55', yoke: '#ffb21a', shorts: '#ece8dd', sock: '#1c2d55', band: '#ffb21a', boot: '#101010' },
     away: { jumper: '#ece8dd', yoke: '#c8323b', shorts: '#c8323b', sock: '#ece8dd', band: '#c8323b', boot: '#101010' },
     ump: { jumper: '#c9f23a', yoke: '#c9f23a', shorts: '#14171c', sock: '#14171c', band: '#c9f23a', boot: '#101010' },
     goal: { jumper: '#f4f1e8', yoke: '#f4f1e8', shorts: '#f4f1e8', sock: '#f4f1e8', band: '#f4f1e8', boot: '#101010', coat: true, hat: true }
@@ -2002,7 +2172,8 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   /* Pick your club: your side runs out in its real home colours. (The table above shows each club as an opponent,
      in colours that read against navy.) Where the two sides would look alike, yours wears its clash strip. */
   const OWN = {
-    ADE: { jumper: '#0f2c5c', yoke: '#d71f3a', shorts: '#0f2c5c', sock: '#0f2c5c', band: '#ffd200', pat: 'hoops' },
+    ADE: { jumper: '#1c2d55', yoke: '#ffb21a', shorts: '#ece8dd', sock: '#1c2d55', band: '#d71f3a', near: 68 },      // the old no-club strip, with a red sock band.
+    // near: it played against the sides in black all season as the no-club strip, so it only changes for the sides in navy or royal blue
     BRI: { jumper: '#7a0d2b', yoke: '#0055a3', shorts: '#7a0d2b', sock: '#7a0d2b', band: '#fdbe57', pat: 'yoke' },
     CAR: { jumper: '#0e1e2d', yoke: '#f2f0ea', shorts: '#0e1e2d', sock: '#0e1e2d', band: '#f2f0ea', pat: 'mono' },
     MEL: { jumper: '#0f1131', yoke: '#cc2031', shorts: '#0f1131', sock: '#cc2031', band: '#0f1131', pat: 'yoke' },
@@ -2032,15 +2203,16 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     const b = rgb(k.yoke);
     return [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2, (a[2] + b[2]) / 2];
   }
-  function alike(k1, k2) { const a = tone(k1), b = tone(k2); return Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]) < 90; }
+  function alike(k1, k2) { const a = tone(k1), b = tone(k2); return Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]) < Math.min(k1.near || 90, k2.near || 90); }
   /* Who wears what. No club (or playing your own club): our navy and amber against the opposition table above.
      With a club: both sides in home colours, yours in its clash strip if they'd look alike. */
   function strips(club, opp) {
-    const def = { us: KITS.home, them: CLUB_KITS[opp] || KITS.away, me: 'YOU' };
+    const they = CLUB_KITS[opp] || KITS.away;
+    const def = { us: alike(KITS.home, they) ? KITS.homeAlt : KITS.home, them: they, me: 'YOU' };
     if (!club || !CLUB_KITS[club] || club === opp || (club === 'PTA' && opp === 'POR')) return def;
     const them = ownKit(opp) || KITS.away;
     const us = [ownKit(club), clashKit(club)].filter(function (k) { return !alike(k, them); })[0];
-    return us ? { us: us, them: them, me: club } : { us: KITS.home, them: CLUB_KITS[opp] || KITS.away, me: club };
+    return us ? { us: us, them: them, me: club } : { us: def.us, them: they, me: club };
   }
   const SKIN = ['#f1c9a0', '#e0ac69', '#c68642', '#8d5524', '#5c3a21'];
   const HAIR = ['#2b1d14', '#5a3825', '#151515', '#b5854b', '#3a2a20'];
@@ -3602,7 +3774,118 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
      plays: win all four and the flag is yours. Twelve wins in the season proper earns the double chance. */
   const seasonOf = function (r) { return (r && r.season) || 1; };
   function outcomeOf(r) { const p = store.get(KEY(r.n)); return p && p.done ? B.scoreAfter(r, p.kicks).outcome : null; }
+  /* ---------- Season 2 on: a ladder. You are one of the 18 clubs (with no club, a 19th side). The other clubs' results come
+     from the engine's seed; yours are what you did. Top eight play finals, from your own ladder. */
+  const ord = function (n) { const v = n % 100; return n + (v > 10 && v < 14 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th'); };
+  const f1Of = function (s) { return ROUNDS.filter(function (r) { return seasonOf(r) === s && r.final === 'F1'; })[0]; };
+  // how many of the season's 17 rounds have opened: the season's first round is day one
+  function openedRounds(s) {
+    const first = ROUNDS.filter(function (r) { return seasonOf(r) === s; })[0];
+    if (!first) return 0;
+    const d = Math.round((Date.parse(todayStr() + 'T00:00:00Z') - Date.parse(first.date + 'T00:00:00Z')) / 864e5) + 1;
+    return Math.max(0, Math.min(B.LADDER_ROUNDS, d));
+  }
+  // your own results: { round: [your points, their points] }. Settled as you run out for week one of the finals.
+  function mineOf(s) {
+    const f1r = f1Of(s), f1 = f1r && store.get(KEY(f1r.n));
+    if (f1 && f1.mine) return f1.mine;
+    const m = {};
+    ROUNDS.forEach(function (r) {
+      if (seasonOf(r) !== s || r.final || !r.rn) return;
+      const p = store.get(KEY(r.n));
+      if (p && p.done) { const sc = B.scoreAfter(r, p.kicks); m[r.rn] = [sc.us[2], sc.them[2]]; }
+    });
+    // once the finals are on, a round you never played is a loss
+    if (f1r && f1r.date <= todayStr()) for (let rn = 1; rn <= B.LADDER_ROUNDS; rn++) if (!m[rn]) m[rn] = [0, 0, 'forfeit'];
+    return m;
+  }
+  function ladderState(s) {
+    const rs = ROUNDS.filter(function (r) { return seasonOf(r) === s; }), f1r = f1Of(s), f1 = f1r && store.get(KEY(f1r.n));
+    const me = f1 && f1.me ? f1.me : (CLUB || 'YOU'), mine = mineOf(s), upto = openedRounds(s);
+    const rows = B.ladder(s, upto, me === 'YOU' ? null : me, mine), my = rows.filter(function (t) { return t.me; })[0];
+    const res = {};
+    rs.forEach(function (r) { if (r.final) { const o = outcomeOf(r); if (o) res[r.final] = o; } });
+    const finalsOpen = !!f1r && f1r.date <= todayStr();
+    const draw = B.finalsDraw(s, rows.slice(0, 8).map(function (t) { return t.code; }), me, finalsOpen ? res : {});
+    const played = Object.keys(mine).filter(function (k) { return mine[k][2] !== 'forfeit'; }).length;
+    return { season: s, ladder: rows, my: my, pos: my.pos, me: me, upto: upto, wins: my.w, played: played, dc: my.pos <= 4, res: res, draw: draw, finalsOpen: finalsOpen,
+      run: { out: draw.out, alive: draw.alive, lifeUsed: draw.secondChance, flag: finalsOpen && draw.flag, played: draw.played }, finals: rs.filter(function (r) { return !!r.final; }) };
+  }
+  /* Put the day's real opponent and ground into each round of a ladder season: the fixture for the home-and-away rounds,
+     the draw for the finals. r.match0 keeps what the round was built with (a player with no club plays that). */
+  function resolveMatches() {
+    const seen = {};
+    ROUNDS.forEach(function (r) {
+      const s = seasonOf(r);
+      if (!B.hasLadder(s)) return;
+      r.match0 = r.match0 || r.match;
+      const st = seen[s] || (seen[s] = ladderState(s)), me = st.me;
+      let m = r.match0;
+      if (!r.final) {
+        const fx = me === 'YOU' ? null : B.fixtureOf(s, r.rn, me);
+        if (fx) m = B.matchWith(r.match0, fx.opp, fx.home ? me : fx.opp);
+      } else {
+        const w = st.draw.weeks[r.final];
+        if (w) m = B.matchWith(r.match0, w.opp, w.home ? me : w.opp, r.final === 'GF');
+        else if (r.match0.ab === me) m = B.matchWith(r.match0, B.league(s).order.filter(function (c) { return c !== me; })[0], null, r.final === 'GF');
+      }
+      r.match = m;
+    });
+  }
+  // what a finals day is called for this player
+  function finalName(r) {
+    const st = ladderState(seasonOf(r)), w = st.draw.weeks[r.final];
+    return w ? w.name : st.draw.state[r.final] === 'off' ? 'Week off' : B.FINAL_DAYS[r.final];
+  }
+  function ladderFinalsLine(r) {
+    const st = ladderState(seasonOf(r)), d = st.draw, w = d.weeks[r.final], state = d.state[r.final];
+    if (st.run.flag) return '🏆 Premiers! The flag is yours.';
+    if (state === 'missed') return 'You finished ' + ord(st.pos) + ', outside the eight. Today is for pride: it still counts on your record.';
+    if (state === 'out') return 'Your flag hopes ended in the ' + d.weeks[d.out].name + '. Today is for pride: it still counts on your record.';
+    if (state === 'off') return 'You won the Qualifying Final, so this is your week off. Have a kick: nothing rides on it.';
+    if (state === 'tbc') return 'Play your last final from the archive to see who you meet.';
+    if (w.result === 'lost') return d.out === r.final ? 'Knocked out. There\'s always next season.' : 'Beaten, but a top-four finish keeps you alive.';
+    if (w.result === 'won') return r.final === 'GF' ? '' : w.type === 'QF' ? 'Through to a Preliminary Final, after a week off.' : 'Through. Sudden death again next time.';
+    if (w.type === 'QF') return 'You finished ' + ord(st.pos) + ': lose this one and you get a second chance.';
+    if (w.type === 'GF') return 'One win from the flag.';
+    return 'Sudden death: lose and the season is over.';
+  }
+  function ladderSeasonLine(s) {
+    const st = ladderState(s);
+    if (st.finalsOpen) return '';
+    const link = ' <button type="button" class="linkish" data-ladder>See the ladder</button>';
+    if (!st.played) return 'Season ' + s + ' has a real ladder: finish in the top eight to play finals.' + link;
+    const left = B.LADDER_ROUNDS - st.upto;
+    return '<b>' + ord(st.pos) + '</b> on the ladder: ' + st.my.w + (st.my.w === 1 ? ' win' : ' wins') + ', ' + st.my.l + (st.my.l === 1 ? ' loss' : ' losses') +
+      (st.my.d ? ', ' + st.my.d + (st.my.d === 1 ? ' draw' : ' draws') : '') + '. ' + (left ? 'Top eight play finals.' : 'The finals start tomorrow.') + link;
+  }
+  function ladderHtml(s) {
+    const st = ladderState(s), pc = function (t) { return t.p && t.a ? t.pct.toFixed(1) : '–'; };
+    const rows = st.ladder.map(function (t, i) {
+      return '<tr class="' + (t.me ? 'lad-me' : '') + (i === 7 ? ' lad-cut' : '') + '"><td class="lad-pos">' + t.pos + '</td><td class="lad-club">' + esc(t.me && t.code !== 'YOU' ? t.name : t.name) +
+        (t.me ? ' <b>YOU</b>' : '') + '</td><td>' + t.p + '</td><td>' + t.w + '</td><td>' + t.l + '</td><td>' + t.d + '</td><td class="lad-pct">' + pc(t) + '</td><td class="lad-pts">' + t.pts + '</td></tr>';
+    }).join('');
+    // rounds before today's that you have not played yet
+    const cur = currentRound(), todayRn = seasonOf(cur) === s && !cur.final && cur.rn ? cur.rn : 0, mm = mineOf(s);
+    let inHand = 0;
+    for (let rn = 1; rn <= st.upto; rn++) if (!mm[rn] && rn !== todayRn) inHand++;
+    let foot = st.finalsOpen ? 'The season proper is over. ' + (st.pos <= 8 ? 'You finished ' + ord(st.pos) + ' and play finals.' : 'You finished ' + ord(st.pos) + ', outside the eight.')
+      : (st.upto ? 'After Round ' + st.upto + ' of ' + B.LADDER_ROUNDS + '. ' : '') + 'The top eight play finals. The top four get a second chance.';
+    if (!st.finalsOpen && inHand > 0) foot += ' You have ' + (inHand === 1 ? 'a game' : inHand + ' games') + ' in hand: play ' + (inHand === 1 ? 'it' : 'them') + ' from the archive before the finals, or ' + (inHand === 1 ? 'it counts' : 'they count') + ' as ' + (inHand === 1 ? 'a loss' : 'losses') + '.';
+    if (st.me === 'YOU') foot += ' Pick a club in the menu to take its place on the ladder.';
+    return '<div class="lad-box"><table class="lad"><thead><tr><th></th><th class="lad-club">Club</th><th>P</th><th>W</th><th>L</th><th>D</th><th>%</th><th>Pts</th></tr></thead><tbody>' + rows +
+      '</tbody></table></div><p class="note lad-foot">' + foot + '</p>';
+  }
+  function openLadder() {
+    const s = seasonOf(currentRound()), dlg = $('#table');
+    if (!B.hasLadder(s)) return;
+    $('#table-h').textContent = 'Season ' + s + ' ladder';
+    $('#table-body').innerHTML = ladderHtml(s);
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+
   function seasonState(s) {
+    if (B.hasLadder(s)) return ladderState(s);
     const rs = ROUNDS.filter(function (r) { return seasonOf(r) === s; });
     let wins = 0, played = 0, f1 = null;
     const res = {};
@@ -3615,7 +3898,10 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     const dc = f1 && f1.dc != null ? !!f1.dc : wins >= B.DC_WINS;
     return { season: s, wins: wins, played: played, dc: dc, res: res, run: B.finalsRun(res, dc), finals: rs.filter(function (r) { return !!r.final; }) };
   }
-  function rname(r) { return B.roundName(r, !!(r && r.final === 'F1') && seasonState(seasonOf(r)).dc); }
+  function rname(r) {
+    if (r && r.final && B.hasLadder(seasonOf(r))) return finalName(r);
+    return B.roundName(r, !!(r && r.final === 'F1') && seasonState(seasonOf(r)).dc);
+  }
   function flagsWon() {
     const seen = {};
     ROUNDS.forEach(function (r) { seen[seasonOf(r)] = true; });
@@ -3624,6 +3910,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   // Where this player's finals stand, said in a line, for the home screen and full time
   function finalsLine(r) {
     if (!r || !r.final) return '';
+    if (B.hasLadder(seasonOf(r))) return ladderFinalsLine(r);
     const ss = seasonState(seasonOf(r)), run = ss.run, mine = ss.res[r.final];
     if (run.flag) return '🏆 Premiers! The flag is yours.';
     if (run.out) return run.out === r.final ? 'Knocked out. There\'s always next season.' : 'Your flag hopes ended in the ' + B.roundName({ final: run.out }, false) + ', but every game still counts on your record.';
@@ -3634,6 +3921,11 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   }
   // Late in the season proper: how close the double chance is
   function seasonLine(s) {
+    if (B.hasLadder(s)) return ladderSeasonLine(s);
+    // the last season without a ladder: say what is coming
+    const mine = ROUNDS.filter(function (r) { return seasonOf(r) === s; });
+    if (ROUNDS.some(function (r) { return seasonOf(r) === s + 1; }) && !mine.some(function (r) { return !!r.final; }))
+      return 'Season ' + s + ' ends with Round ' + mine[mine.length - 1].n + '. Season ' + (s + 1) + ' follows, with a real ladder: the top eight play finals.';
     const ss = seasonState(s);
     if (!ss.finals.length || !ss.played) return '';
     if (ss.run.played) return '';
@@ -3642,6 +3934,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   }
 
   function renderHome() {
+    resolveMatches();
     const r = currentRound();
     $('#home-round').textContent = rname(r).toUpperCase() + ' · ' + fmtDate(r.date).toUpperCase() + (PREVIEW ? ' · PREVIEW' : '');
     const p = store.get(KEY(r.n));
@@ -3653,6 +3946,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       '. You\'re ' + start.deficit + ' down. ' + drawLine(start, r);
     const fl = $('#home-finals'), fline = finalsLine(r) || seasonLine(seasonOf(r));
     fl.hidden = !fline; fl.innerHTML = fline;
+    $('#tile-table').hidden = !B.hasLadder(seasonOf(r));
     const hc = $('#home-club');
     hc.hidden = !!store.get(CLUB_KEY);
     ensureHome().setMatch(boardFor(r, p ? p.kicks : []));
@@ -3768,7 +4062,11 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     if (fresh) {
       // settled as the side runs out: which game of yours this is and, in week one of the finals, the double chance
       S.prog.game = logbook().played + 1;
-      if (r.final === 'F1') S.prog.dc = seasonState(seasonOf(r)).dc;
+      if (r.final === 'F1') {
+        const ss0 = seasonState(seasonOf(r));
+        S.prog.dc = ss0.dc;
+        if (B.hasLadder(seasonOf(r))) { S.prog.mine = mineOf(seasonOf(r)); S.prog.me = ss0.me; }
+      }
       saveProg();
       track('round started', roundProps(r));
       const ms = B.milestone(S.prog.game);
@@ -3802,7 +4100,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     $('#skip-btn').hidden = false;
     sc.setIdleFeet(null);
     track('milestone', { games: n, club: CLUB || 'none' });
-    sc.banner({ top: String(n), sub: 'GAMES', paper: kit.yoke, ink: kit.jumper }).then(function () {
+    sc.banner({ top: String(n), sub: 'GAMES', paper: kit.yoke, ink: kit.ink || kit.jumper }).then(function () {
       S.busy = false; $('#skip-btn').hidden = true;
       if (S.screen === 'play' && S.prog && !S.prog.kicks.length && !S.prog.done) showPrompt(focus);
     });
@@ -4250,6 +4548,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   function finishRound() {
     S.prog.done = true;
     saveProg();
+    resolveMatches();                 // a final just played settles who is next
     const r = S.round, sc = scoreNow();
     if (playScene) playScene.setScore(boardFor(r, S.prog.kicks));       // extra time can end with their point
     renderHud();
@@ -4571,13 +4870,23 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     let note = '';
     if (r.final) {
       const nextKey = B.FINAL_KEYS[B.FINAL_KEYS.indexOf(r.final) + 1];
+      const lw = B.hasLadder(season) ? ss.draw.weeks[r.final] : null;
       if (flagHere) { extras.push('🏆 PREMIERS!'); note = 'PREMIERS!'; }
+      else if (B.hasLadder(season)) {
+        if (!lw) { /* a game for pride, or a week off: nothing rides on it */ }
+        else if (ss.run.out === r.final) { extras.push('Knocked out'); note = 'KNOCKED OUT'; }
+        else if (sc.outcome === 'lost' && lw.type === 'QF') { extras.push('Alive on the second chance'); note = 'ALIVE ON THE SECOND CHANCE'; }
+        else if (sc.outcome === 'won' && r.final !== 'GF') {
+          const to = lw.type === 'QF' || lw.type === 'SF' ? 'Preliminary Final' : lw.type === 'EF' ? 'Semi-Final' : 'Grand Final';
+          extras.push('Through to the ' + to); note = 'THROUGH TO THE ' + to.toUpperCase();
+        }
+      }
       else if (ss.run.out === r.final) { extras.push('Knocked out'); note = 'KNOCKED OUT'; }
       else if (sc.outcome === 'lost' && r.final === 'F1' && ss.run.lifeUsed) { extras.push('Alive on the double chance'); note = 'ALIVE ON THE DOUBLE CHANCE'; }
       else if (sc.outcome === 'won' && ss.run.alive && nextKey) { extras.push('Through to the ' + B.FINALS[nextKey]); note = 'THROUGH TO THE ' + B.FINALS[nextKey]; }
     }
     if (ms) { extras.push('🎽 Game ' + ms); if (!note) note = 'GAME ' + ms; }
-    const share = B.shareText(r, p.kicks, { dc: !!p.dc, lines: extras });
+    const share = B.shareText(r, p.kicks, { dc: !!p.dc, lines: extras, name: r.final && B.hasLadder(season) ? rname(r) : '' });
     const em = function (k) { return B.TIER[k.tier].emoji; };
     const row = p.kicks.slice(0, B.KICKS).map(em).join('') + (p.kicks.length > B.KICKS ? ' ⏱ ' + p.kicks.slice(B.KICKS).map(em).join('') : '');
     const v = VERDICT.filter(function (x) { return sc.margin >= x.lo && sc.margin <= x.hi; })[0] || VERDICT[0];
@@ -4605,13 +4914,13 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     const nextHtml = nextLine(nr, currentRound().n);
 
     $('#screen-full').innerHTML =
-      '<div class="res-head"><span class="chip-led">' + (r.final ? esc(rname(r)).toUpperCase() : 'ROUND #' + r.n) + ' · FULL TIME</span></div>' +
+      '<div class="res-head"><span class="chip-led">' + (r.final ? esc(rname(r)).toUpperCase() : r.rn ? 'ROUND ' + r.rn : 'ROUND #' + r.n) + ' · FULL TIME</span></div>' +
       '<div class="res-score res-' + sc.outcome + '">' + (flagHere ? '<div class="res-cup">' + cupSvg() + '<span class="led">Premiers</span>' + cupSvg() + '</div>' : '') +
       '<div class="res-big"><span class="led">' + word + '</span><span class="res-unit">' + esc(by) + '</span></div>' +
       '<div class="mini-board res-board">' + miniBoard(sc) + '</div>' +
       '<p class="res-m">From ' + sc.deficit + ' down v ' + esc(sc.opp) + ': ' + sc.goals + (sc.goals === 1 ? ' goal' : ' goals') +
       (sc.behinds ? ', ' + sc.behinds + (sc.behinds === 1 ? ' behind' : ' behinds') : '') + ' in ' + p.kicks.length + ' kicks' + (p.kicks.length > B.KICKS ? ', after extra time' : '') + '</p>' +
-      (r.final ? '<p class="finals-line">' + finalsLine(r) + '</p>' : '') +
+      (r.final ? '<p class="finals-line">' + finalsLine(r) + '</p>' : B.hasLadder(season) && seasonLine(season) ? '<p class="finals-line">' + seasonLine(season) + '</p>' : '') +
       (ms ? '<p class="finals-line">🎽 Game ' + ms + ' for you. They made you a banner.</p>' : '') +
       '<p class="res-row" aria-label="Your kicks">' + row + '</p></div>' +
       '<div class="btn-row"><button type="button" class="btn btn-red" id="copy-btn">' + (canShare() ? 'Share ▸' : 'Copy result') + '</button><button type="button" class="btn" data-go="archive">Archive ↺</button></div>' +
@@ -4823,6 +5132,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
   function setClub(code) {
     CLUB = CLUB_NAMES[code] ? code : null;
     store.set(CLUB_KEY, CLUB || 'none');
+    resolveMatches();                 // another club, another fixture
     $('#tile-club').textContent = CLUB ? 'Club: ' + CLUB_NAMES[CLUB] : 'Pick your club';
     track('club picked', { club: CLUB || 'none' });
     // repaint whatever is showing
@@ -4907,6 +5217,10 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
       if (sdlg.showModal) sdlg.showModal(); else sdlg.setAttribute('open', '');
     };
     $('#stats-close').addEventListener('click', function () { if (sdlg.close) sdlg.close(); else sdlg.removeAttribute('open'); });
+    // the season's ladder: from the menu, and from the line on the home screen and at full time
+    const tdlg = $('#table');
+    $('#table-close').addEventListener('click', function () { if (tdlg.close) tdlg.close(); else tdlg.removeAttribute('open'); });
+    document.addEventListener('click', function (e) { const b = e.target && e.target.closest ? e.target.closest('[data-ladder]') : null; if (b) { e.preventDefault(); openLadder(); } });
     // Results are final: wiping them is only for testing a preview build
     if (!PREVIEW) { const rb = $('#reset-box'); if (rb) rb.remove(); }
     // The oranges only appear once there's somewhere to pay (or in a preview); otherwise they're taken out of the page
@@ -4926,6 +5240,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
         else if (a === 'archive') { closeMenu(); go('archive'); }
         else if (a === 'help') { closeMenu(); openHelp(); }
         else if (a === 'stats') { closeMenu(); openStats(); }
+        else if (a === 'table') { closeMenu(); openLadder(); }
         else if (a === 'oranges') { closeMenu(); openOranges(); }
         else if (a === 'club') { closeMenu(); openClub(); }
         else if (a === 'sound') { SND.unlock(); setSound(!SND.isOn()); }
@@ -4985,6 +5300,7 @@ window.BON_DONATE = {"via": "Ko-fi", "url": "https://ko-fi.com/bontillion"};
     UI.kbd = store.get('bontillion:keys') === 'phone' ? 'phone' : 'game';
     const c0 = store.get(CLUB_KEY);
     CLUB = CLUB_NAMES[c0] ? c0 : null;
+    resolveMatches();
     renderLadder($('#ladder'));
     renderLadder($('#help-ladder'));
     wire();
